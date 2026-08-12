@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>INMOBILIARIA Y CONSTRUCTORA</title>
@@ -11,235 +14,472 @@
     <!-- Font Awesome -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
+
 
 <body>
 
-<!-- ================= HEADER ================= -->
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
 <header class="header">
+
     <div class="container nav">
 
         <a href="#inicio" class="logo">
+
             <i class="fa-solid fa-building"></i>
-            INMOBILIARIA Y CONSTRUCTORA
+
+            <span>INMOBILIARIA Y CONSTRUCTORA</span>
+
         </a>
 
+
         <nav class="menu">
-            <a href="#inicio">Inicio</a>
-            <a href="#propiedades">Propiedades</a>
-            <a href="#nosotros">Nosotros</a>
-            <a href="#contacto">Contacto</a>
+
+            <a href="#inicio">
+                Inicio
+            </a>
+
+            <a href="#propiedades">
+                Propiedades
+            </a>
+
+            <a href="#proyectos">
+                Proyectos
+            </a>
+
+            <a href="#construccion">
+                Construcción
+            </a>
+
+            <a href="#nosotros">
+                Nosotros
+            </a>
+
+            <a href="#contacto">
+                Contacto
+            </a>
+
         </nav>
 
-        <button class="btn-publicar" onclick="irContacto()">
+
+        <button class="btn-publicar"
+                onclick="irContacto()">
+
             <i class="fa-solid fa-plus"></i>
+
             Publicar propiedad
+
         </button>
 
-        <button class="menu-mobile" id="menuMobile">
+
+        <button class="menu-mobile"
+                id="menuMobile">
+
             <i class="fa-solid fa-bars"></i>
+
         </button>
 
     </div>
+
 </header>
 
 
-<!-- ================= HERO ================= -->
 
-<section class="hero" id="inicio">
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero"
+         id="inicio">
 
     <div class="hero-overlay"></div>
+
 
     <div class="container hero-content">
 
         <span class="hero-tag">
+
             <i class="fa-solid fa-location-dot"></i>
+
             INMOBILIARIA Y CONSTRUCTORA
+
         </span>
 
+
         <h1>
+
             Encuentra el lugar
             <br>
+
             <span>perfecto para ti</span>
+
         </h1>
 
+
         <p>
-            Encuentra casas, departamentos, terrenos y oficinas
-            en las mejores ubicaciones.
+
+            Encuentra casas, departamentos y terrenos,
+            o convierte tu terreno en el proyecto que siempre imaginaste.
+
         </p>
+
+
+        <!-- BUSCADOR -->
 
         <div class="search-box">
 
+
             <div class="search-item">
-                <label>¿Qué buscas?</label>
+
+                <label>
+                    ¿Qué buscas?
+                </label>
+
 
                 <select id="tipo">
-                    <option value="todos">Todas las propiedades</option>
-                    <option value="casa">Casas</option>
-                    <option value="departamento">Departamentos</option>
-                    <option value="terreno">Terrenos</option>
-                    <option value="oficina">Oficinas</option>
+
+                    <option value="todos">
+                        Todas las propiedades
+                    </option>
+
+                    <option value="casa">
+                        Casas
+                    </option>
+
+                    <option value="departamento">
+                        Departamentos
+                    </option>
+
+                    <option value="terreno">
+                        Terrenos
+                    </option>
+
+                    <option value="oficina">
+                        Oficinas
+                    </option>
+
                 </select>
+
             </div>
+
+
 
             <div class="search-item">
 
-                <label>Ubicación</label>
+                <label>
+                    Ubicación
+                </label>
+
 
                 <div class="input-location">
+
                     <i class="fa-solid fa-location-dot"></i>
+
 
                     <input
                         type="text"
                         id="ubicacion"
                         placeholder="Ej. Cuenca, Ecuador">
+
                 </div>
 
             </div>
 
+
+
             <div class="search-item">
 
-                <label>Precio máximo</label>
+                <label>
+                    Precio máximo
+                </label>
+
 
                 <select id="precio">
-                    <option value="9999999">Sin límite</option>
-                    <option value="100000">$100.000</option>
-                    <option value="200000">$200.000</option>
-                    <option value="300000">$300.000</option>
-                    <option value="500000">$500.000</option>
+
+                    <option value="9999999">
+                        Sin límite
+                    </option>
+
+                    <option value="50000">
+                        $50.000
+                    </option>
+
+                    <option value="100000">
+                        $100.000
+                    </option>
+
+                    <option value="200000">
+                        $200.000
+                    </option>
+
+                    <option value="300000">
+                        $300.000
+                    </option>
+
+                    <option value="500000">
+                        $500.000
+                    </option>
+
                 </select>
 
             </div>
 
-            <button class="btn-search" onclick="buscarPropiedades()">
+
+
+            <button class="btn-search"
+                    onclick="buscarPropiedades()">
+
                 <i class="fa-solid fa-magnifying-glass"></i>
+
                 Buscar
+
             </button>
 
         </div>
 
     </div>
+
 </section>
 
 
-<!-- ================= CATEGORIAS ================= -->
+
+<!-- =========================================================
+     CATEGORIAS DE PROPIEDADES
+========================================================= -->
 
 <section class="categories">
 
     <div class="container">
 
+
         <div class="section-header">
 
             <div>
-                <span class="section-tag">EXPLORA</span>
-                <h2>¿Qué estás buscando?</h2>
+
+                <span class="section-tag">
+                    INMOBILIARIA
+                </span>
+
+                <h2>
+                    Encuentra tu próxima propiedad
+                </h2>
+
             </div>
 
+
             <p>
-                Encuentra la propiedad que se adapte
-                perfectamente a tus necesidades.
+
+                Explora nuestras propiedades disponibles
+                para venta y encuentra la opción ideal para ti.
+
             </p>
 
         </div>
 
+
+
         <div class="category-grid">
 
-            <div class="category-card" onclick="seleccionarTipo('casa')">
+
+            <!-- CASA -->
+
+            <div class="category-card"
+                 onclick="seleccionarTipo('casa')">
+
                 <div class="category-icon">
+
                     <i class="fa-solid fa-house"></i>
+
                 </div>
 
-                <h3>Casas</h3>
-                <p>Encuentra tu casa ideal</p>
+
+                <h3>
+                    Casas
+                </h3>
+
+
+                <p>
+                    Encuentra tu casa ideal
+                </p>
+
 
                 <span>
+
                     Ver propiedades
+
                     <i class="fa-solid fa-arrow-right"></i>
+
                 </span>
+
             </div>
 
 
-            <div class="category-card" onclick="seleccionarTipo('departamento')">
+
+            <!-- DEPARTAMENTOS -->
+
+            <div class="category-card"
+                 onclick="seleccionarTipo('departamento')">
+
                 <div class="category-icon">
+
                     <i class="fa-solid fa-building"></i>
+
                 </div>
 
-                <h3>Departamentos</h3>
-                <p>Vive con comodidad</p>
+
+                <h3>
+                    Departamentos
+                </h3>
+
+
+                <p>
+                    Vive con comodidad y seguridad
+                </p>
+
 
                 <span>
+
                     Ver propiedades
+
                     <i class="fa-solid fa-arrow-right"></i>
+
                 </span>
+
             </div>
 
 
-            <div class="category-card" onclick="seleccionarTipo('terreno')">
+
+            <!-- TERRENOS -->
+
+            <div class="category-card"
+                 onclick="seleccionarTipo('terreno')">
+
                 <div class="category-icon">
+
                     <i class="fa-solid fa-mountain-sun"></i>
+
                 </div>
 
-                <h3>Terrenos</h3>
-                <p>Construye tus proyectos</p>
+
+                <h3>
+                    Terrenos
+                </h3>
+
+
+                <p>
+                    Encuentra el lugar para tu próximo proyecto
+                </p>
+
 
                 <span>
-                    Ver propiedades
+
+                    Ver terrenos
+
                     <i class="fa-solid fa-arrow-right"></i>
+
                 </span>
+
             </div>
 
 
-            <div class="category-card" onclick="seleccionarTipo('oficina')">
+
+            <!-- PUBLICAR -->
+
+            <div class="category-card"
+                 onclick="irContacto()">
+
                 <div class="category-icon">
-                    <i class="fa-solid fa-briefcase"></i>
+
+                    <i class="fa-solid fa-bullhorn"></i>
+
                 </div>
 
-                <h3>Oficinas</h3>
-                <p>El espacio para tu negocio</p>
+
+                <h3>
+                    Publica tu propiedad
+                </h3>
+
+
+                <p>
+                    Vende tu terreno, casa o propiedad con nosotros
+                </p>
+
 
                 <span>
-                    Ver propiedades
+
+                    Contactarnos
+
                     <i class="fa-solid fa-arrow-right"></i>
+
                 </span>
+
             </div>
+
 
         </div>
+
     </div>
+
 </section>
 
 
-<!-- ================= PROPIEDADES ================= -->
 
-<section class="properties" id="propiedades">
+<!-- =========================================================
+     PROPIEDADES
+========================================================= -->
+
+<section class="properties"
+         id="propiedades">
 
     <div class="container">
+
 
         <div class="section-header">
 
             <div>
-                <span class="section-tag">PROPIEDADES</span>
-                <h2>Propiedades destacadas</h2>
+
+                <span class="section-tag">
+                    PROPIEDADES
+                </span>
+
+
+                <h2 class="properties-title">
+                    Propiedades destacadas
+                </h2>
+
             </div>
 
-            <button class="btn-outline" onclick="mostrarTodas()">
+
+            <button class="btn-outline"
+                    onclick="mostrarTodas()">
+
                 Ver todas
+
                 <i class="fa-solid fa-arrow-right"></i>
+
             </button>
 
         </div>
 
 
-        <div class="property-grid" id="propertyGrid">
+
+        <div class="property-grid"
+             id="propertyGrid">
 
 
-            <!-- ================= CASA 1 ================= -->
 
-            <article
-                class="property-card"
-                data-tipo="casa"
-                data-precio="185000"
-                data-ubicacion="cuenca">
+            <!-- CASA 1 -->
+
+            <article class="property-card"
+                     data-tipo="casa"
+                     data-precio="185000"
+                     data-ubicacion="cuenca">
+
 
                 <div class="property-image">
 
@@ -247,15 +487,21 @@
                         src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80"
                         alt="Casa moderna">
 
+
                     <span class="property-badge">
                         Venta
                     </span>
 
+
                     <button class="favorite">
+
                         <i class="fa-regular fa-heart"></i>
+
                     </button>
 
                 </div>
+
+
 
                 <div class="property-info">
 
@@ -263,14 +509,20 @@
                         CASA
                     </div>
 
+
                     <h3>
                         Casa moderna con jardín
                     </h3>
 
+
                     <p class="property-location">
+
                         <i class="fa-solid fa-location-dot"></i>
+
                         Cuenca, Ecuador
+
                     </p>
+
 
                     <div class="property-features">
 
@@ -279,10 +531,12 @@
                             3 habitaciones
                         </span>
 
+
                         <span>
                             <i class="fa-solid fa-bath"></i>
                             2 baños
                         </span>
+
 
                         <span>
                             <i class="fa-solid fa-ruler-combined"></i>
@@ -291,27 +545,36 @@
 
                     </div>
 
+
                     <div class="property-bottom">
 
-                        <strong>$185.000</strong>
+                        <strong>
+                            $185.000
+                        </strong>
 
-                        <button class="btn-view">
+
+                        <button class="btn-view"
+                                onclick="contactarPropiedad('Casa moderna con jardín')">
+
                             Ver propiedad
+
                         </button>
 
                     </div>
 
                 </div>
+
             </article>
 
 
-            <!-- ================= DEPARTAMENTO ================= -->
 
-            <article
-                class="property-card"
-                data-tipo="departamento"
-                data-precio="125000"
-                data-ubicacion="cuenca">
+            <!-- DEPARTAMENTO -->
+
+            <article class="property-card"
+                     data-tipo="departamento"
+                     data-precio="125000"
+                     data-ubicacion="cuenca">
+
 
                 <div class="property-image">
 
@@ -319,15 +582,20 @@
                         src="https://images.unsplash.com/photo-1502672023488-70e25813eb80?auto=format&fit=crop&w=900&q=80"
                         alt="Departamento moderno">
 
+
                     <span class="property-badge">
                         Venta
                     </span>
 
+
                     <button class="favorite">
+
                         <i class="fa-regular fa-heart"></i>
+
                     </button>
 
                 </div>
+
 
                 <div class="property-info">
 
@@ -335,14 +603,20 @@
                         DEPARTAMENTO
                     </div>
 
+
                     <h3>
                         Departamento moderno
                     </h3>
 
+
                     <p class="property-location">
+
                         <i class="fa-solid fa-location-dot"></i>
+
                         Cuenca, Ecuador
+
                     </p>
+
 
                     <div class="property-features">
 
@@ -351,10 +625,12 @@
                             2 habitaciones
                         </span>
 
+
                         <span>
                             <i class="fa-solid fa-bath"></i>
                             2 baños
                         </span>
+
 
                         <span>
                             <i class="fa-solid fa-ruler-combined"></i>
@@ -363,27 +639,36 @@
 
                     </div>
 
+
                     <div class="property-bottom">
 
-                        <strong>$125.000</strong>
+                        <strong>
+                            $125.000
+                        </strong>
 
-                        <button class="btn-view">
+
+                        <button class="btn-view"
+                                onclick="contactarPropiedad('Departamento moderno')">
+
                             Ver propiedad
+
                         </button>
 
                     </div>
 
                 </div>
+
             </article>
 
 
-            <!-- ================= CASA 2 ================= -->
 
-            <article
-                class="property-card"
-                data-tipo="casa"
-                data-precio="295000"
-                data-ubicacion="cuenca">
+            <!-- CASA 2 -->
+
+            <article class="property-card"
+                     data-tipo="casa"
+                     data-precio="295000"
+                     data-ubicacion="cuenca">
+
 
                 <div class="property-image">
 
@@ -391,15 +676,20 @@
                         src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80"
                         alt="Casa de lujo">
 
+
                     <span class="property-badge">
                         Destacada
                     </span>
 
+
                     <button class="favorite">
+
                         <i class="fa-regular fa-heart"></i>
+
                     </button>
 
                 </div>
+
 
                 <div class="property-info">
 
@@ -407,14 +697,20 @@
                         CASA
                     </div>
 
+
                     <h3>
                         Residencia de lujo
                     </h3>
 
+
                     <p class="property-location">
+
                         <i class="fa-solid fa-location-dot"></i>
+
                         Cuenca, Ecuador
+
                     </p>
+
 
                     <div class="property-features">
 
@@ -423,10 +719,12 @@
                             4 habitaciones
                         </span>
 
+
                         <span>
                             <i class="fa-solid fa-bath"></i>
                             3 baños
                         </span>
+
 
                         <span>
                             <i class="fa-solid fa-ruler-combined"></i>
@@ -435,27 +733,36 @@
 
                     </div>
 
+
                     <div class="property-bottom">
 
-                        <strong>$295.000</strong>
+                        <strong>
+                            $295.000
+                        </strong>
 
-                        <button class="btn-view">
+
+                        <button class="btn-view"
+                                onclick="contactarPropiedad('Residencia de lujo')">
+
                             Ver propiedad
+
                         </button>
 
                     </div>
 
                 </div>
+
             </article>
 
 
-            <!-- ================= TERRENO 1 ================= -->
 
-            <article
-                class="property-card"
-                data-tipo="terreno"
-                data-precio="95000"
-                data-ubicacion="cuenca">
+            <!-- TERRENO 1 -->
+
+            <article class="property-card"
+                     data-tipo="terreno"
+                     data-precio="95000"
+                     data-ubicacion="cuenca">
+
 
                 <div class="property-image">
 
@@ -463,15 +770,20 @@
                         src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80"
                         alt="Terreno en Cuenca">
 
+
                     <span class="property-badge">
                         Oportunidad
                     </span>
 
+
                     <button class="favorite">
+
                         <i class="fa-regular fa-heart"></i>
+
                     </button>
 
                 </div>
+
 
                 <div class="property-info">
 
@@ -479,14 +791,20 @@
                         TERRENO
                     </div>
 
+
                     <h3>
                         Terreno con excelente ubicación
                     </h3>
 
+
                     <p class="property-location">
+
                         <i class="fa-solid fa-location-dot"></i>
+
                         Cuenca, Ecuador
+
                     </p>
+
 
                     <div class="property-features">
 
@@ -495,6 +813,7 @@
                             500 m²
                         </span>
 
+
                         <span>
                             <i class="fa-solid fa-road"></i>
                             Acceso vial
@@ -502,27 +821,36 @@
 
                     </div>
 
+
                     <div class="property-bottom">
 
-                        <strong>$95.000</strong>
+                        <strong>
+                            $95.000
+                        </strong>
 
-                        <button class="btn-view">
+
+                        <button class="btn-view"
+                                onclick="contactarPropiedad('Terreno con excelente ubicación')">
+
                             Ver propiedad
+
                         </button>
 
                     </div>
 
                 </div>
+
             </article>
 
 
-            <!-- ================= TERRENO 2 - LA VICTORIA DEL PORTETE ================= -->
 
-            <article
-                class="property-card"
-                data-tipo="terreno"
-                data-precio="35000"
-                data-ubicacion="la victoria del portete">
+            <!-- TERRENO 2 -->
+
+            <article class="property-card"
+                     data-tipo="terreno"
+                     data-precio="35000"
+                     data-ubicacion="la victoria del portete">
+
 
                 <div class="property-image">
 
@@ -530,15 +858,20 @@
                         src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80"
                         alt="Terreno en La Victoria del Portete">
 
+
                     <span class="property-badge">
                         Oportunidad
                     </span>
 
+
                     <button class="favorite">
+
                         <i class="fa-regular fa-heart"></i>
+
                     </button>
 
                 </div>
+
 
                 <div class="property-info">
 
@@ -546,14 +879,20 @@
                         TERRENO
                     </div>
 
+
                     <h3>
                         Terreno en La Victoria del Portete
                     </h3>
 
+
                     <p class="property-location">
+
                         <i class="fa-solid fa-location-dot"></i>
+
                         La Victoria del Portete, Cuenca, Ecuador
+
                     </p>
+
 
                     <div class="property-features">
 
@@ -562,6 +901,7 @@
                             Excelente oportunidad
                         </span>
 
+
                         <span>
                             <i class="fa-solid fa-road"></i>
                             Acceso vial
@@ -569,25 +909,36 @@
 
                     </div>
 
+
                     <div class="property-bottom">
 
-                        <strong>$35.000</strong>
+                        <strong>
+                            $35.000
+                        </strong>
 
-                        <button class="btn-view">
+
+                        <button class="btn-view"
+                                onclick="contactarPropiedad('Terreno en La Victoria del Portete')">
+
                             Ver propiedad
+
                         </button>
 
                     </div>
 
                 </div>
+
             </article>
+
 
         </div>
 
 
+
         <!-- SIN RESULTADOS -->
 
-        <div id="noResults" class="no-results">
+        <div id="noResults"
+             class="no-results">
 
             <i class="fa-solid fa-house-circle-xmark"></i>
 
@@ -602,14 +953,556 @@
         </div>
 
     </div>
+
 </section>
 
 
-<!-- ================= NOSOTROS ================= -->
 
-<section class="about" id="nosotros">
+<!-- =========================================================
+     SEPARADOR DE SERVICIOS
+========================================================= -->
+
+<section class="projects-intro"
+         id="proyectos">
+
+    <div class="container">
+
+        <span class="section-tag">
+            PROYECTOS Y CONSTRUCCIÓN
+        </span>
+
+        <h2>
+            ¿Ya tienes un terreno?
+            <span>Nosotros lo convertimos en un proyecto.</span>
+        </h2>
+
+        <p>
+
+            Además de comercializar propiedades, desarrollamos
+            proyectos personalizados de arquitectura y construcción,
+            especialmente viviendas, cabañas y proyectos turísticos.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PROYECTOS / CABAÑAS
+========================================================= -->
+
+<section class="projects">
+
+    <div class="container">
+
+
+        <div class="section-header">
+
+            <div>
+
+                <span class="section-tag">
+                    PROYECTOS
+                </span>
+
+
+                <h2>
+                    Propuestas de construcción
+                </h2>
+
+            </div>
+
+
+            <p>
+
+                Diseñamos proyectos adaptados al terreno,
+                presupuesto y necesidades de cada cliente.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="project-grid">
+
+
+            <!-- CABAÑA MIRADOR -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?auto=format&fit=crop&w=1000&q=85"
+                        alt="Cabaña Mirador">
+
+
+                    <span>
+                        PROYECTO
+                    </span>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-type">
+                        CABAÑA
+                    </div>
+
+
+                    <h3>
+                        Cabaña Mirador
+                    </h3>
+
+
+                    <p>
+
+                        Diseño compacto y funcional pensado
+                        para aprovechar las vistas del paisaje
+                        y crear una experiencia de descanso.
+
+                    </p>
+
+
+                    <div class="project-data">
+
+                        <span>
+                            <i class="fa-solid fa-bed"></i>
+                            2 habitaciones
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-ruler-combined"></i>
+                            65 m²
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-mountain-sun"></i>
+                            Panorámica
+                        </span>
+
+                    </div>
+
+
+                    <a href="#contacto"
+                       class="project-link">
+
+                        Quiero un proyecto similar
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- CABAÑA BOSQUE -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1000&q=85"
+                        alt="Cabaña Bosque Premium">
+
+
+                    <span>
+                        PROYECTO DESTACADO
+                    </span>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-type">
+                        CABAÑA PREMIUM
+                    </div>
+
+
+                    <h3>
+                        Cabaña Bosque Premium
+                    </h3>
+
+
+                    <p>
+
+                        Una propuesta de mayor nivel para
+                        terrenos rodeados de naturaleza, ideal
+                        para vivienda, descanso o turismo.
+
+                    </p>
+
+
+                    <div class="project-data">
+
+                        <span>
+                            <i class="fa-solid fa-bed"></i>
+                            2 habitaciones
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-ruler-combined"></i>
+                            85 m²
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-tree"></i>
+                            Naturaleza
+                        </span>
+
+                    </div>
+
+
+                    <a href="#contacto"
+                       class="project-link">
+
+                        Quiero un proyecto similar
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- CABAÑA PANORAMICA -->
+
+            <article class="project-card">
+
+                <div class="project-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1000&q=85"
+                        alt="Cabaña Panorámica">
+
+
+                    <span>
+                        PROYECTO
+                    </span>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-type">
+                        CABAÑA PANORÁMICA
+                    </div>
+
+
+                    <h3>
+                        Cabaña Panorámica
+                    </h3>
+
+
+                    <p>
+
+                        Propuesta contemporánea con grandes
+                        superficies acristaladas para conectar
+                        los espacios interiores con el paisaje.
+
+                    </p>
+
+
+                    <div class="project-data">
+
+                        <span>
+                            <i class="fa-solid fa-bed"></i>
+                            2 habitaciones
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-ruler-combined"></i>
+                            95 m²
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-window-maximize"></i>
+                            Grandes vistas
+                        </span>
+
+                    </div>
+
+
+                    <a href="#contacto"
+                       class="project-link">
+
+                        Quiero un proyecto similar
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SERVICIOS DE CONSTRUCCIÓN
+========================================================= -->
+
+<section class="construction"
+         id="construccion">
+
+    <div class="container">
+
+
+        <div class="section-header construction-header">
+
+            <div>
+
+                <span class="section-tag">
+                    SERVICIOS
+                </span>
+
+
+                <h2>
+                    Del diseño a la construcción
+                </h2>
+
+            </div>
+
+
+            <p>
+
+                Te acompañamos durante todo el proceso,
+                desde la idea inicial hasta la ejecución del proyecto.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="construction-grid">
+
+
+            <!-- DISEÑO -->
+
+            <div class="construction-card">
+
+                <div class="construction-icon">
+
+                    <i class="fa-solid fa-compass-drafting"></i>
+
+                </div>
+
+
+                <h3>
+                    Diseño arquitectónico
+                </h3>
+
+
+                <p>
+
+                    Diseñamos tu proyecto de acuerdo con
+                    tus necesidades, presupuesto y características
+                    del terreno.
+
+                </p>
+
+
+                <a href="#contacto">
+
+                    Solicitar información
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- ESTRUCTURA -->
+
+            <div class="construction-card">
+
+                <div class="construction-icon">
+
+                    <i class="fa-solid fa-building-columns"></i>
+
+                </div>
+
+
+                <h3>
+                    Diseño estructural
+                </h3>
+
+
+                <p>
+
+                    Desarrollamos soluciones estructurales
+                    seguras y eficientes para viviendas
+                    y proyectos de diferentes escalas.
+
+                </p>
+
+
+                <a href="#contacto">
+
+                    Solicitar información
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- CONSTRUCCION -->
+
+            <div class="construction-card">
+
+                <div class="construction-icon">
+
+                    <i class="fa-solid fa-helmet-safety"></i>
+
+                </div>
+
+
+                <h3>
+                    Construcción
+                </h3>
+
+
+                <p>
+
+                    Ejecutamos proyectos de vivienda,
+                    cabañas y diferentes tipos de edificaciones
+                    de acuerdo con los planos y especificaciones.
+
+                </p>
+
+
+                <a href="#contacto">
+
+                    Solicitar cotización
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- PRESUPUESTO -->
+
+            <div class="construction-card">
+
+                <div class="construction-icon">
+
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+
+                </div>
+
+
+                <h3>
+                    Presupuesto y planificación
+                </h3>
+
+
+                <p>
+
+                    Analizamos tu proyecto y elaboramos
+                    una estimación de costos según las
+                    características requeridas.
+
+                </p>
+
+
+                <a href="#contacto">
+
+                    Solicitar cotización
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CTA CONSTRUCCION -->
+
+        <div class="construction-cta">
+
+
+            <div>
+
+                <span class="section-tag">
+                    ¿TIENES UN TERRENO?
+                </span>
+
+
+                <h3>
+                    Nosotros podemos convertirlo
+                    en tu próximo proyecto.
+                </h3>
+
+
+                <p>
+
+                    Cuéntanos qué quieres construir,
+                    dónde está ubicado tu terreno y
+                    aproximadamente qué superficie deseas.
+
+                </p>
+
+            </div>
+
+
+            <a class="btn-construction"
+               href="https://wa.me/593988486874?text=Hola,%20quiero%20solicitar%20una%20cotizaci%C3%B3n%20para%20un%20proyecto%20de%20construcci%C3%B3n."
+               target="_blank">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+                Solicitar cotización
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     NOSOTROS
+========================================================= -->
+
+<section class="about"
+         id="nosotros">
 
     <div class="container about-grid">
+
 
         <div class="about-image">
 
@@ -617,12 +1510,22 @@
                 src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1000&q=80"
                 alt="Proyecto inmobiliario">
 
+
             <div class="experience">
-                <strong>10+</strong>
-                <span>años de experiencia</span>
+
+                <strong>
+                    10+
+                </strong>
+
+
+                <span>
+                    años de experiencia
+                </span>
+
             </div>
 
         </div>
+
 
 
         <div class="about-content">
@@ -631,118 +1534,198 @@
                 SOBRE NOSOTROS
             </span>
 
+
             <h2>
+
                 Construimos espacios,
                 encontramos hogares
+
             </h2>
 
+
             <p>
+
                 INMOBILIARIA Y CONSTRUCTORA es una empresa
                 dedicada al desarrollo, comercialización y
                 gestión de propiedades.
+
             </p>
 
+
             <p>
-                Nuestro objetivo es brindar soluciones
-                inmobiliarias y constructivas de calidad,
-                acompañando a nuestros clientes durante todo
-                el proceso.
+
+                También ofrecemos servicios de diseño,
+                planificación, presupuestación y construcción
+                de proyectos inmobiliarios y turísticos.
+
             </p>
+
 
             <div class="about-stats">
 
                 <div>
-                    <strong>500+</strong>
-                    <span>Propiedades</span>
+
+                    <strong>
+                        500+
+                    </strong>
+
+                    <span>
+                        Propiedades
+                    </span>
+
                 </div>
 
-                <div>
-                    <strong>1.200+</strong>
-                    <span>Clientes</span>
-                </div>
 
                 <div>
-                    <strong>10+</strong>
-                    <span>Años</span>
+
+                    <strong>
+                        1.200+
+                    </strong>
+
+                    <span>
+                        Clientes
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        10+
+                    </strong>
+
+                    <span>
+                        Años
+                    </span>
+
                 </div>
 
             </div>
 
-            <button class="btn-primary" onclick="irContacto()">
+
+            <button class="btn-primary"
+                    onclick="irContacto()">
+
                 Conoce más
+
                 <i class="fa-solid fa-arrow-right"></i>
+
             </button>
 
         </div>
 
     </div>
+
 </section>
 
 
-<!-- ================= CONTACTO ================= -->
 
-<section class="contact" id="contacto">
+<!-- =========================================================
+     CONTACTO
+========================================================= -->
+
+<section class="contact"
+         id="contacto">
 
     <div class="container contact-box">
+
 
         <div>
 
             <span class="section-tag">
-                ¿TIENES UNA PROPIEDAD?
+                HABLEMOS DE TU PROYECTO
             </span>
 
+
             <h2>
-                ¿Quieres vender o alquilar?
+                ¿Quieres comprar, vender o construir?
             </h2>
 
+
             <p>
-                Publica tu propiedad con nosotros y
-                encuentra compradores rápidamente.
+
+                Escríbenos y cuéntanos qué necesitas.
+                Podemos ayudarte a encontrar una propiedad,
+                publicar tu terreno o desarrollar tu proyecto.
+
             </p>
 
         </div>
 
-        <button class="btn-white" onclick="irWhatsApp()">
-            Contactar ahora
-            <i class="fa-solid fa-arrow-right"></i>
-        </button>
+
+        <a class="btn-white"
+           href="https://wa.me/593988486874?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20sus%20propiedades%20y%20servicios."
+           target="_blank">
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            Contactar por WhatsApp
+
+        </a>
 
     </div>
 
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
 
 <footer class="footer">
 
     <div class="container footer-grid">
 
+
+        <!-- EMPRESA -->
+
         <div>
 
-            <a href="#inicio" class="logo footer-logo">
+            <a href="#inicio"
+               class="logo footer-logo">
+
                 <i class="fa-solid fa-building"></i>
+
                 INMOBILIARIA Y CONSTRUCTORA
+
             </a>
 
+
             <p>
-                Construimos espacios, encontramos hogares.
+
+                Construimos espacios,
+                encontramos hogares.
+
             </p>
+
 
             <div class="social">
 
-                <a href="#" aria-label="Facebook">
+
+                <a href="#"
+                   aria-label="Facebook">
+
                     <i class="fa-brands fa-facebook-f"></i>
+
                 </a>
 
-                <a href="#" aria-label="Instagram">
+
+                <a href="#"
+                   aria-label="Instagram">
+
                     <i class="fa-brands fa-instagram"></i>
+
                 </a>
+
 
                 <a href="https://wa.me/593988486874"
                    target="_blank"
                    aria-label="WhatsApp">
+
                     <i class="fa-brands fa-whatsapp"></i>
+
                 </a>
 
             </div>
@@ -750,52 +1733,113 @@
         </div>
 
 
+
+        <!-- PROPIEDADES -->
+
         <div>
 
-            <h4>Propiedades</h4>
+            <h4>
+                Propiedades
+            </h4>
 
-            <a href="#propiedades">Casas</a>
-            <a href="#propiedades">Departamentos</a>
-            <a href="#propiedades">Terrenos</a>
-            <a href="#propiedades">Oficinas</a>
+
+            <a href="#propiedades">
+                Casas
+            </a>
+
+
+            <a href="#propiedades">
+                Departamentos
+            </a>
+
+
+            <a href="#propiedades">
+                Terrenos
+            </a>
+
+
+            <a href="#propiedades">
+                Publicar propiedad
+            </a>
 
         </div>
 
 
+
+        <!-- PROYECTOS -->
+
         <div>
 
-            <h4>Empresa</h4>
+            <h4>
+                Proyectos
+            </h4>
 
-            <a href="#nosotros">Nosotros</a>
-            <a href="#contacto">Agentes</a>
-            <a href="#contacto">Contacto</a>
-            <a href="#contacto">Preguntas frecuentes</a>
+
+            <a href="#proyectos">
+                Cabañas
+            </a>
+
+
+            <a href="#construccion">
+                Diseño arquitectónico
+            </a>
+
+
+            <a href="#construccion">
+                Diseño estructural
+            </a>
+
+
+            <a href="#construccion">
+                Construcción
+            </a>
 
         </div>
 
 
+
+        <!-- CONTACTO -->
+
         <div>
 
-            <h4>Contacto</h4>
+            <h4>
+                Contacto
+            </h4>
+
 
             <p>
+
                 <i class="fa-solid fa-location-dot"></i>
+
                 Cuenca, Ecuador
+
             </p>
 
+
             <p>
+
                 <i class="fa-solid fa-phone"></i>
+
                 +593 98 848 6874
+
             </p>
 
+
             <p>
+
                 <i class="fa-solid fa-envelope"></i>
+
                 briari2108@gmail.com
+
             </p>
 
+
             <p>
+
                 <i class="fa-solid fa-envelope"></i>
+
                 briari21@hotmail.com
+
             </p>
 
         </div>
@@ -803,11 +1847,14 @@
     </div>
 
 
+
     <div class="footer-bottom">
 
         <p>
+
             © 2026 INMOBILIARIA Y CONSTRUCTORA.
             Todos los derechos reservados.
+
         </p>
 
     </div>
@@ -815,22 +1862,34 @@
 </footer>
 
 
-<!-- ================= JAVASCRIPT ================= -->
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
 
 <script>
 
+
 function buscarPropiedades() {
 
-    const tipo = document.getElementById("tipo").value;
-    const ubicacion = document.getElementById("ubicacion").value
+    const tipo =
+        document.getElementById("tipo").value;
+
+    const ubicacion =
+        document.getElementById("ubicacion")
+        .value
         .toLowerCase()
         .trim();
 
     const precioMaximo =
-        Number(document.getElementById("precio").value);
+        Number(
+            document.getElementById("precio").value
+        );
 
     const propiedades =
-        document.querySelectorAll(".property-card");
+        document.querySelectorAll(
+            ".property-card"
+        );
 
     let resultados = 0;
 
@@ -840,10 +1899,13 @@ function buscarPropiedades() {
             propiedad.dataset.tipo;
 
         const precio =
-            Number(propiedad.dataset.precio);
+            Number(
+                propiedad.dataset.precio
+            );
 
         const ubicacionPropiedad =
-            propiedad.dataset.ubicacion.toLowerCase();
+            propiedad.dataset.ubicacion
+            .toLowerCase();
 
         const coincideTipo =
             tipo === "todos" ||
@@ -854,9 +1916,9 @@ function buscarPropiedades() {
 
         const coincideUbicacion =
             ubicacion === "" ||
-            ubicacionPropiedad.includes(ubicacion) ||
-            ubicacion.includes("cuenca") &&
-            ubicacionPropiedad.includes("cuenca");
+            ubicacionPropiedad.includes(
+                ubicacion
+            );
 
         if (
             coincideTipo &&
@@ -865,6 +1927,7 @@ function buscarPropiedades() {
         ) {
 
             propiedad.style.display = "block";
+
             resultados++;
 
         } else {
@@ -875,114 +1938,189 @@ function buscarPropiedades() {
 
     });
 
-    document.getElementById("noResults").style.display =
-        resultados === 0 ? "block" : "none";
+    document.getElementById(
+        "noResults"
+    ).style.display =
+        resultados === 0
+            ? "block"
+            : "none";
 
-    document.getElementById("propiedades")
-        .scrollIntoView({
-            behavior: "smooth"
-        });
+    document.getElementById(
+        "propiedades"
+    ).scrollIntoView({
+        behavior: "smooth"
+    });
+
 }
+
 
 
 function seleccionarTipo(tipo) {
 
-    document.getElementById("tipo").value = tipo;
+    document.getElementById(
+        "tipo"
+    ).value = tipo;
 
-    document.getElementById("ubicacion").value = "";
+    document.getElementById(
+        "ubicacion"
+    ).value = "";
 
-    document.getElementById("precio").value = "9999999";
+    document.getElementById(
+        "precio"
+    ).value = "9999999";
 
     buscarPropiedades();
+
 }
+
 
 
 function mostrarTodas() {
 
-    document.getElementById("tipo").value = "todos";
+    document.getElementById(
+        "tipo"
+    ).value = "todos";
 
-    document.getElementById("ubicacion").value = "";
+    document.getElementById(
+        "ubicacion"
+    ).value = "";
 
-    document.getElementById("precio").value = "9999999";
+    document.getElementById(
+        "precio"
+    ).value = "9999999";
 
-    document.querySelectorAll(".property-card")
-        .forEach(propiedad => {
-            propiedad.style.display = "block";
-        });
+    document.querySelectorAll(
+        ".property-card"
+    ).forEach(propiedad => {
 
-    document.getElementById("noResults").style.display = "none";
+        propiedad.style.display = "block";
+
+    });
+
+    document.getElementById(
+        "noResults"
+    ).style.display = "none";
+
+    document.getElementById(
+        "propiedades"
+    ).scrollIntoView({
+        behavior: "smooth"
+    });
 
 }
+
 
 
 function irContacto() {
 
-    document.getElementById("contacto")
-        .scrollIntoView({
-            behavior: "smooth"
-        });
+    document.getElementById(
+        "contacto"
+    ).scrollIntoView({
+
+        behavior: "smooth"
+
+    });
 
 }
 
 
-function irWhatsApp() {
+
+function contactarPropiedad(nombre) {
+
+    const mensaje =
+        "Hola, estoy interesado en la propiedad: " +
+        nombre +
+        ". Me gustaría obtener más información.";
+
+    const url =
+        "https://wa.me/593988486874?text=" +
+        encodeURIComponent(mensaje);
 
     window.open(
-        "https://wa.me/593988486874?text=Hola,%20estoy%20interesado%20en%20una%20propiedad.",
+        url,
         "_blank"
     );
 
 }
 
 
-/* FAVORITOS */
 
-document.querySelectorAll(".favorite")
-    .forEach(boton => {
+document.querySelectorAll(
+    ".favorite"
+).forEach(boton => {
 
-        boton.addEventListener("click", function() {
+    boton.addEventListener(
+        "click",
+        function(event) {
+
+            event.stopPropagation();
 
             const icono =
                 this.querySelector("i");
 
-            icono.classList.toggle("fa-regular");
-            icono.classList.toggle("fa-solid");
+            icono.classList.toggle(
+                "fa-regular"
+            );
 
-        });
+            icono.classList.toggle(
+                "fa-solid"
+            );
 
-    });
+            this.classList.toggle(
+                "favorite-active"
+            );
 
-
-/* MENÚ MÓVIL */
-
-const menuMobile =
-    document.getElementById("menuMobile");
-
-const menu =
-    document.querySelector(".menu");
-
-menuMobile.addEventListener("click", () => {
-
-    menu.classList.toggle("active");
+        }
+    );
 
 });
 
 
-/* CERRAR MENÚ AL HACER CLICK */
 
-document.querySelectorAll(".menu a")
-    .forEach(enlace => {
+const menuMobile =
+    document.getElementById(
+        "menuMobile"
+    );
 
-        enlace.addEventListener("click", () => {
+const menu =
+    document.querySelector(
+        ".menu"
+    );
 
-            menu.classList.remove("active");
+menuMobile.addEventListener(
+    "click",
+    () => {
 
-        });
+        menu.classList.toggle(
+            "active"
+        );
 
-    });
+    }
+);
+
+
+
+document.querySelectorAll(
+    ".menu a"
+).forEach(enlace => {
+
+    enlace.addEventListener(
+        "click",
+        () => {
+
+            menu.classList.remove(
+                "active"
+            );
+
+        }
+    );
+
+});
+
 
 </script>
 
+
 </body>
+
 </html>
-```
