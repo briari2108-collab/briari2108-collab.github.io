@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,781 +9,980 @@
 
     <link rel="stylesheet" href="styles.css">
 
-    <!-- Iconos -->
+    <!-- Font Awesome -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- ================= HEADER ================= -->
+<!-- ================= HEADER ================= -->
 
-    <header class="header">
+<header class="header">
+    <div class="container nav">
 
-        <div class="container nav">
+        <a href="#inicio" class="logo">
+            <i class="fa-solid fa-building"></i>
+            INMOBILIARIA Y CONSTRUCTORA
+        </a>
 
-            <a href="#" class="logo">
-                <i class="fa-solid fa-building"></i>
-                INMOBILIARIA Y CONSTRUCTORA
-            </a>
+        <nav class="menu">
+            <a href="#inicio">Inicio</a>
+            <a href="#propiedades">Propiedades</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
 
-            <nav class="menu">
-                <a href="#inicio">Inicio</a>
-                <a href="#propiedades">Propiedades</a>
-                <a href="#nosotros">Nosotros</a>
-                <a href="#contacto">Contacto</a>
-            </nav>
+        <button class="btn-publicar" onclick="irContacto()">
+            <i class="fa-solid fa-plus"></i>
+            Publicar propiedad
+        </button>
 
-            <button class="btn-publicar">
-                <i class="fa-solid fa-plus"></i>
-                Publicar propiedad
+        <button class="menu-mobile" id="menuMobile">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="inicio">
+
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+
+        <span class="hero-tag">
+            <i class="fa-solid fa-location-dot"></i>
+            INMOBILIARIA Y CONSTRUCTORA
+        </span>
+
+        <h1>
+            Encuentra el lugar
+            <br>
+            <span>perfecto para ti</span>
+        </h1>
+
+        <p>
+            Encuentra casas, departamentos, terrenos y oficinas
+            en las mejores ubicaciones.
+        </p>
+
+        <div class="search-box">
+
+            <div class="search-item">
+                <label>¿Qué buscas?</label>
+
+                <select id="tipo">
+                    <option value="todos">Todas las propiedades</option>
+                    <option value="casa">Casas</option>
+                    <option value="departamento">Departamentos</option>
+                    <option value="terreno">Terrenos</option>
+                    <option value="oficina">Oficinas</option>
+                </select>
+            </div>
+
+            <div class="search-item">
+
+                <label>Ubicación</label>
+
+                <div class="input-location">
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <input
+                        type="text"
+                        id="ubicacion"
+                        placeholder="Ej. Cuenca, Ecuador">
+                </div>
+
+            </div>
+
+            <div class="search-item">
+
+                <label>Precio máximo</label>
+
+                <select id="precio">
+                    <option value="9999999">Sin límite</option>
+                    <option value="100000">$100.000</option>
+                    <option value="200000">$200.000</option>
+                    <option value="300000">$300.000</option>
+                    <option value="500000">$500.000</option>
+                </select>
+
+            </div>
+
+            <button class="btn-search" onclick="buscarPropiedades()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Buscar
             </button>
 
-            <button class="menu-mobile" id="menuMobile">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-
         </div>
 
-    </header>
+    </div>
+</section>
 
 
-    <!-- ================= HERO ================= -->
+<!-- ================= CATEGORIAS ================= -->
 
-    <section class="hero" id="inicio">
+<section class="categories">
 
-        <div class="hero-overlay"></div>
+    <div class="container">
 
-        <div class="container hero-content">
-
-            <span class="hero-tag">
-                <i class="fa-solid fa-location-dot"></i>
-                INMOBILIARIA Y CONSTRUCTORA
-            </span>
-
-            <h1>
-                Encuentra el lugar
-                <br>
-                <span>perfecto para ti</span>
-            </h1>
-
-            <p>
-                Encuentra casas, departamentos, terrenos y oficinas
-                en las mejores ubicaciones.
-            </p>
-
-            <!-- BUSCADOR -->
-
-            <div class="search-box">
-
-                <div class="search-item">
-
-                    <label>¿Qué buscas?</label>
-
-                    <select id="tipo">
-                        <option value="todos">Todas las propiedades</option>
-                        <option value="casa">Casas</option>
-                        <option value="departamento">Departamentos</option>
-                        <option value="terreno">Terrenos</option>
-                        <option value="oficina">Oficinas</option>
-                    </select>
-
-                </div>
-
-
-                <div class="search-item">
-
-                    <label>Ubicación</label>
-
-                    <div class="input-location">
-                        <i class="fa-solid fa-location-dot"></i>
-
-                        <input
-                            type="text"
-                            id="ubicacion"
-                            placeholder="Ej. Cuenca, Ecuador">
-                    </div>
-
-                </div>
-
-
-                <div class="search-item">
-
-                    <label>Precio máximo</label>
-
-                    <select id="precio">
-                        <option value="9999999">Sin límite</option>
-                        <option value="100000">$100.000</option>
-                        <option value="200000">$200.000</option>
-                        <option value="300000">$300.000</option>
-                        <option value="500000">$500.000</option>
-                    </select>
-
-                </div>
-
-
-                <button class="btn-search" onclick="buscarPropiedades()">
-
-                    <i class="fa-solid fa-magnifying-glass"></i>
-
-                    Buscar
-
-                </button>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= CATEGORIAS ================= -->
-
-    <section class="categories">
-
-        <div class="container">
-
-            <div class="section-header">
-
-                <div>
-                    <span class="section-tag">EXPLORA</span>
-
-                    <h2>
-                        ¿Qué estás buscando?
-                    </h2>
-                </div>
-
-                <p>
-                    Encuentra la propiedad que se adapte
-                    perfectamente a tus necesidades.
-                </p>
-
-            </div>
-
-
-            <div class="category-grid">
-
-                <div class="category-card" onclick="seleccionarTipo('casa')">
-
-                    <div class="category-icon">
-                        <i class="fa-solid fa-house"></i>
-                    </div>
-
-                    <h3>Casas</h3>
-
-                    <p>Encuentra tu casa ideal</p>
-
-                    <span>
-                        Ver propiedades
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </span>
-
-                </div>
-
-
-                <div class="category-card" onclick="seleccionarTipo('departamento')">
-
-                    <div class="category-icon">
-                        <i class="fa-solid fa-building"></i>
-                    </div>
-
-                    <h3>Departamentos</h3>
-
-                    <p>Vive con comodidad</p>
-
-                    <span>
-                        Ver propiedades
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </span>
-
-                </div>
-
-
-                <div class="category-card" onclick="seleccionarTipo('terreno')">
-
-                    <div class="category-icon">
-                        <i class="fa-solid fa-mountain-sun"></i>
-                    </div>
-
-                    <h3>Terrenos</h3>
-
-                    <p>Construye tus proyectos</p>
-
-                    <span>
-                        Ver propiedades
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </span>
-
-                </div>
-
-
-                <div class="category-card" onclick="seleccionarTipo('oficina')">
-
-                    <div class="category-icon">
-                        <i class="fa-solid fa-briefcase"></i>
-                    </div>
-
-                    <h3>Oficinas</h3>
-
-                    <p>El espacio para tu negocio</p>
-
-                    <span>
-                        Ver propiedades
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= PROPIEDADES ================= -->
-
-    <section class="properties" id="propiedades">
-
-        <div class="container">
-
-            <div class="section-header">
-
-                <div>
-                    <span class="section-tag">PROPIEDADES</span>
-
-                    <h2>
-                        Propiedades destacadas
-                    </h2>
-                </div>
-
-                <button class="btn-outline">
-                    Ver todas
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
-
-            </div>
-
-
-            <div class="property-grid" id="propertyGrid">
-
-                <!-- PROPIEDAD 1 -->
-
-                <article
-                    class="property-card"
-                    data-tipo="casa"
-                    data-precio="185000"
-                    data-ubicacion="cuenca">
-
-                    <div class="property-image">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80"
-                            alt="Casa moderna">
-
-                        <span class="property-badge">
-                            Venta
-                        </span>
-
-                        <button class="favorite">
-                            <i class="fa-regular fa-heart"></i>
-                        </button>
-
-                    </div>
-
-                    <div class="property-info">
-
-                        <div class="property-type">
-                            CASA
-                        </div>
-
-                        <h3>
-                            Casa moderna con jardín
-                        </h3>
-
-                        <p class="property-location">
-                            <i class="fa-solid fa-location-dot"></i>
-                            Cuenca, Ecuador
-                        </p>
-
-                        <div class="property-features">
-
-                            <span>
-                                <i class="fa-solid fa-bed"></i>
-                                3 habitaciones
-                            </span>
-
-                            <span>
-                                <i class="fa-solid fa-bath"></i>
-                                2 baños
-                            </span>
-
-                            <span>
-                                <i class="fa-solid fa-ruler-combined"></i>
-                                180 m²
-                            </span>
-
-                        </div>
-
-                        <div class="property-bottom">
-
-                            <strong>
-                                $185.000
-                            </strong>
-
-                            <button class="btn-view">
-                                Ver propiedad
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- PROPIEDAD 2 -->
-
-                <article
-                    class="property-card"
-                    data-tipo="departamento"
-                    data-precio="125000"
-                    data-ubicacion="cuenca">
-
-                    <div class="property-image">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1502672023488-70e25813eb80?auto=format&fit=crop&w=900&q=80"
-                            alt="Departamento moderno">
-
-                        <span class="property-badge">
-                            Venta
-                        </span>
-
-                        <button class="favorite">
-                            <i class="fa-regular fa-heart"></i>
-                        </button>
-
-                    </div>
-
-                    <div class="property-info">
-
-                        <div class="property-type">
-                            DEPARTAMENTO
-                        </div>
-
-                        <h3>
-                            Departamento moderno
-                        </h3>
-
-                        <p class="property-location">
-                            <i class="fa-solid fa-location-dot"></i>
-                            Cuenca, Ecuador
-                        </p>
-
-                        <div class="property-features">
-
-                            <span>
-                                <i class="fa-solid fa-bed"></i>
-                                2 habitaciones
-                            </span>
-
-                            <span>
-                                <i class="fa-solid fa-bath"></i>
-                                2 baños
-                            </span>
-
-                            <span>
-                                <i class="fa-solid fa-ruler-combined"></i>
-                                110 m²
-                            </span>
-
-                        </div>
-
-                        <div class="property-bottom">
-
-                            <strong>
-                                $125.000
-                            </strong>
-
-                            <button class="btn-view">
-                                Ver propiedad
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- PROPIEDAD 3 -->
-
-                <article
-                    class="property-card"
-                    data-tipo="casa"
-                    data-precio="295000"
-                    data-ubicacion="cuenca">
-
-                    <div class="property-image">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80"
-                            alt="Casa de lujo">
-
-                        <span class="property-badge">
-                            Destacada
-                        </span>
-
-                        <button class="favorite">
-                            <i class="fa-regular fa-heart"></i>
-                        </button>
-
-                    </div>
-
-                    <div class="property-info">
-
-                        <div class="property-type">
-                            CASA
-                        </div>
-
-                        <h3>
-                            Residencia de lujo
-                        </h3>
-
-                        <p class="property-location">
-                            <i class="fa-solid fa-location-dot"></i>
-                            Cuenca, Ecuador
-                        </p>
-
-                        <div class="property-features">
-
-                            <span>
-                                <i class="fa-solid fa-bed"></i>
-                                4 habitaciones
-                            </span>
-
-                            <span>
-                                <i class="fa-solid fa-bath"></i>
-                                3 baños
-                            </span>
-
-                            <span>
-                                <i class="fa-solid fa-ruler-combined"></i>
-                                280 m²
-                            </span>
-
-                        </div>
-
-                        <div class="property-bottom">
-
-                            <strong>
-                                $295.000
-                            </strong>
-
-                            <button class="btn-view">
-                                Ver propiedad
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- PROPIEDAD 4 -->
-
-                <article
-                    class="property-card"
-                    data-tipo="terreno"
-                    data-precio="95000"
-                    data-ubicacion="cuenca">
-
-                    <div class="property-image">
-
-                        <img
-                            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80"
-                            alt="Terreno">
-
-                        <span class="property-badge">
-                            Oportunidad
-                        </span>
-
-                        <button class="favorite">
-                            <i class="fa-regular fa-heart"></i>
-                        </button>
-
-                    </div>
-
-                    <div class="property-info">
-
-                        <div class="property-type">
-                            TERRENO
-                        </div>
-
-                        <h3>
-                            Terreno con excelente ubicación
-                        </h3>
-
-                        <p class="property-location">
-                            <i class="fa-solid fa-location-dot"></i>
-                            Cuenca, Ecuador
-                        </p>
-
-                        <div class="property-features">
-
-                            <span>
-                                <i class="fa-solid fa-ruler-combined"></i>
-                                500 m²
-                            </span>
-
-                            <span>
-                                <i class="fa-solid fa-road"></i>
-                                Acceso vial
-                            </span>
-
-                        </div>
-
-                        <div class="property-bottom">
-
-                            <strong>
-                                $95.000
-                            </strong>
-
-                            <button class="btn-view">
-                                Ver propiedad
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-            <div id="noResults" class="no-results">
-                <i class="fa-solid fa-house-circle-xmark"></i>
-                <h3>No encontramos propiedades</h3>
-                <p>Prueba cambiando los filtros de búsqueda.</p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= NOSOTROS ================= -->
-
-    <section class="about" id="nosotros">
-
-        <div class="container about-grid">
-
-            <div class="about-image">
-
-                <img
-                    src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1000&q=80"
-                    alt="Proyecto inmobiliario">
-
-                <div class="experience">
-
-                    <strong>10+</strong>
-
-                    <span>
-                        años de experiencia
-                    </span>
-
-                </div>
-
-            </div>
-
-
-            <div class="about-content">
-
-                <span class="section-tag">
-                    SOBRE NOSOTROS
-                </span>
-
-                <h2>
-                    Construimos espacios,
-                    encontramos hogares
-                </h2>
-
-                <p>
-                    INMOBILIARIA Y CONSTRUCTORA es una empresa
-                    dedicada al desarrollo, comercialización y
-                    gestión de propiedades.
-                </p>
-
-                <p>
-                    Nuestro objetivo es brindar soluciones
-                    inmobiliarias y constructivas de calidad,
-                    acompañando a nuestros clientes durante todo
-                    el proceso.
-                </p>
-
-                <div class="about-stats">
-
-                    <div>
-                        <strong>500+</strong>
-                        <span>Propiedades</span>
-                    </div>
-
-                    <div>
-                        <strong>1.200+</strong>
-                        <span>Clientes</span>
-                    </div>
-
-                    <div>
-                        <strong>10+</strong>
-                        <span>Años</span>
-                    </div>
-
-                </div>
-
-                <button class="btn-primary">
-                    Conoce más
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= CONTACTO ================= -->
-
-    <section class="contact" id="contacto">
-
-        <div class="container contact-box">
+        <div class="section-header">
 
             <div>
-
-                <span class="section-tag">
-                    ¿TIENES UNA PROPIEDAD?
-                </span>
-
-                <h2>
-                    ¿Quieres vender o alquilar?
-                </h2>
-
-                <p>
-                    Publica tu propiedad con nosotros y
-                    encuentra compradores rápidamente.
-                </p>
-
+                <span class="section-tag">EXPLORA</span>
+                <h2>¿Qué estás buscando?</h2>
             </div>
 
-            <button class="btn-white">
-                Contactar ahora
+            <p>
+                Encuentra la propiedad que se adapte
+                perfectamente a tus necesidades.
+            </p>
+
+        </div>
+
+        <div class="category-grid">
+
+            <div class="category-card" onclick="seleccionarTipo('casa')">
+                <div class="category-icon">
+                    <i class="fa-solid fa-house"></i>
+                </div>
+
+                <h3>Casas</h3>
+                <p>Encuentra tu casa ideal</p>
+
+                <span>
+                    Ver propiedades
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+            </div>
+
+
+            <div class="category-card" onclick="seleccionarTipo('departamento')">
+                <div class="category-icon">
+                    <i class="fa-solid fa-building"></i>
+                </div>
+
+                <h3>Departamentos</h3>
+                <p>Vive con comodidad</p>
+
+                <span>
+                    Ver propiedades
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+            </div>
+
+
+            <div class="category-card" onclick="seleccionarTipo('terreno')">
+                <div class="category-icon">
+                    <i class="fa-solid fa-mountain-sun"></i>
+                </div>
+
+                <h3>Terrenos</h3>
+                <p>Construye tus proyectos</p>
+
+                <span>
+                    Ver propiedades
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+            </div>
+
+
+            <div class="category-card" onclick="seleccionarTipo('oficina')">
+                <div class="category-icon">
+                    <i class="fa-solid fa-briefcase"></i>
+                </div>
+
+                <h3>Oficinas</h3>
+                <p>El espacio para tu negocio</p>
+
+                <span>
+                    Ver propiedades
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= PROPIEDADES ================= -->
+
+<section class="properties" id="propiedades">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div>
+                <span class="section-tag">PROPIEDADES</span>
+                <h2>Propiedades destacadas</h2>
+            </div>
+
+            <button class="btn-outline" onclick="mostrarTodas()">
+                Ver todas
                 <i class="fa-solid fa-arrow-right"></i>
             </button>
 
         </div>
 
-    </section>
+
+        <div class="property-grid" id="propertyGrid">
 
 
-    <!-- ================= FOOTER ================= -->
+            <!-- ================= CASA 1 ================= -->
 
-    <footer class="footer">
+            <article
+                class="property-card"
+                data-tipo="casa"
+                data-precio="185000"
+                data-ubicacion="cuenca">
 
-        <div class="container footer-grid">
+                <div class="property-image">
 
-            <div>
+                    <img
+                        src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80"
+                        alt="Casa moderna">
 
-                <a href="#" class="logo footer-logo">
-                    <i class="fa-solid fa-building"></i>
-                    INMOBILIARIA Y CONSTRUCTORA
-                </a>
+                    <span class="property-badge">
+                        Venta
+                    </span>
 
-                <p>
-                    Construimos espacios, encontramos hogares.
-                </p>
-
-                <div class="social">
-
-                    <a href="#">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-
-                    <a href="#">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-
-                    <a href="#">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </a>
+                    <button class="favorite">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
 
                 </div>
 
-            </div>
+                <div class="property-info">
+
+                    <div class="property-type">
+                        CASA
+                    </div>
+
+                    <h3>
+                        Casa moderna con jardín
+                    </h3>
+
+                    <p class="property-location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Cuenca, Ecuador
+                    </p>
+
+                    <div class="property-features">
+
+                        <span>
+                            <i class="fa-solid fa-bed"></i>
+                            3 habitaciones
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-bath"></i>
+                            2 baños
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-ruler-combined"></i>
+                            180 m²
+                        </span>
+
+                    </div>
+
+                    <div class="property-bottom">
+
+                        <strong>$185.000</strong>
+
+                        <button class="btn-view">
+                            Ver propiedad
+                        </button>
+
+                    </div>
+
+                </div>
+            </article>
 
 
-            <div>
+            <!-- ================= DEPARTAMENTO ================= -->
 
-                <h4>Propiedades</h4>
+            <article
+                class="property-card"
+                data-tipo="departamento"
+                data-precio="125000"
+                data-ubicacion="cuenca">
 
-                <a href="#">Casas</a>
-                <a href="#">Departamentos</a>
-                <a href="#">Terrenos</a>
-                <a href="#">Oficinas</a>
+                <div class="property-image">
 
-            </div>
+                    <img
+                        src="https://images.unsplash.com/photo-1502672023488-70e25813eb80?auto=format&fit=crop&w=900&q=80"
+                        alt="Departamento moderno">
+
+                    <span class="property-badge">
+                        Venta
+                    </span>
+
+                    <button class="favorite">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                </div>
+
+                <div class="property-info">
+
+                    <div class="property-type">
+                        DEPARTAMENTO
+                    </div>
+
+                    <h3>
+                        Departamento moderno
+                    </h3>
+
+                    <p class="property-location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Cuenca, Ecuador
+                    </p>
+
+                    <div class="property-features">
+
+                        <span>
+                            <i class="fa-solid fa-bed"></i>
+                            2 habitaciones
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-bath"></i>
+                            2 baños
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-ruler-combined"></i>
+                            110 m²
+                        </span>
+
+                    </div>
+
+                    <div class="property-bottom">
+
+                        <strong>$125.000</strong>
+
+                        <button class="btn-view">
+                            Ver propiedad
+                        </button>
+
+                    </div>
+
+                </div>
+            </article>
 
 
-            <div>
+            <!-- ================= CASA 2 ================= -->
 
-                <h4>Empresa</h4>
+            <article
+                class="property-card"
+                data-tipo="casa"
+                data-precio="295000"
+                data-ubicacion="cuenca">
 
-                <a href="#">Nosotros</a>
-                <a href="#">Agentes</a>
-                <a href="#">Contacto</a>
-                <a href="#">Preguntas frecuentes</a>
+                <div class="property-image">
 
-            </div>
+                    <img
+                        src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80"
+                        alt="Casa de lujo">
+
+                    <span class="property-badge">
+                        Destacada
+                    </span>
+
+                    <button class="favorite">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                </div>
+
+                <div class="property-info">
+
+                    <div class="property-type">
+                        CASA
+                    </div>
+
+                    <h3>
+                        Residencia de lujo
+                    </h3>
+
+                    <p class="property-location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Cuenca, Ecuador
+                    </p>
+
+                    <div class="property-features">
+
+                        <span>
+                            <i class="fa-solid fa-bed"></i>
+                            4 habitaciones
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-bath"></i>
+                            3 baños
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-ruler-combined"></i>
+                            280 m²
+                        </span>
+
+                    </div>
+
+                    <div class="property-bottom">
+
+                        <strong>$295.000</strong>
+
+                        <button class="btn-view">
+                            Ver propiedad
+                        </button>
+
+                    </div>
+
+                </div>
+            </article>
 
 
-            <div>
+            <!-- ================= TERRENO 1 ================= -->
 
-                <h4>Contacto</h4>
+            <article
+                class="property-card"
+                data-tipo="terreno"
+                data-precio="95000"
+                data-ubicacion="cuenca">
 
-                <p>
-                    <i class="fa-solid fa-location-dot"></i>
-                    Cuenca, Ecuador
-                </p>
+                <div class="property-image">
 
-                <p>
-                    <i class="fa-solid fa-phone"></i>
-                    +593 98 848 6874
-                </p>
+                    <img
+                        src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80"
+                        alt="Terreno en Cuenca">
 
-                <p>
-                    <i class="fa-solid fa-envelope"></i>
-                    briari2108@gmail.com
-                    briari21@hotmail.com
-                </p>
+                    <span class="property-badge">
+                        Oportunidad
+                    </span>
 
-            </div>
+                    <button class="favorite">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                </div>
+
+                <div class="property-info">
+
+                    <div class="property-type">
+                        TERRENO
+                    </div>
+
+                    <h3>
+                        Terreno con excelente ubicación
+                    </h3>
+
+                    <p class="property-location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Cuenca, Ecuador
+                    </p>
+
+                    <div class="property-features">
+
+                        <span>
+                            <i class="fa-solid fa-ruler-combined"></i>
+                            500 m²
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-road"></i>
+                            Acceso vial
+                        </span>
+
+                    </div>
+
+                    <div class="property-bottom">
+
+                        <strong>$95.000</strong>
+
+                        <button class="btn-view">
+                            Ver propiedad
+                        </button>
+
+                    </div>
+
+                </div>
+            </article>
+
+
+            <!-- ================= TERRENO 2 - LA VICTORIA DEL PORTETE ================= -->
+
+            <article
+                class="property-card"
+                data-tipo="terreno"
+                data-precio="35000"
+                data-ubicacion="la victoria del portete">
+
+                <div class="property-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80"
+                        alt="Terreno en La Victoria del Portete">
+
+                    <span class="property-badge">
+                        Oportunidad
+                    </span>
+
+                    <button class="favorite">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                </div>
+
+                <div class="property-info">
+
+                    <div class="property-type">
+                        TERRENO
+                    </div>
+
+                    <h3>
+                        Terreno en La Victoria del Portete
+                    </h3>
+
+                    <p class="property-location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        La Victoria del Portete, Cuenca, Ecuador
+                    </p>
+
+                    <div class="property-features">
+
+                        <span>
+                            <i class="fa-solid fa-ruler-combined"></i>
+                            Excelente oportunidad
+                        </span>
+
+                        <span>
+                            <i class="fa-solid fa-road"></i>
+                            Acceso vial
+                        </span>
+
+                    </div>
+
+                    <div class="property-bottom">
+
+                        <strong>$35.000</strong>
+
+                        <button class="btn-view">
+                            Ver propiedad
+                        </button>
+
+                    </div>
+
+                </div>
+            </article>
 
         </div>
 
 
-        <div class="footer-bottom">
+        <!-- SIN RESULTADOS -->
+
+        <div id="noResults" class="no-results">
+
+            <i class="fa-solid fa-house-circle-xmark"></i>
+
+            <h3>
+                No encontramos propiedades
+            </h3>
 
             <p>
-                © 2026 INMOBILIARIA Y CONSTRUCTORA. Todos los derechos reservados.
+                Prueba cambiando los filtros de búsqueda.
             </p>
 
         </div>
 
-    </footer>
+    </div>
+</section>
 
 
-    <script src="script.js"></script>
+<!-- ================= NOSOTROS ================= -->
+
+<section class="about" id="nosotros">
+
+    <div class="container about-grid">
+
+        <div class="about-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1000&q=80"
+                alt="Proyecto inmobiliario">
+
+            <div class="experience">
+                <strong>10+</strong>
+                <span>años de experiencia</span>
+            </div>
+
+        </div>
+
+
+        <div class="about-content">
+
+            <span class="section-tag">
+                SOBRE NOSOTROS
+            </span>
+
+            <h2>
+                Construimos espacios,
+                encontramos hogares
+            </h2>
+
+            <p>
+                INMOBILIARIA Y CONSTRUCTORA es una empresa
+                dedicada al desarrollo, comercialización y
+                gestión de propiedades.
+            </p>
+
+            <p>
+                Nuestro objetivo es brindar soluciones
+                inmobiliarias y constructivas de calidad,
+                acompañando a nuestros clientes durante todo
+                el proceso.
+            </p>
+
+            <div class="about-stats">
+
+                <div>
+                    <strong>500+</strong>
+                    <span>Propiedades</span>
+                </div>
+
+                <div>
+                    <strong>1.200+</strong>
+                    <span>Clientes</span>
+                </div>
+
+                <div>
+                    <strong>10+</strong>
+                    <span>Años</span>
+                </div>
+
+            </div>
+
+            <button class="btn-primary" onclick="irContacto()">
+                Conoce más
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= CONTACTO ================= -->
+
+<section class="contact" id="contacto">
+
+    <div class="container contact-box">
+
+        <div>
+
+            <span class="section-tag">
+                ¿TIENES UNA PROPIEDAD?
+            </span>
+
+            <h2>
+                ¿Quieres vender o alquilar?
+            </h2>
+
+            <p>
+                Publica tu propiedad con nosotros y
+                encuentra compradores rápidamente.
+            </p>
+
+        </div>
+
+        <button class="btn-white" onclick="irWhatsApp()">
+            Contactar ahora
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+        <div>
+
+            <a href="#inicio" class="logo footer-logo">
+                <i class="fa-solid fa-building"></i>
+                INMOBILIARIA Y CONSTRUCTORA
+            </a>
+
+            <p>
+                Construimos espacios, encontramos hogares.
+            </p>
+
+            <div class="social">
+
+                <a href="#" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://wa.me/593988486874"
+                   target="_blank"
+                   aria-label="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <h4>Propiedades</h4>
+
+            <a href="#propiedades">Casas</a>
+            <a href="#propiedades">Departamentos</a>
+            <a href="#propiedades">Terrenos</a>
+            <a href="#propiedades">Oficinas</a>
+
+        </div>
+
+
+        <div>
+
+            <h4>Empresa</h4>
+
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Agentes</a>
+            <a href="#contacto">Contacto</a>
+            <a href="#contacto">Preguntas frecuentes</a>
+
+        </div>
+
+
+        <div>
+
+            <h4>Contacto</h4>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Cuenca, Ecuador
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +593 98 848 6874
+            </p>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                briari2108@gmail.com
+            </p>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                briari21@hotmail.com
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 INMOBILIARIA Y CONSTRUCTORA.
+            Todos los derechos reservados.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+function buscarPropiedades() {
+
+    const tipo = document.getElementById("tipo").value;
+    const ubicacion = document.getElementById("ubicacion").value
+        .toLowerCase()
+        .trim();
+
+    const precioMaximo =
+        Number(document.getElementById("precio").value);
+
+    const propiedades =
+        document.querySelectorAll(".property-card");
+
+    let resultados = 0;
+
+    propiedades.forEach(propiedad => {
+
+        const tipoPropiedad =
+            propiedad.dataset.tipo;
+
+        const precio =
+            Number(propiedad.dataset.precio);
+
+        const ubicacionPropiedad =
+            propiedad.dataset.ubicacion.toLowerCase();
+
+        const coincideTipo =
+            tipo === "todos" ||
+            tipo === tipoPropiedad;
+
+        const coincidePrecio =
+            precio <= precioMaximo;
+
+        const coincideUbicacion =
+            ubicacion === "" ||
+            ubicacionPropiedad.includes(ubicacion) ||
+            ubicacion.includes("cuenca") &&
+            ubicacionPropiedad.includes("cuenca");
+
+        if (
+            coincideTipo &&
+            coincidePrecio &&
+            coincideUbicacion
+        ) {
+
+            propiedad.style.display = "block";
+            resultados++;
+
+        } else {
+
+            propiedad.style.display = "none";
+
+        }
+
+    });
+
+    document.getElementById("noResults").style.display =
+        resultados === 0 ? "block" : "none";
+
+    document.getElementById("propiedades")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+}
+
+
+function seleccionarTipo(tipo) {
+
+    document.getElementById("tipo").value = tipo;
+
+    document.getElementById("ubicacion").value = "";
+
+    document.getElementById("precio").value = "9999999";
+
+    buscarPropiedades();
+}
+
+
+function mostrarTodas() {
+
+    document.getElementById("tipo").value = "todos";
+
+    document.getElementById("ubicacion").value = "";
+
+    document.getElementById("precio").value = "9999999";
+
+    document.querySelectorAll(".property-card")
+        .forEach(propiedad => {
+            propiedad.style.display = "block";
+        });
+
+    document.getElementById("noResults").style.display = "none";
+
+}
+
+
+function irContacto() {
+
+    document.getElementById("contacto")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+
+}
+
+
+function irWhatsApp() {
+
+    window.open(
+        "https://wa.me/593988486874?text=Hola,%20estoy%20interesado%20en%20una%20propiedad.",
+        "_blank"
+    );
+
+}
+
+
+/* FAVORITOS */
+
+document.querySelectorAll(".favorite")
+    .forEach(boton => {
+
+        boton.addEventListener("click", function() {
+
+            const icono =
+                this.querySelector("i");
+
+            icono.classList.toggle("fa-regular");
+            icono.classList.toggle("fa-solid");
+
+        });
+
+    });
+
+
+/* MENÚ MÓVIL */
+
+const menuMobile =
+    document.getElementById("menuMobile");
+
+const menu =
+    document.querySelector(".menu");
+
+menuMobile.addEventListener("click", () => {
+
+    menu.classList.toggle("active");
+
+});
+
+
+/* CERRAR MENÚ AL HACER CLICK */
+
+document.querySelectorAll(".menu a")
+    .forEach(enlace => {
+
+        enlace.addEventListener("click", () => {
+
+            menu.classList.remove("active");
+
+        });
+
+    });
+
+</script>
 
 </body>
 </html>
