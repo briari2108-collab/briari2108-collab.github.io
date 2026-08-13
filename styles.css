@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    font-family: Courier new, Helvetica, sans-serif;
+    font-family: 'Courier New', Courier, monospace, Helvetica, sans-serif;
     background: #f8f9fb;
     color: #1d2630;
     line-height: 1.6;
@@ -83,11 +83,9 @@ a {
     top: 0;
     z-index: 1000;
 
-    background:
-        rgba(255, 255, 255, 0.97);
+    background: rgba(255, 255, 255, 0.97);
 
-    border-bottom:
-        1px solid var(--border);
+    border-bottom: 1px solid var(--border);
 }
 
 .nav {
@@ -255,8 +253,7 @@ a {
 
     font-size: 18px;
 
-    color:
-        rgba(255, 255, 255, .88);
+    color: rgba(255, 255, 255, .88);
 
     margin-bottom: 35px;
 }
@@ -551,7 +548,6 @@ a {
 
     transition: .3s;
 
-    /* IMPORTANTE */
     display: flex;
     flex-direction: column;
 }
@@ -716,8 +712,6 @@ a {
 
     padding-top: 18px;
 
-    /* IMPORTANTE:
-       mantiene precio y botón abajo */
     margin-top: auto;
 }
 
@@ -799,16 +793,17 @@ a {
 
 /* =========================================================
    INTRO PROYECTOS
+   VERSIÓN MÁS DISCRETA
 ========================================================= */
 
 .projects-intro {
-    padding: 80px 0;
+    padding: 55px 0;
 
     background:
         linear-gradient(
             135deg,
-            #102f47,
-            #173f5f
+            #173f5f,
+            #204d6d
         );
 
     color: white;
@@ -817,33 +812,49 @@ a {
 }
 
 .projects-intro .section-tag {
-    color: #e1b866;
+    color: #d9b86d;
+
+    font-size: 10px;
+
+    letter-spacing: 1.8px;
+
+    margin-bottom: 10px;
 }
 
 .projects-intro h2 {
-    max-width: 850px;
+
+    max-width: 700px;
 
     margin: auto;
 
     font-size:
-        clamp(30px, 4vw, 48px);
+        clamp(25px, 3vw, 36px);
 
-    line-height: 1.15;
+    line-height: 1.2;
+
+    font-weight: 600;
+
+    letter-spacing: -.2px;
 }
 
 .projects-intro h2 span {
     color: #e1b866;
+
+    font-weight: 600;
 }
 
 .projects-intro p {
-    max-width: 760px;
 
-    margin: 22px auto 0;
+    max-width: 650px;
+
+    margin: 16px auto 0;
 
     color:
-        rgba(255,255,255,.76);
+        rgba(255,255,255,.72);
 
-    font-size: 16px;
+    font-size: 14px;
+
+    line-height: 1.7;
 }
 
 
@@ -863,9 +874,6 @@ a {
 
     gap: 25px;
 
-    /* IMPORTANTE:
-       permite que las tarjetas tengan
-       exactamente la misma altura */
     align-items: stretch;
 }
 
@@ -881,7 +889,6 @@ a {
 
     transition: .3s;
 
-    /* CORRECCIÓN PRINCIPAL */
     display: flex;
     flex-direction: column;
 
@@ -903,7 +910,6 @@ a {
 
     overflow: hidden;
 
-    /* evita que la imagen cambie de tamaño */
     flex-shrink: 0;
 }
 
@@ -942,7 +948,6 @@ a {
 .project-content {
     padding: 25px;
 
-    /* CORRECCIÓN PRINCIPAL */
     display: flex;
     flex-direction: column;
 
@@ -976,11 +981,6 @@ a {
     margin-bottom: 20px;
 }
 
-
-/* =========================================================
-   DATOS DEL PROYECTO
-========================================================= */
-
 .project-data {
     display: flex;
 
@@ -996,7 +996,6 @@ a {
     border-bottom:
         1px solid var(--border);
 
-    /* IMPORTANTE */
     margin-top: auto;
 }
 
@@ -1011,11 +1010,6 @@ a {
 
     margin-right: 4px;
 }
-
-
-/* =========================================================
-   BOTÓN / ENLACE PROYECTO
-========================================================= */
 
 .project-link {
     display: flex;
@@ -1035,7 +1029,6 @@ a {
     font-size: 13px;
     font-weight: 800;
 
-    /* IMPORTANTE */
     min-height: 22px;
 }
 
@@ -1075,7 +1068,6 @@ a {
 
     gap: 22px;
 
-    /* IMPORTANTE */
     align-items: stretch;
 }
 
@@ -1091,7 +1083,6 @@ a {
 
     transition: .3s;
 
-    /* CORRECCIÓN PRINCIPAL */
     display: flex;
     flex-direction: column;
 
@@ -1146,8 +1137,6 @@ a {
 
     margin-bottom: 22px;
 
-    /* IMPORTANTE:
-       ocupa el espacio disponible */
     flex: 1;
 }
 
@@ -1168,8 +1157,6 @@ a {
 }
 
 .construction-card a i {
-    margin-left: 0;
-
     transition: .25s;
 }
 
@@ -1600,6 +1587,7 @@ a {
     .btn-search {
         justify-content: center;
     }
+
 }
 
 
@@ -1702,11 +1690,6 @@ a {
             1fr 1fr;
     }
 
-
-    /* ==========================================
-       TABLET - PROYECTOS
-    ========================================== */
-
     .project-card {
         min-height: auto;
     }
@@ -1766,7 +1749,15 @@ a {
     }
 
     .projects-intro {
-        padding: 65px 0;
+        padding: 50px 0;
+    }
+
+    .projects-intro h2 {
+        font-size: 27px;
+    }
+
+    .projects-intro p {
+        font-size: 13px;
     }
 
     .construction-cta {
@@ -1781,11 +1772,6 @@ a {
         grid-template-columns:
             1fr;
     }
-
-
-    /* ==========================================
-       CELULAR - PROYECTOS
-    ========================================== */
 
     .project-card {
         display: flex;
@@ -1806,11 +1792,6 @@ a {
         justify-content: space-between;
     }
 
-
-    /* ==========================================
-       CELULAR - CONSTRUCCIÓN
-    ========================================== */
-
     .construction-card {
         min-height: 0;
     }
@@ -1823,11 +1804,6 @@ a {
         margin-top: auto;
     }
 
-
-    /* ==========================================
-       BOTONES
-    ========================================== */
-
     .btn-construction {
         width: 100%;
 
@@ -1839,19 +1815,13 @@ a {
 
         justify-content: center;
     }
+
 }
 
 
 /* =========================================================
    CORRECCIÓN FINAL PARA TARJETAS
 ========================================================= */
-
-/*
-   Estas reglas son las más importantes para solucionar
-   el problema de que los botones/enlaces aparezcan
-   desalineados cuando las descripciones tienen diferente
-   cantidad de texto.
-*/
 
 .project-grid,
 .construction-grid {
