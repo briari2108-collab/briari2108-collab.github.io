@@ -1,292 +1,265 @@
-/* ==========================================================
-   VIVID.CSS · Capa llamativa inspirada en la bandera de Pachakutik
-   Cargar DESPUÉS de styles.css
-   Colores: rojo, naranja, amarillo, blanco, verde, azul, violeta
-   ========================================================== */
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#14081f">
+  <meta name="description" content="El Valle Democrático · Encuentro ciudadano de Felipe Sari. Pachakutik, Lista 18.">
+  <title>El Valle Democrático | Felipe Sari | Pachakutik 18</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-:root {
-  --red: #e4002b;
-  --orange: #ff7a00;
-  --yellow: #ffd400;
-  --green: #00a650;
-  --green-dark: #04361f;
-  --blue: #0072ce;
-  --sky: #00b7f1;
-  --purple: #7a2da0;
-  --ink: #120b1f;
-  --font: "Trebuchet MS", "Segoe UI", Verdana, sans-serif;
-  --display: Impact, "Arial Black", "Trebuchet MS", sans-serif;
-  --wiphala: repeating-linear-gradient(45deg,
-    var(--red) 0 22px, var(--orange) 22px 44px, var(--yellow) 44px 66px,
-    #fff 66px 88px, var(--green) 88px 110px, var(--blue) 110px 132px,
-    var(--purple) 132px 154px);
-  --pop: 5px 5px 0 var(--ink);
-}
+  <div class="wiphala-bar" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
 
-body { font-size: 16px; background: #fffbea; }
-h1, h2, h3, .brand b, .number-18, .movement-18, .event-18, .axis-number,
-.button, .nav-cta { font-family: var(--display); letter-spacing: .5px; }
-h1, h2, h3 { text-transform: uppercase; }
+  <header class="top">
+    <div class="wrap top-in">
+      <a class="logo" href="#inicio">
+        <img src="images/pachakutik-logo.svg" alt="Pachakutik">
+        <b>PACHAKUTIK<small>LISTA 18</small></b>
+      </a>
+      <input type="checkbox" id="mt">
+      <label for="mt" class="burger" aria-label="Menú"><span></span><span></span><span></span></label>
+      <nav>
+        <a href="#encuentro">Encuentro</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#ejes">34 propuestas</a>
+        <a href="#candidato">Candidato</a>
+        <a class="cta" href="#participa">¡Participa!</a>
+      </nav>
+    </div>
+  </header>
 
-/* Barra de progreso + franja */
-.progress {
-  position: fixed; top: 0; left: 0; height: 6px; width: 0;
-  z-index: 2000; background: var(--wiphala); background-size: 154px 154px;
-}
-.rainbow { height: 16px; }
-.rainbow i { animation: shimmer 3s ease-in-out infinite; }
-.rainbow i:nth-child(odd) { animation-delay: .3s; }
-@keyframes shimmer { 50% { filter: brightness(1.3) saturate(1.4); } }
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="wrap hero-in">
+        <div>
+          <p class="tag">ENCUENTRO CIUDADANO · EL VALLE · CUENCA</p>
+          <h1>EL VALLE<br><span>DEMOCRÁTICO</span></h1>
+          <p class="lead">Un espacio para conversar, escuchar y compartir ideas para nuestra parroquia. Con Felipe Sari, ingeniero civil y candidato a vocal.</p>
 
-/* Cabecera */
-.site-header {
-  background: var(--ink);
-  border-bottom: 6px solid var(--yellow);
-}
-.brand img { border: 3px solid var(--yellow); }
-.navigation a { font-size: 13px; text-transform: uppercase; }
-.navigation a:not(.nav-cta):hover { color: var(--ink); background: var(--yellow); padding: 6px 8px; border-radius: 4px; }
-.navigation .nav-cta {
-  background: var(--red); color: #fff; border: 3px solid #fff;
-  box-shadow: 3px 3px 0 var(--yellow); animation: wobble 2.5s infinite;
-}
-@keyframes wobble { 0%, 90%, 100% { transform: rotate(0); } 93% { transform: rotate(-4deg); } 96% { transform: rotate(4deg); } }
+          <div class="when">
+            <div><small>FECHA</small><b>22 NOV 2026</b></div>
+            <div><small>HORA</small><b>DOMINGO 14h00</b></div>
+            <div><small>LUGAR</small><b>PARQUEADERO PARROQUIAL</b></div>
+          </div>
 
-/* Portada */
-.hero {
-  background:
-    radial-gradient(circle at 80% 20%, #00d466 0, transparent 40%),
-    linear-gradient(135deg, #02522c, #00a650 70%);
-}
-.hero::before {
-  content: ""; position: absolute; inset: -40% -10%;
-  background: var(--wiphala); opacity: .22;
-  transform: rotate(-8deg); animation: slide 28s linear infinite;
-}
-@keyframes slide { to { background-position: 154px 154px; } }
-.hero h1 {
-  font-size: clamp(46px, 8vw, 104px); line-height: .92; letter-spacing: -1px;
-  text-shadow: 5px 5px 0 var(--ink);
-}
-.hero h1 em { color: var(--yellow); text-shadow: 5px 5px 0 var(--red); }
-.eyebrow { background: var(--ink); border: 2px solid var(--yellow); }
-.hero-overline { background: var(--red); color: #fff; display: inline-block; padding: 5px 10px; transform: rotate(-1.5deg); }
-.candidate-name h2 { font-size: 40px; text-shadow: 3px 3px 0 var(--ink); }
-.name-bar { width: 10px; background: var(--wiphala); background-size: 40px 40px; }
-.hero-description { font-size: 17px; font-weight: bold; }
-.portrait-frame {
-  border: 8px solid #fff; box-shadow: 16px 16px 0 var(--red), 28px 28px 0 var(--yellow);
-  animation: float 5s ease-in-out infinite;
-}
-@keyframes float { 50% { transform: translateY(-12px) rotate(1deg); } }
-.number-18 { font-size: 170px; text-shadow: 6px 6px 0 var(--red), 12px 12px 0 var(--ink); animation: bump 2s ease-in-out infinite; }
-@keyframes bump { 50% { transform: scale(1.1) rotate(5deg); } }
-.portrait-stamp { background: var(--purple); border-color: var(--yellow); animation: spin 14s linear infinite; }
-@keyframes spin { to { transform: rotate(348deg); } }
-.hero-rainbow { height: 18px; }
+          <div class="count" id="count" aria-live="polite">
+            <div><b id="d">00</b><span>DÍAS</span></div>
+            <div><b id="h">00</b><span>HORAS</span></div>
+            <div><b id="m">00</b><span>MIN</span></div>
+            <div><b id="s">00</b><span>SEG</span></div>
+          </div>
 
-/* Botones */
-.button {
-  font-size: 15px; text-transform: uppercase; border: 3px solid var(--ink);
-  box-shadow: var(--pop);
-}
-.button:hover { transform: translate(-3px, -3px); box-shadow: 8px 8px 0 var(--ink); }
-.button-yellow { background: var(--yellow); color: var(--ink); }
-.button-yellow:hover { background: var(--orange); }
-.button-outline { background: var(--red); color: #fff; border-color: var(--ink); }
-.button-outline:hover { background: #fff; color: var(--red); }
-.button-white { background: #fff; color: var(--ink); }
+          <div class="btns">
+            <a class="btn y" href="#participa">QUIERO ASISTIR →</a>
+            <a class="btn r" href="#ejes">VER PROPUESTAS</a>
+          </div>
+        </div>
 
-/* Marquesina (la crea script.js) */
-.marquee {
-  overflow: hidden; background: var(--ink); color: var(--yellow);
-  border-block: 5px solid var(--yellow); padding: 12px 0; white-space: nowrap;
-}
-.marquee div { display: inline-block; animation: ticker 28s linear infinite; font: 22px var(--display); letter-spacing: 2px; }
-.marquee span { margin: 0 18px; }
-.marquee span:nth-child(7n+1) { color: var(--red); }
-.marquee span:nth-child(7n+2) { color: var(--orange); }
-.marquee span:nth-child(7n+4) { color: #fff; }
-.marquee span:nth-child(7n+5) { color: #2be07f; }
-.marquee span:nth-child(7n+6) { color: var(--sky); }
-.marquee span:nth-child(7n) { color: #c36bff; }
-@keyframes ticker { to { transform: translateX(-50%); } }
+        <div class="photo">
+          <img src="images/felipe-sari.jpg" alt="Felipe Sari">
+          <strong>18</strong>
+          <span class="chip">FELIPE SARI<small>INGENIERO CIVIL</small></span>
+        </div>
+      </div>
+    </section>
 
-/* Frase central */
-.statement { background: var(--wiphala); background-size: 154px 154px; padding: 0; }
-.statement-inner { background: var(--yellow); margin: 38px auto; border: 4px solid var(--ink); box-shadow: 10px 10px 0 var(--ink); padding: 22px 28px; }
-.statement h2 { color: var(--ink); }
-.statement-inner > strong { font-family: var(--display); font-size: 72px; }
+    <div class="ticker" aria-hidden="true">
+      <div>
+        <span>★ EL PODER DE LA GENTE</span><span>EL VALLE SE CONSTRUYE CON TODOS</span><span>PACHAKUTIK · LISTA 18</span><span>34 PROPUESTAS</span><span>5 EJES</span>
+        <span>★ EL PODER DE LA GENTE</span><span>EL VALLE SE CONSTRUYE CON TODOS</span><span>PACHAKUTIK · LISTA 18</span><span>34 PROPUESTAS</span><span>5 EJES</span>
+      </div>
+    </div>
 
-/* Candidato */
-.about { background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M20 4l4 12h12l-10 8 4 12-10-8-10 8 4-12L4 16h12z' fill='%23ffd400' fill-opacity='.18'/%3E%3C/svg%3E"); }
-.about-photo { border: 6px solid var(--ink); box-shadow: 14px 14px 0 var(--purple); transform: rotate(-2deg); border-radius: 0; }
-.about-copy h2, .contact h2 { color: var(--ink); text-shadow: 3px 3px 0 var(--yellow); }
-.about-copy > p:not(.section-label) { color: var(--ink); }
-.section-label { display: inline-block; background: var(--ink); color: var(--yellow); padding: 6px 12px; transform: rotate(-1deg); }
-.section-label.light { background: var(--yellow); color: var(--ink); }
-.color-line { height: 10px; width: 140px; }
-.values div { border: 3px solid var(--ink); border-radius: 0; box-shadow: 4px 4px 0 var(--ink); transition: transform .2s; }
-.values div:hover { transform: translateY(-6px) rotate(-2deg); }
-.values div:nth-child(1) { background: var(--yellow); }
-.values div:nth-child(2) { background: #ffb8c0; }
-.values div:nth-child(3) { background: #bfe3ff; }
-.values b, .values span { color: var(--ink); }
-.text-link { color: var(--red); font-size: 15px; }
+    <!-- CIFRAS -->
+    <section class="stats">
+      <div class="wrap stats-in">
+        <div class="c1"><b>34</b><span>propuestas</span></div>
+        <div class="c2"><b>05</b><span>ejes de trabajo</span></div>
+        <div class="c3"><b>01</b><span>parroquia unida</span></div>
+        <div class="c4"><b>18</b><span>lista Pachakutik</span></div>
+      </div>
+    </section>
 
-/* Movimiento */
-.movement { background: var(--purple); border-block: 6px solid var(--ink); }
-.movement-logo { border: 5px solid var(--yellow); box-shadow: 0 0 0 6px var(--red); }
-.movement p { color: #fff; font-size: 15px; }
-.movement-18 { font-size: 150px; text-shadow: 6px 6px 0 var(--red); }
+    <!-- ENCUENTRO -->
+    <section class="sec" id="encuentro">
+      <div class="wrap two">
+        <div>
+          <span class="label">EL ENCUENTRO</span>
+          <h2>Una cita para escucharnos.</h2>
+          <p>El Valle Democrático es un espacio abierto para que vecinos, productores, jóvenes, artistas y líderes comunitarios compartan sus necesidades y propongan soluciones para la parroquia.</p>
+          <p>Planificación, innovación y participación ciudadana: así queremos construir una parroquia productiva, segura, organizada y con oportunidades para todas sus comunidades.</p>
+        </div>
+        <div class="cards">
+          <div class="card c1"><b>01</b>Planificación responsable</div>
+          <div class="card c2"><b>02</b>Innovación y tecnología</div>
+          <div class="card c3"><b>03</b>Participación ciudadana</div>
+        </div>
+      </div>
+    </section>
 
-/* PLAN DE TRABAJO */
-.workplan { background: #fff3c4; }
-.section-heading h2 { color: var(--ink); font-size: clamp(34px, 6vw, 64px); }
-.section-heading h2 em { color: var(--red); text-shadow: 3px 3px 0 var(--yellow); }
-.section-heading > p { color: var(--ink); font-size: 16px; }
-.plan-count { border: 3px solid var(--ink); box-shadow: var(--pop); border-radius: 0; background: var(--yellow); }
-.plan-count b { font-family: var(--display); color: var(--red); font-size: 34px; }
+    <!-- AGENDA -->
+    <section class="sec dark" id="agenda">
+      <div class="wrap">
+        <span class="label y">AGENDA</span>
+        <h2>Así será la jornada.</h2>
+        <p class="note">Horarios y detalles por confirmar. Toca cada bloque para ver más.</p>
+        <div class="agenda">
+          <details name="ag" open>
+            <summary><b>14h00</b><span>Bienvenida y apertura</span><i>＋</i></summary>
+            <p>Recepción de los asistentes, presentación del encuentro y del movimiento Pachakutik.</p>
+          </details>
+          <details name="ag">
+            <summary><b>14h30</b><span>Presentación del plan de trabajo</span><i>＋</i></summary>
+            <p>Resumen de las 34 propuestas organizadas en cinco ejes: económico, infraestructura, social y cultural, ambiental e institucional.</p>
+          </details>
+          <details name="ag">
+            <summary><b>15h15</b><span>Mesas de diálogo por comunidad</span><i>＋</i></summary>
+            <p>Cada comunidad comparte sus prioridades: vías, agua, seguridad, producción, cultura y juventud.</p>
+          </details>
+          <details name="ag">
+            <summary><b>16h30</b><span>Compromisos y cierre</span><i>＋</i></summary>
+            <p>Conclusiones del encuentro y compromisos de seguimiento con las comunidades.</p>
+          </details>
+        </div>
+      </div>
+    </section>
 
-/* Pestañas de ejes (las crea script.js) */
-.axis-tabs {
-  display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 14px;
-  position: sticky; top: 90px; z-index: 40; padding: 10px;
-  background: #fff3c4; border-bottom: 4px solid var(--ink);
-}
-.axis-tab {
-  --axis: var(--green);
-  flex: 1 1 150px; padding: 13px 10px; cursor: pointer;
-  font: 15px var(--display); text-transform: uppercase; letter-spacing: .5px;
-  color: var(--ink); background: #fff; border: 3px solid var(--ink);
-  box-shadow: 4px 4px 0 var(--axis); transition: transform .15s, box-shadow .15s;
-}
-.axis-tab b { display: block; font-size: 26px; color: var(--axis); line-height: 1; }
-.axis-tab:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 var(--axis); }
-.axis-tab[aria-selected="true"] { background: var(--axis); color: #fff; transform: translateY(4px); box-shadow: none; }
-.axis-tab[aria-selected="true"] b { color: #fff; }
-.axis-tab.axis-yellow[aria-selected="true"], .axis-tab.axis-yellow[aria-selected="true"] b { color: var(--ink); }
-.axis-tools { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 22px; }
-.axis-tools button {
-  cursor: pointer; padding: 10px 16px; font: 13px var(--display); text-transform: uppercase;
-  background: var(--ink); color: var(--yellow); border: 3px solid var(--ink); border-radius: 30px;
-  transition: transform .15s, background .15s;
-}
-.axis-tools button:hover { background: var(--red); color: #fff; transform: scale(1.06) rotate(-1deg); }
+    <!-- EJES -->
+    <section class="sec" id="ejes">
+      <div class="wrap">
+        <span class="label">PLAN DE TRABAJO</span>
+        <h2>34 propuestas.<br><em>Cinco ejes para avanzar.</em></h2>
+        <div class="ejes">
 
-.axis-red { --axis: var(--red); }
-.axis-orange { --axis: var(--orange); }
-.axis-yellow { --axis: #f2b700; }
-.axis-green { --axis: var(--green); }
-.axis-blue { --axis: var(--blue); }
+          <details name="eje" class="e1" open>
+            <summary><b>01</b><span>Económico y productivo<small>Una economía local con más oportunidades</small></span><i>＋</i></summary>
+            <ul>
+              <li>1.1 Registro y legalización de pequeños productores</li>
+              <li>1.2 Espacio para productores en mercados y ferias</li>
+              <li>1.3 Dos miradores y ruta turística parroquial</li>
+              <li>1.4 Ventanilla de emprendimiento y economía popular</li>
+              <li>1.5 Mercado Vivo: digno, seguro y autosostenible</li>
+              <li>1.6 Eventos en escenarios deportivos comunitarios</li>
+            </ul>
+          </details>
 
-.js .axis { display: none; margin-top: 0; }
-.js .axis.is-active { display: block; animation: pop .4s cubic-bezier(.2, 1.4, .4, 1); }
-@keyframes pop { from { opacity: 0; transform: scale(.94) translateY(20px); } }
+          <details name="eje" class="e2">
+            <summary><b>02</b><span>Infraestructura y territorio<small>Conectividad, movilidad y seguridad</small></span><i>＋</i></summary>
+            <ul>
+              <li>2.1 Tecnificación del lastrado con bombeo normativo</li>
+              <li>2.2 Capas base, subbase y rasante en tramos críticos</li>
+              <li>2.3 Piloto de geoceldas de polímero (HDPE)</li>
+              <li>2.4 Repotenciación de las cinco salidas de la parroquia</li>
+              <li>2.5 Reorganización vial del centro y parqueo</li>
+              <li>2.6 Desconcentración de servicios de Cuenca</li>
+              <li>2.7 Red comunitaria de videovigilancia</li>
+              <li>2.8 Actualización participativa del PDOT</li>
+            </ul>
+          </details>
 
-.axis {
-  border: 4px solid var(--ink); border-top: 14px solid var(--axis);
-  border-radius: 0; box-shadow: 10px 10px 0 var(--axis);
-}
-.axis-number { font-size: 90px; -webkit-text-stroke: 3px var(--ink); color: var(--axis); text-shadow: 4px 4px 0 var(--ink); }
-.axis-heading { grid-template-columns: 120px 1fr; border-bottom: 4px dashed var(--axis); }
-.axis-heading span { background: var(--axis); color: #fff; padding: 4px 8px; font-size: 11px; }
-.axis-yellow .axis-heading span { color: var(--ink); }
-.axis-heading h3 { font-size: clamp(24px, 3.4vw, 36px); }
-.axis-heading p { color: var(--ink); font-size: 15px; }
+          <details name="eje" class="e3">
+            <summary><b>03</b><span>Social, cultural e inclusión<small>Educación, cultura y oportunidades</small></span><i>＋</i></summary>
+            <ul>
+              <li>3.1 Programa de inteligencia artificial aplicada</li>
+              <li>3.2 Programa de inglés comunitario</li>
+              <li>3.3 Feria de internacionalización universitaria</li>
+              <li>3.4 Feria de ciencia, tecnología y proyectos</li>
+              <li>3.5 Educación afectivo-sexual “Proyecto de Vida”</li>
+              <li>3.6 Red “Comunidad Protectora”</li>
+              <li>3.7 Apoyo a personas con alcoholismo</li>
+              <li>3.8 Reconocimiento de las culturas de la parroquia</li>
+              <li>3.9 Formación académica y reconocimiento a los músicos</li>
+              <li>3.10 Galería parroquial para artistas</li>
+              <li>3.11 Capacitación técnica para maestros de obra</li>
+            </ul>
+          </details>
 
-/* Propuestas desplegables */
-.proposal { border: 3px solid var(--ink); border-radius: 0; box-shadow: 5px 5px 0 var(--axis); background: #fff; }
-.proposal:hover { transform: translate(-3px, -3px) rotate(-.4deg); box-shadow: 8px 8px 0 var(--axis); }
-.proposal summary { transition: background .2s; }
-.proposal summary:hover { background: color-mix(in srgb, var(--axis) 14%, white); }
-.proposal summary b { background: var(--axis); color: #fff; border: 3px solid var(--ink); font-family: var(--display); transition: transform .3s; }
-.axis-yellow .proposal summary b { color: var(--ink); }
-.proposal summary:hover b { transform: rotate(360deg) scale(1.1); }
-.proposal summary span { font-size: 15px; color: var(--ink); }
-.proposal summary i { background: var(--ink); color: var(--yellow); width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%; font-size: 20px; }
-.proposal[open] { box-shadow: 8px 8px 0 var(--ink); }
-.proposal[open] summary { background: var(--axis); border-bottom: 3px solid var(--ink); }
-.proposal[open] summary span { color: #fff; }
-.axis-yellow .proposal[open] summary span { color: var(--ink); }
-.proposal[open] summary b { background: #fff; color: var(--ink); }
-.proposal-body { padding: 22px; background: repeating-linear-gradient(0deg, #fff 0 28px, #fffdf2 28px 56px); }
-.proposal-body p, .proposal-body li { color: var(--ink); font-size: 14px; }
-.proposal-body strong { color: var(--axis); }
-.axis-yellow .proposal-body strong { color: #a07800; }
-.proposal-body .result { background: var(--yellow); border: 3px solid var(--ink); border-radius: 0; box-shadow: 3px 3px 0 var(--ink); color: var(--ink); }
-.proposal-body .result strong { color: var(--red); }
-.proposal-body .note { background: #ffe0ec; border: 2px dashed var(--red); color: var(--ink); border-radius: 0; }
-.proposal-body small { color: var(--ink); border-top: 3px dotted var(--axis); font-size: 11px; }
-.proposal-body h4 { color: var(--red); font-family: var(--display); font-size: 17px; text-transform: uppercase; }
-.proposal-body ol { counter-reset: n; list-style: none; margin-left: 0; }
-.proposal-body li { counter-increment: n; padding-left: 38px; position: relative; }
-.proposal-body li::before {
-  content: counter(n); position: absolute; left: 0; top: 0; width: 28px; height: 28px;
-  display: grid; place-items: center; background: var(--axis); color: #fff;
-  border: 2px solid var(--ink); border-radius: 50%; font: 14px var(--display);
-}
-.proposal.suggested { border-style: dashed; border-color: var(--purple); box-shadow: 5px 5px 0 var(--purple); }
-.validation { background: var(--purple); color: #fff; font-size: 11px; padding: 6px 10px; }
-.proposal.featured { border-color: var(--ink); background: #fffbe0; }
-.proposal.featured summary::after {
-  content: "★ ESTRELLA"; position: absolute; top: -2px; right: 52px;
-  background: var(--red); color: #fff; font: 10px var(--display); padding: 3px 7px; transform: rotate(3deg);
-}
-.proposal { position: relative; }
-.proposal-legend { color: var(--ink); font-size: 13px; font-weight: bold; }
-.legend-author { background: var(--green); } .legend-suggested { background: var(--purple); }
+          <details name="eje" class="e4">
+            <summary><b>04</b><span>Ambiental y riesgos<small>Agua segura y comunidades preparadas</small></span><i>＋</i></summary>
+            <ul>
+              <li>4.1 Protección de fuentes de agua y control de calidad</li>
+              <li>4.2 Captaciones y potabilización tecnificadas</li>
+              <li>4.3 Plan de saneamiento</li>
+              <li>4.4 Mapa de riesgos y fallas geológicas</li>
+              <li>4.5 Protección de quebradas y reforestación nativa</li>
+            </ul>
+          </details>
 
-/* Participación */
-.participation { background: var(--blue); border-block: 6px solid var(--ink); position: relative; overflow: hidden; }
-.participation::before { content: ""; position: absolute; inset: 0; background: var(--wiphala); opacity: .13; }
-.participation-grid { position: relative; }
-.participation p { color: #fff; font-size: 16px; font-weight: bold; }
-.participation-seal { background: var(--red); border-color: var(--yellow); box-shadow: 0 0 0 8px var(--ink), 14px 14px 0 8px var(--yellow); animation: spin2 12s ease-in-out infinite alternate; }
-@keyframes spin2 { to { transform: rotate(-8deg) scale(1.05); } }
-.participation-seal b { font-family: var(--display); font-size: 52px; }
+          <details name="eje" class="e5">
+            <summary><b>05</b><span>Institucional y transparencia<small>Una gestión abierta, cercana y digital</small></span><i>＋</i></summary>
+            <ul>
+              <li>5.1 Transparencia activa y portal web actualizado</li>
+              <li>5.2 Presidente en territorio: convenios ciudadanos</li>
+              <li>5.3 Gobierno parroquial digital con IA</li>
+              <li>5.4 Observatorio ciudadano de obras y veeduría</li>
+            </ul>
+          </details>
+        </div>
+      </div>
+    </section>
 
-/* Evento */
-.event { background: var(--wiphala); background-size: 154px 154px; padding: 70px 0; }
-.event-card { border: 4px solid var(--ink); border-radius: 0; box-shadow: 12px 12px 0 var(--ink); }
-.event-date { background: var(--red); border: 3px solid var(--ink); box-shadow: 4px 4px 0 var(--yellow); animation: wobble 3s infinite; }
-.event-copy h2 { color: var(--ink); font-size: 38px; }
-.event-copy p { color: var(--ink); font-size: 15px; }
-.event-meta { color: var(--red); font-size: 13px; }
-.event-18 { color: var(--purple); text-shadow: 4px 4px 0 var(--yellow); }
+    <!-- CANDIDATO -->
+    <section class="sec cand" id="candidato">
+      <div class="wrap two">
+        <div class="pic">
+          <img src="images/felipe-sari.jpg" alt="Felipe Sari">
+        </div>
+        <div>
+          <span class="label y">TU CANDIDATO</span>
+          <h2>Felipe Sari</h2>
+          <p class="role">Ingeniero civil y músico académico · Candidato a vocal del GAD Parroquial Rural de El Valle</p>
+          <p>Creo en la innovación, en la planificación responsable y en la capacidad de nuestras comunidades para construir un mejor futuro. Siempre podemos mejorar lo que ya existe y trabajar junto a la ciudadanía para encontrar soluciones reales.</p>
+          <a class="btn y" href="https://pachakutik.com.ec/" target="_blank" rel="noopener">CONOCE EL MOVIMIENTO →</a>
+        </div>
+      </div>
+    </section>
 
-/* Contacto */
-.contact { background: #fff; }
-.contact-links a { color: var(--ink); font-size: 15px; }
-.contact-links b { background: var(--yellow); border: 3px solid var(--ink); box-shadow: 3px 3px 0 var(--ink); transition: transform .2s; }
-.contact-links a:hover b { transform: rotate(-12deg) scale(1.15); background: var(--orange); }
-.contact-card { background: var(--green); border: 4px solid var(--ink); border-radius: 0; box-shadow: 12px 12px 0 var(--purple); transform: rotate(1.5deg); }
-.contact-card h3 { text-shadow: 3px 3px 0 var(--ink); }
-.contact-card p { color: #fff; }
+    <!-- PARTICIPA -->
+    <section class="sec join" id="participa">
+      <div class="wrap two">
+        <div>
+          <span class="label">PARTICIPA</span>
+          <h2>Tu comunidad tiene mucho que aportar.</h2>
+          <p>Escríbeme, confirma tu asistencia y comparte las ideas y necesidades de tu barrio o comunidad.</p>
+          <div class="links">
+            <a href="mailto:briari21@hotmail.com"><b>✉</b>briari21@hotmail.com</a>
+            <a href="https://wa.me/593988486874" target="_blank" rel="noopener"><b>☏</b>+593 0988486874 · WhatsApp</a>
+          </div>
+        </div>
+        <div class="ticket">
+          <small>LISTA</small><strong>18</strong>
+          <h3>FELIPE SARI</h3>
+          <p>22 NOV 2026 · DOMINGO 14h00<br>PARQUEADERO PARROQUIAL</p>
+          <a class="btn y full" href="https://wa.me/593988486874?text=Hola%20Felipe,%20quiero%20asistir%20al%20encuentro%20El%20Valle%20Democr%C3%A1tico." target="_blank" rel="noopener">CONFIRMAR POR WHATSAPP →</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-/* Pie y subir */
-.footer { background: var(--ink); border-top: 0; }
-.back-top { border: 3px solid var(--ink); box-shadow: 3px 3px 0 var(--ink); background: var(--orange); }
+  <footer>
+    <div class="wiphala-bar" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="wrap foot">
+      <b>FELIPE SARI · PACHAKUTIK · LISTA 18</b>
+      <small>El Valle · Cuenca · Azuay</small>
+    </div>
+  </footer>
 
-/* Aparición al hacer scroll */
-.js .reveal { opacity: 0; transform: translateY(35px) scale(.97); transition: opacity .6s, transform .6s cubic-bezier(.2, 1.2, .4, 1); }
-.js .reveal.in { opacity: 1; transform: none; }
-
-/* Móvil */
-@media (max-width: 680px) {
-  .axis-tabs { top: 70px; gap: 6px; padding: 8px; }
-  .axis-tab { flex: 1 1 45%; font-size: 12px; padding: 9px 6px; }
-  .axis-tab b { font-size: 20px; }
-  .axis-heading { grid-template-columns: 70px 1fr; }
-  .axis-number { font-size: 54px; }
-  .number-18 { font-size: 110px; }
-  .proposal summary span { font-size: 13px; }
-  .contact-card { transform: none; }
-  .statement-inner { margin: 25px auto; box-shadow: 6px 6px 0 var(--ink); }
-  .marquee div { font-size: 17px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .marquee div, .hero::before, .portrait-frame, .number-18, .portrait-stamp,
-  .participation-seal, .event-date, .navigation .nav-cta, .rainbow i { animation: none !important; }
-  .js .reveal { opacity: 1; transform: none; }
-}
+  <script>
+    // Cuenta regresiva al encuentro (22 nov 2026, 14h00, hora de Ecuador)
+    (function () {
+      var t = new Date("2026-11-22T14:00:00-05:00").getTime();
+      var ids = ["d", "h", "m", "s"];
+      function pad(n) { return String(n).padStart(2, "0"); }
+      function tick() {
+        var x = Math.max(0, t - Date.now());
+        var v = [Math.floor(x / 864e5), Math.floor(x / 36e5) % 24, Math.floor(x / 6e4) % 60, Math.floor(x / 1e3) % 60];
+        ids.forEach(function (id, i) { document.getElementById(id).textContent = pad(v[i]); });
+      }
+      tick(); setInterval(tick, 1000);
+    })();
+  </script>
+</body>
+</html>
