@@ -1,265 +1,1433 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#14081f">
-  <meta name="description" content="El Valle Democrático · Encuentro ciudadano de Felipe Sari. Pachakutik, Lista 18.">
-  <title>El Valle Democrático | Felipe Sari | Pachakutik 18</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Felipe Sari - Candidato a vocal parroquial de El Valle. Conoce el plan de trabajo, las propuestas y los proyectos para nuestra parroquia.">
+    <title>Felipe Sari | Pachakutik - El Valle</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
+
 <body>
 
-  <div class="wiphala-bar" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-
-  <header class="top">
-    <div class="wrap top-in">
-      <a class="logo" href="#inicio">
-        <img src="images/pachakutik-logo.svg" alt="Pachakutik">
-        <b>PACHAKUTIK<small>LISTA 18</small></b>
-      </a>
-      <input type="checkbox" id="mt">
-      <label for="mt" class="burger" aria-label="Menú"><span></span><span></span><span></span></label>
-      <nav>
-        <a href="#encuentro">Encuentro</a>
-        <a href="#agenda">Agenda</a>
-        <a href="#ejes">34 propuestas</a>
-        <a href="#candidato">Candidato</a>
-        <a class="cta" href="#participa">¡Participa!</a>
-      </nav>
+    <!-- BARRA SUPERIOR -->
+    <div class="topbar">
+        <div class="container topbar-content">
+            <span>EL VALLE · CUENCA · AZUAY</span>
+            <span>PARTICIPACIÓN · INNOVACIÓN · DESARROLLO</span>
+        </div>
     </div>
-  </header>
 
-  <main>
-    <!-- HERO -->
+    <!-- ENCABEZADO -->
+    <header class="header">
+        <div class="container nav-container">
+
+            <a href="#inicio" class="brand">
+                <div class="brand-symbol">P</div>
+                <div>
+                    <strong>PACHAKUTIK</strong>
+                    <small>Movimiento de Unidad Plurinacional</small>
+                </div>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                ☰
+            </button>
+
+            <nav class="nav" id="mainNav">
+                <a href="#inicio">Inicio</a>
+                <a href="#identidad">Identidad</a>
+                <a href="#propuestas">Propuestas</a>
+                <a href="#ejes">Ejes de trabajo</a>
+                <a href="#participacion">Participación</a>
+                <a href="#contacto" class="nav-button">Contáctanos</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- PORTADA -->
     <section class="hero" id="inicio">
-      <div class="wrap hero-in">
-        <div>
-          <p class="tag">ENCUENTRO CIUDADANO · EL VALLE · CUENCA</p>
-          <h1>EL VALLE<br><span>DEMOCRÁTICO</span></h1>
-          <p class="lead">Un espacio para conversar, escuchar y compartir ideas para nuestra parroquia. Con Felipe Sari, ingeniero civil y candidato a vocal.</p>
 
-          <div class="when">
-            <div><small>FECHA</small><b>22 NOV 2026</b></div>
-            <div><small>HORA</small><b>DOMINGO 14h00</b></div>
-            <div><small>LUGAR</small><b>PARQUEADERO PARROQUIAL</b></div>
-          </div>
+        <div class="hero-overlay"></div>
 
-          <div class="count" id="count" aria-live="polite">
-            <div><b id="d">00</b><span>DÍAS</span></div>
-            <div><b id="h">00</b><span>HORAS</span></div>
-            <div><b id="m">00</b><span>MIN</span></div>
-            <div><b id="s">00</b><span>SEG</span></div>
-          </div>
+        <div class="container hero-content">
 
-          <div class="btns">
-            <a class="btn y" href="#participa">QUIERO ASISTIR →</a>
-            <a class="btn r" href="#ejes">VER PROPUESTAS</a>
-          </div>
+            <div class="hero-label">
+                <span class="hero-dot"></span>
+                UNA NUEVA VISIÓN PARA EL VALLE
+            </div>
+
+            <p class="hero-pretitle">CANDIDATURA A VOCAL PARROQUIAL</p>
+
+            <h1>
+                FELIPE
+                <span>SARI</span>
+            </h1>
+
+            <div class="hero-line"></div>
+
+            <h2>
+                Innovación, participación y desarrollo
+                para nuestra parroquia.
+            </h2>
+
+            <p class="hero-description">
+                Creemos en una parroquia que aprovecha su potencial,
+                fortalece sus comunidades y construye oportunidades
+                mediante la planificación, la tecnología y el trabajo conjunto.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#propuestas" class="btn btn-primary">
+                    CONOCE EL PLAN DE TRABAJO →
+                </a>
+
+                <a href="#identidad" class="btn btn-outline">
+                    NUESTRA IDENTIDAD
+                </a>
+            </div>
+
+            <div class="hero-bottom">
+                <span>EL VALLE</span>
+                <span>PAZ · UNIDAD · DESARROLLO</span>
+            </div>
+
         </div>
 
-        <div class="photo">
-          <img src="images/felipe-sari.jpg" alt="Felipe Sari">
-          <strong>18</strong>
-          <span class="chip">FELIPE SARI<small>INGENIERO CIVIL</small></span>
-        </div>
-      </div>
+        <div class="hero-decoration">FS</div>
+
     </section>
 
-    <div class="ticker" aria-hidden="true">
-      <div>
-        <span>★ EL PODER DE LA GENTE</span><span>EL VALLE SE CONSTRUYE CON TODOS</span><span>PACHAKUTIK · LISTA 18</span><span>34 PROPUESTAS</span><span>5 EJES</span>
-        <span>★ EL PODER DE LA GENTE</span><span>EL VALLE SE CONSTRUYE CON TODOS</span><span>PACHAKUTIK · LISTA 18</span><span>34 PROPUESTAS</span><span>5 EJES</span>
-      </div>
-    </div>
 
-    <!-- CIFRAS -->
-    <section class="stats">
-      <div class="wrap stats-in">
-        <div class="c1"><b>34</b><span>propuestas</span></div>
-        <div class="c2"><b>05</b><span>ejes de trabajo</span></div>
-        <div class="c3"><b>01</b><span>parroquia unida</span></div>
-        <div class="c4"><b>18</b><span>lista Pachakutik</span></div>
-      </div>
+    <!-- MENSAJE PRINCIPAL -->
+    <section class="intro-section">
+
+        <div class="container intro-grid">
+
+            <div class="intro-number">01</div>
+
+            <div>
+                <span class="section-tag">NUESTRA VISIÓN</span>
+
+                <h2>
+                    El futuro de El Valle se construye
+                    con ideas, planificación y trabajo.
+                </h2>
+            </div>
+
+            <div class="intro-text">
+                <p>
+                    Nuestra propuesta parte de una idea fundamental:
+                    mejorar lo que ya existe y desarrollar nuevas soluciones
+                    para los desafíos de nuestra parroquia.
+                </p>
+
+                <p>
+                    Queremos impulsar oportunidades económicas, mejorar
+                    la infraestructura, fortalecer la seguridad, proteger
+                    el ambiente y acercar las instituciones a la ciudadanía.
+                </p>
+            </div>
+
+        </div>
+
     </section>
 
-    <!-- ENCUENTRO -->
-    <section class="sec" id="encuentro">
-      <div class="wrap two">
-        <div>
-          <span class="label">EL ENCUENTRO</span>
-          <h2>Una cita para escucharnos.</h2>
-          <p>El Valle Democrático es un espacio abierto para que vecinos, productores, jóvenes, artistas y líderes comunitarios compartan sus necesidades y propongan soluciones para la parroquia.</p>
-          <p>Planificación, innovación y participación ciudadana: así queremos construir una parroquia productiva, segura, organizada y con oportunidades para todas sus comunidades.</p>
+
+    <!-- PRESENTACIÓN DEL CANDIDATO -->
+    <section class="candidate-section" id="candidato">
+
+        <div class="container candidate-grid">
+
+            <div class="candidate-visual">
+                <div class="candidate-frame">
+                    <div class="candidate-initials">FS</div>
+                    <span>EL VALLE</span>
+                </div>
+
+                <div class="candidate-stamp">
+                    INNOVACIÓN<br>
+                    Y DESARROLLO
+                </div>
+            </div>
+
+            <div class="candidate-info">
+
+                <span class="section-tag">CONOCE A TU CANDIDATO</span>
+
+                <h2>
+                    Ingeniero Civil.
+                    <span>Felipe Sari.</span>
+                </h2>
+
+                <p>
+                    Soy Felipe Sari, ingeniero civil y músico académico.
+                    Creo que las comunidades pueden alcanzar mejores
+                    resultados cuando sus necesidades se escuchan y sus
+                    proyectos se planifican con responsabilidad.
+                </p>
+
+                <p>
+                    Mi visión combina conocimientos técnicos, innovación,
+                    tecnología y participación ciudadana para impulsar
+                    soluciones que respondan a la realidad de El Valle.
+                </p>
+
+                <div class="candidate-values">
+
+                    <div>
+                        <span>01</span>
+                        <strong>Innovación</strong>
+                        <small>Nuevas soluciones para los problemas locales.</small>
+                    </div>
+
+                    <div>
+                        <span>02</span>
+                        <strong>Planificación</strong>
+                        <small>Proyectos con objetivos y etapas claras.</small>
+                    </div>
+
+                    <div>
+                        <span>03</span>
+                        <strong>Participación</strong>
+                        <small>La ciudadanía como protagonista.</small>
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
-        <div class="cards">
-          <div class="card c1"><b>01</b>Planificación responsable</div>
-          <div class="card c2"><b>02</b>Innovación y tecnología</div>
-          <div class="card c3"><b>03</b>Participación ciudadana</div>
-        </div>
-      </div>
+
     </section>
 
-    <!-- AGENDA -->
-    <section class="sec dark" id="agenda">
-      <div class="wrap">
-        <span class="label y">AGENDA</span>
-        <h2>Así será la jornada.</h2>
-        <p class="note">Horarios y detalles por confirmar. Toca cada bloque para ver más.</p>
-        <div class="agenda">
-          <details name="ag" open>
-            <summary><b>14h00</b><span>Bienvenida y apertura</span><i>＋</i></summary>
-            <p>Recepción de los asistentes, presentación del encuentro y del movimiento Pachakutik.</p>
-          </details>
-          <details name="ag">
-            <summary><b>14h30</b><span>Presentación del plan de trabajo</span><i>＋</i></summary>
-            <p>Resumen de las 34 propuestas organizadas en cinco ejes: económico, infraestructura, social y cultural, ambiental e institucional.</p>
-          </details>
-          <details name="ag">
-            <summary><b>15h15</b><span>Mesas de diálogo por comunidad</span><i>＋</i></summary>
-            <p>Cada comunidad comparte sus prioridades: vías, agua, seguridad, producción, cultura y juventud.</p>
-          </details>
-          <details name="ag">
-            <summary><b>16h30</b><span>Compromisos y cierre</span><i>＋</i></summary>
-            <p>Conclusiones del encuentro y compromisos de seguimiento con las comunidades.</p>
-          </details>
+
+    <!-- IDENTIDAD PACHAKUTIK -->
+    <section class="identity-section" id="identidad">
+
+        <div class="container">
+
+            <div class="section-heading light-heading">
+                <span class="section-tag">NUESTRA IDENTIDAD</span>
+
+                <h2>
+                    Una visión basada en la unidad,
+                    la diversidad y el Buen Vivir.
+                </h2>
+
+                <p>
+                    Pachakutik representa una propuesta política
+                    vinculada con la participación, la plurinacionalidad,
+                    la interculturalidad y la transformación social.
+                </p>
+            </div>
+
+            <div class="identity-grid">
+
+                <article class="identity-card">
+                    <div class="identity-icon">✊</div>
+                    <h3>Minka</h3>
+                    <p>Trabajo comunitario y colaboración para alcanzar objetivos comunes.</p>
+                </article>
+
+                <article class="identity-card">
+                    <div class="identity-icon">↔</div>
+                    <h3>Ayni</h3>
+                    <p>Reciprocidad, solidaridad y apoyo entre las personas.</p>
+                </article>
+
+                <article class="identity-card">
+                    <div class="identity-icon">🌱</div>
+                    <h3>Pachamama</h3>
+                    <p>Respeto por la naturaleza y protección de nuestro entorno.</p>
+                </article>
+
+                <article class="identity-card">
+                    <div class="identity-icon">🌽</div>
+                    <h3>Soberanía alimentaria</h3>
+                    <p>Valoración de nuestros productores y de la alimentación local.</p>
+                </article>
+
+                <article class="identity-card">
+                    <div class="identity-icon">◎</div>
+                    <h3>Plurinacionalidad</h3>
+                    <p>Reconocimiento y respeto de nuestras raíces y culturas.</p>
+                </article>
+
+                <article class="identity-card">
+                    <div class="identity-icon">☀</div>
+                    <h3>Sumak Kawsay</h3>
+                    <p>El Buen Vivir, con dignidad, equilibrio y bienestar colectivo.</p>
+                </article>
+
+            </div>
+
         </div>
-      </div>
+
     </section>
 
-    <!-- EJES -->
-    <section class="sec" id="ejes">
-      <div class="wrap">
-        <span class="label">PLAN DE TRABAJO</span>
-        <h2>34 propuestas.<br><em>Cinco ejes para avanzar.</em></h2>
-        <div class="ejes">
 
-          <details name="eje" class="e1" open>
-            <summary><b>01</b><span>Económico y productivo<small>Una economía local con más oportunidades</small></span><i>＋</i></summary>
-            <ul>
-              <li>1.1 Registro y legalización de pequeños productores</li>
-              <li>1.2 Espacio para productores en mercados y ferias</li>
-              <li>1.3 Dos miradores y ruta turística parroquial</li>
-              <li>1.4 Ventanilla de emprendimiento y economía popular</li>
-              <li>1.5 Mercado Vivo: digno, seguro y autosostenible</li>
-              <li>1.6 Eventos en escenarios deportivos comunitarios</li>
-            </ul>
-          </details>
+    <!-- CINCO EJES -->
+    <section class="axes-section" id="ejes">
 
-          <details name="eje" class="e2">
-            <summary><b>02</b><span>Infraestructura y territorio<small>Conectividad, movilidad y seguridad</small></span><i>＋</i></summary>
-            <ul>
-              <li>2.1 Tecnificación del lastrado con bombeo normativo</li>
-              <li>2.2 Capas base, subbase y rasante en tramos críticos</li>
-              <li>2.3 Piloto de geoceldas de polímero (HDPE)</li>
-              <li>2.4 Repotenciación de las cinco salidas de la parroquia</li>
-              <li>2.5 Reorganización vial del centro y parqueo</li>
-              <li>2.6 Desconcentración de servicios de Cuenca</li>
-              <li>2.7 Red comunitaria de videovigilancia</li>
-              <li>2.8 Actualización participativa del PDOT</li>
-            </ul>
-          </details>
+        <div class="container">
 
-          <details name="eje" class="e3">
-            <summary><b>03</b><span>Social, cultural e inclusión<small>Educación, cultura y oportunidades</small></span><i>＋</i></summary>
-            <ul>
-              <li>3.1 Programa de inteligencia artificial aplicada</li>
-              <li>3.2 Programa de inglés comunitario</li>
-              <li>3.3 Feria de internacionalización universitaria</li>
-              <li>3.4 Feria de ciencia, tecnología y proyectos</li>
-              <li>3.5 Educación afectivo-sexual “Proyecto de Vida”</li>
-              <li>3.6 Red “Comunidad Protectora”</li>
-              <li>3.7 Apoyo a personas con alcoholismo</li>
-              <li>3.8 Reconocimiento de las culturas de la parroquia</li>
-              <li>3.9 Formación académica y reconocimiento a los músicos</li>
-              <li>3.10 Galería parroquial para artistas</li>
-              <li>3.11 Capacitación técnica para maestros de obra</li>
-            </ul>
-          </details>
+            <div class="section-heading">
+                <span class="section-tag">PLAN DE TRABAJO</span>
 
-          <details name="eje" class="e4">
-            <summary><b>04</b><span>Ambiental y riesgos<small>Agua segura y comunidades preparadas</small></span><i>＋</i></summary>
-            <ul>
-              <li>4.1 Protección de fuentes de agua y control de calidad</li>
-              <li>4.2 Captaciones y potabilización tecnificadas</li>
-              <li>4.3 Plan de saneamiento</li>
-              <li>4.4 Mapa de riesgos y fallas geológicas</li>
-              <li>4.5 Protección de quebradas y reforestación nativa</li>
-            </ul>
-          </details>
+                <h2>
+                    Cinco ejes para transformar
+                    nuestra parroquia.
+                </h2>
 
-          <details name="eje" class="e5">
-            <summary><b>05</b><span>Institucional y transparencia<small>Una gestión abierta, cercana y digital</small></span><i>＋</i></summary>
-            <ul>
-              <li>5.1 Transparencia activa y portal web actualizado</li>
-              <li>5.2 Presidente en territorio: convenios ciudadanos</li>
-              <li>5.3 Gobierno parroquial digital con IA</li>
-              <li>5.4 Observatorio ciudadano de obras y veeduría</li>
-            </ul>
-          </details>
+                <p>
+                    Una planificación integral que conecta la economía,
+                    infraestructura, desarrollo social, ambiente y
+                    participación ciudadana.
+                </p>
+            </div>
+
+            <div class="axes-grid">
+
+                <a href="#eje1" class="axis-card axis-green">
+                    <span class="axis-number">01</span>
+                    <div class="axis-icon">🌾</div>
+                    <h3>Productividad y economía local</h3>
+                    <p>Productores, emprendimientos, mercados y turismo.</p>
+                    <span class="axis-link">VER PROPUESTAS →</span>
+                </a>
+
+                <a href="#eje2" class="axis-card axis-orange">
+                    <span class="axis-number">02</span>
+                    <div class="axis-icon">🏗</div>
+                    <h3>Infraestructura y ordenamiento</h3>
+                    <p>Vialidad, movilidad, seguridad y planificación territorial.</p>
+                    <span class="axis-link">VER PROPUESTAS →</span>
+                </a>
+
+                <a href="#eje3" class="axis-card axis-blue">
+                    <span class="axis-number">03</span>
+                    <div class="axis-icon">🎓</div>
+                    <h3>Social, cultural e inclusión</h3>
+                    <p>Juventud, educación, cultura y protección social.</p>
+                    <span class="axis-link">VER PROPUESTAS →</span>
+                </a>
+
+                <a href="#eje4" class="axis-card axis-teal">
+                    <span class="axis-number">04</span>
+                    <div class="axis-icon">🌳</div>
+                    <h3>Ambiente y gestión de riesgos</h3>
+                    <p>Agua, saneamiento, conservación y prevención.</p>
+                    <span class="axis-link">VER PROPUESTAS →</span>
+                </a>
+
+                <a href="#eje5" class="axis-card axis-dark">
+                    <span class="axis-number">05</span>
+                    <div class="axis-icon">🏛</div>
+                    <h3>Transparencia y participación</h3>
+                    <p>Gobierno digital, rendición de cuentas y ciudadanía.</p>
+                    <span class="axis-link">VER PROPUESTAS →</span>
+                </a>
+
+            </div>
+
         </div>
-      </div>
+
     </section>
 
-    <!-- CANDIDATO -->
-    <section class="sec cand" id="candidato">
-      <div class="wrap two">
-        <div class="pic">
-          <img src="images/felipe-sari.jpg" alt="Felipe Sari">
+
+    <!-- PROPUESTAS -->
+    <section class="proposals-section" id="propuestas">
+
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="section-tag">PROYECTOS Y SOLUCIONES</span>
+
+                <h2>
+                    Conoce nuestras propuestas.
+                </h2>
+
+                <p>
+                    Explora los proyectos que forman parte del plan
+                    de trabajo para el desarrollo de El Valle.
+                </p>
+            </div>
+
+            <div class="proposal-search">
+                <input
+                    type="text"
+                    id="proposalSearch"
+                    placeholder="Buscar una propuesta, proyecto o tema..."
+                    aria-label="Buscar propuestas"
+                >
+                <span>⌕</span>
+            </div>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">TODAS</button>
+                <button class="filter-btn" data-filter="eje1">ECONOMÍA</button>
+                <button class="filter-btn" data-filter="eje2">INFRAESTRUCTURA</button>
+                <button class="filter-btn" data-filter="eje3">SOCIAL Y CULTURA</button>
+                <button class="filter-btn" data-filter="eje4">AMBIENTE</button>
+                <button class="filter-btn" data-filter="eje5">TRANSPARENCIA</button>
+            </div>
+
+
+            <!-- EJE 1 -->
+            <div class="proposal-group" id="eje1">
+
+                <div class="proposal-group-heading">
+                    <span>01</span>
+                    <div>
+                        <small>EJE DE DESARROLLO</small>
+                        <h3>Productividad, economía local y turismo</h3>
+                    </div>
+                </div>
+
+                <div class="proposal-grid">
+
+                    <article class="proposal-card" data-category="eje1">
+                        <span class="proposal-code">PROPUESTA 1.2</span>
+                        <div class="proposal-icon">🛒</div>
+                        <h4>Espacio para productores en el mercado y ferias parroquiales</h4>
+                        <p>
+                            Gestionar puestos para productores locales en los mercados
+                            y organizar ferias agroecológicas periódicas en el centro parroquial.
+                        </p>
+                        <div class="proposal-meta">
+                            <span>PRODUCTIVIDAD</span>
+                            <span>ODS 2 · 8 · 12</span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p><strong>Etapas:</strong> Año 1: convenio y asignación de puestos. Años 1-2: feria mensual. Desde el año 2: evaluación y ampliación.</p>
+                            <p><strong>Resultado esperado:</strong> Venta directa del productor al consumidor y mayores ingresos familiares.</p>
+                        </details>
+                    </article>
+
+                    <article class="proposal-card" data-category="eje1">
+                        <span class="proposal-code">PROPUESTA 1.3</span>
+                        <div class="proposal-icon">🏞</div>
+                        <h4>Dos miradores y una ruta turística parroquial</h4>
+                        <p>
+                            Estudiar y construir dos miradores en los sectores
+                            Cisnes–Bunchen y La Cruz, enlazados mediante una ruta turística.
+                        </p>
+                        <div class="proposal-meta">
+                            <span>TURISMO</span>
+                            <span>ODS 8 · 11 · 12</span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p><strong>Etapas:</strong> Año 1: estudios, tenencia del suelo y diseños. Año 2: primer mirador. Año 3: segundo mirador y señalética.</p>
+                            <p><strong>Resultado esperado:</strong> Dos miradores operativos y una ruta turística promocionada.</p>
+                        </details>
+                    </article>
+
+                    <article class="proposal-card" data-category="eje1">
+                        <span class="proposal-code">PROPUESTA 1.4</span>
+                        <div class="proposal-icon">💼</div>
+                        <h4>Ventanilla de emprendimiento y economía popular y solidaria</h4>
+                        <p>
+                            Brindar asesoría para formalizar negocios, capacitar
+                            en finanzas y ventas y organizar ruedas de negocios.
+                        </p>
+                        <div class="proposal-meta">
+                            <span>EMPRENDIMIENTO</span>
+                            <span>ODS 8 · 9</span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p><strong>Etapas:</strong> Año 1: alianzas y apertura. Año 2: ruedas de negocios y ferias. Año 3: seguimiento.</p>
+                            <p><strong>Resultado esperado:</strong> Más emprendimientos formalizados y empleo local.</p>
+                        </details>
+                    </article>
+
+                    <article class="proposal-card featured-card" data-category="eje1">
+                        <span class="proposal-code">PROPUESTA 1.5 · PROYECTO EMBLEMÁTICO</span>
+                        <div class="proposal-icon">🏬</div>
+                        <h4>MERCADO VIVO</h4>
+                        <h5>Un mercado digno, seguro y autosostenible.</h5>
+                        <p>
+                            Fortalecer el Mercado Parroquial Reina del Cisne
+                            mediante infraestructura, seguridad, capacitación,
+                            organización comercial y promoción de la producción local.
+                        </p>
+
+                        <div class="market-lines">
+                            <div>01. Mercado digno</div>
+                            <div>02. Mercado seguro y organizado</div>
+                            <div>03. Mercado saludable</div>
+                            <div>04. Comerciantes emprendedores</div>
+                            <div>05. Identidad y soberanía alimentaria</div>
+                            <div>06. Mercado autosostenible</div>
+                        </div>
+
+                        <div class="proposal-meta">
+                            <span>PROYECTO INTEGRAL</span>
+                            <span>ODS 2 · 3 · 8 · 12</span>
+                        </div>
+
+                        <details>
+                            <summary>Conocer las seis líneas de acción</summary>
+
+                            <p><strong>1. Mercado digno:</strong> mantenimiento, mejoramiento de redes eléctricas, agua potable y desagües.</p>
+
+                            <p><strong>2. Mercado seguro:</strong> videovigilancia, gestión de guardia, organización comercial y nuevas islas autorizadas.</p>
+
+                            <p><strong>3. Mercado saludable:</strong> control de plagas, manejo de desechos, limpieza, desinfección y señalización.</p>
+
+                            <p><strong>4. Comerciantes emprendedores:</strong> capacitación en manipulación de alimentos, atención al cliente, gastronomía y educación financiera.</p>
+
+                            <p><strong>5. Identidad y soberanía alimentaria:</strong> promoción de productos locales, ferias gastronómicas y culturales y rescate de tradiciones.</p>
+
+                            <p><strong>6. Mercado autosostenible:</strong> gestión de auspicios, patrocinios, publicidad autorizada y nuevos ingresos comerciales.</p>
+
+                            <p><strong>Resultado esperado:</strong> Un mercado ordenado, limpio, seguro, señalizado y con ingresos propios para contribuir a su mantenimiento.</p>
+                        </details>
+                    </article>
+
+                </div>
+
+            </div>
+
+
+            <!-- EJE 2 -->
+            <div class="proposal-group" id="eje2">
+
+                <div class="proposal-group-heading">
+                    <span>02</span>
+                    <div>
+                        <small>EJE DE DESARROLLO</small>
+                        <h3>Infraestructura y ordenamiento territorial</h3>
+                    </div>
+                </div>
+
+                <div class="proposal-grid">
+
+                    <article class="proposal-card" data-category="eje2">
+                        <span class="proposal-code">PROPUESTA 2.1</span>
+                        <div class="proposal-icon">🛣</div>
+                        <h4>Tecnificación del lastrado con bombeo normativo</h4>
+                        <p>
+                            Mejorar el lastrado de aproximadamente 400 km de vías,
+                            incorporando bombeo, cunetas, alcantarillas y control de compactación.
+                        </p>
+                        <div class="proposal-meta">
+                            <span>VIALIDAD</span>
+                            <span>ODS 9 · 11</span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p><strong>Etapas:</strong> Año 1: inventario y priorización. Años 1-2: tramos piloto. Desde el año 2: mantenimiento programado.</p>
+                            <p><strong>Resultado esperado:</strong> Vías transitables durante todo el año y menores costos de mantenimiento.</p>
+                        </details>
+                    </article>
+
+                    <article class="proposal-card" data-category="eje2">
+                        <span class="proposal-code">PROPUESTA 2.2</span>
+                        <div class="proposal-icon">🏗</div>
+                        <h4>Conformación de capas base, subbase y rasante</h4>
+                        <p>
+                            Construir estructuras viales completas en tramos críticos,
+                            con materiales certificados y ensayos de laboratorio.
+                        </p>
+                        <div class="proposal-meta">
+                            <span>INGENIERÍA VIAL</span>
+                            <span>ODS 9 · 11</span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p><strong>Etapas:</strong> Año 1: estudios de suelos y diseños. Años 2-3: ejecución por tramos. Posteriormente: pavimentación progresiva según tráfico.</p>
+                            <p><strong>Resultado esperado:</strong> Vías con estructura adecuada y mayor vida útil.</p>
+                        </details>
+                    </article>
+
+                    <article class="proposal-card" data-category="eje2">
+                        <span class="proposal-code">PROPUESTA 2.3</span>
+                        <div class="proposal-icon">🔬</div>
+                        <h4>Piloto de geoceldas de polímero de alta densidad</h4>
+                        <p>
+                            Implementar tecnología HDPE en tramos con suelos blandos
+                            o pendientes fuertes para mejorar la estabilidad vial.
+                        </p>
+                        <div class="proposal-meta">
+                            <span>INNOVACIÓN</span>
+                            <span>ODS 9 · 11</span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p><strong>Etapas:</strong> Año 1: selección de 2 o 3 tramos. Año 2: instalación y monitoreo de 12 meses. Año 3: evaluación para ampliar.</p>
+                            <p><strong>Resultado esperado:</strong> Tecnología validada en campo y menor deterioro de las vías.</p>
+                        </details>
+                    </article>
+
+                    <article class="proposal-card" data-category="eje2">
+                        <span class="proposal-code">PROPUESTA 2.4</span>
+                        <div class="proposal-icon">🚙</div>
+                        <h4>Repotenciación de las cinco salidas de la parroquia</h4>
+                        <p>
+                            Diagnosticar y gestionar mejoras para El Verde, La Libertad
+                            (Morochiquiwa), San Antonio de Gapal, Chilcapamba y la vía principal.
+                        </p>
+                        <div class="proposal-meta">
+                            <span>CONECTIVIDAD</span>
+                            <span>ODS 9 · 11</span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p><strong>Etapas:</strong> Año 1: diagnóstico y matriz de competencias. Años 1-2: mesas institucionales. Años 2-4: intervenciones graduales.</p>
+                            <p><strong>Resultado esperado:</strong> Cinco salidas con responsables definidos y mantenimiento regular.</p>
+                        </details>
+                    </article>
+
+                    <article class="proposal-card" data-category="eje2">
+                        <span class="proposal-code">PROPUESTA 2.5</span>
+                        <div class="proposal-icon">🚦</div>
+                        <h4>Reorganización vial del centro parroquial y parqueo</h4>
+                        <p>
+                            Diseñar un plan de movilidad que organice sentidos de circulación,
+                            paradas, zonas de carga y parqueaderos.
+                        </p>
+                        <div class="proposal-meta">
+                            <span>MOVILIDAD</span>
+                            <span>ODS 9 · 11</span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p><strong>Etapas:</strong> Año 1: estudio de tráfico y consulta ciudadana. Año 2: señalización y pruebas piloto. Año 3: obras de parqueo.</p>
+                            <p><strong>Resultado esperado:</strong> Centro parroquial más ordenado y seguro.</p>
+                        </details>
+                    </article>
+
+                    <article class="proposal-card" data-category="eje2">
+                        <span class="proposal-code">PROPUESTA 2.6</span>
+                        <div class="proposal-icon">🏢</div>
+                        <h4>Desconcentración de servicios de Cuenca hacia El Valle</h4>
+                        <p>
+                            Gestionar ventanillas, oficinas y servicios institucionales
+                            para acercar los trámites a la población.
+                        </p>
+                        <div class="proposal-meta">
+                            <span>SERVICIOS</span>
+                            <span>ODS 8 · 11 · 16</span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p><strong>Etapas:</strong> Año 1: catálogo de trámites y mesas de trabajo. Años 1-2: ventanillas piloto. Desde el año 2: agencias permanentes.</p>
+                            <p><strong>Resultado esperado:</strong> Menos desplazamientos hacia Cuenca y más servicios cercanos.</p>
+                        </details>
+                    </article>
+
+                    <article class="proposal-card" data-category="eje2">
+                        <span class="proposal-code">PROPUESTA 2.7</span>
+                        <div class="proposal-icon">📹</div>
+                        <h4>Red comunitaria de videovigilancia en tiempo real</h4>
+                        <p>
+                            Ampliar el sistema de cámaras, alarmas y conectividad comunitaria,
+                            articulándolo con el ECU 911 y la Policía Nacional.
+                        </p>
+                        <div class="proposal-meta">
+                            <span>SEGURIDAD</span>
+                            <span>ODS 11 · 16</span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p><strong>Etapas:</strong> Año 1: auditoría del sistema existente. Años 1-2: protocolos y operación coordinada. Años 2-3: ampliación de cámaras y alarmas.</p>
+                            <p><strong>Resultado esperado:</strong> Monitoreo permanente, respuesta más rápida y comunidades conectadas.</p>
+                            <p><strong>Garantías:</strong> Acceso por roles, registro de consultas y cumplimiento de la normativa de protección de datos personales.</p>
+                        </details>
+                    </article>
+
+                    <article class="proposal-card suggested-card" data-category="eje2">
+                        <span class="proposal-code">PROPUESTA 2.8 · POR VALIDAR</span>
+                        <div class="proposal-icon">🗺</div>
+                        <h4>Actualización participativa del PDOT</h4>
+                        <p>
+                            Actualizar el Plan de Desarrollo y Ordenamiento Territorial
+                            con diagnósticos, mapas, riesgos y prioridades comunitarias.
+                        </p>
+                        <div class="proposal-meta">
+                            <span>PLANIFICACIÓN</span>
+                            <span>ODS 11 · 17</span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p><strong>Etapas:</strong> Año 1: levantamiento y asambleas. Años 1-2: aprobación. Cada año: seguimiento y evaluación.</p>
+                            <p><strong>Resultado esperado:</strong> PDOT actualizado, con metas medibles.</p>
+                        </details>
+                    </article>
+
+                </div>
+
+            </div>
+
+
+            <!-- EJE 3 -->
+            <div class="proposal-group" id="eje3">
+
+                <div class="proposal-group-heading">
+                    <span>03</span>
+                    <div>
+                        <small>EJE DE DESARROLLO</small>
+                        <h3>Social, cultural y de inclusión</h3>
+                    </div>
+                </div>
+
+                <div class="proposal-grid">
+
+                    <article class="proposal-card" data-category="eje3">
+                        <span class="proposal-code">PROPUESTA 3.1</span>
+                        <div class="proposal-icon">🤖</div>
+                        <h4>Programa de inteligencia artificial aplicada</h4>
+                        <p>
+                            Capacitar a jóvenes, emprendedores y líderes en inteligencia
+                            artificial, automatización, programación y desarrollo de software.
+                        </p>
+                        <div class="proposal-meta">
+                            <span>TECNOLOGÍA</span>
+                            <span>ODS 4 · 8 · 9</span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p><strong>Etapas:</strong> Año 1: alianzas y curso piloto para 30-40 personas. Año 2: laboratorio digital. Año 3: formación continua.</p>
+                            <p><strong>Resultado esperado:</strong> Jóvenes capaces de crear soluciones reales y acceder a mejores oportunidades laborales.</p>
+                        </details>
+                    </article>
+
+                    <article class="proposal-card" data-category="eje3">
+                        <span class="proposal-code">PROPUESTA 3.2</span>
+                        <div class="proposal-icon">🌎</div>
+                        <h4>Programa de inglés comunitario</h4>
+                        <p>
+                            Ofrecer formación en inglés por niveles, con docentes,
+                            voluntarios y alianzas universitarias.
+                        </p>
+                        <div class="proposal-meta">
+                            <span>EDUCACIÓN</span>
+                            <span>ODS 4 · 8</span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p><strong>Etapas:</strong> Año 1: diagnóstico y primer curso. Año 2: niveles intermedios y certificación. Año 3: club de conversación.</p>
+                            <p><strong>Resultado esperado:</strong> Mayor dominio del idioma y acceso a nuevas oportunidades.</p>
+                        </details>
+                    </article>
+
+                    <article class="proposal-card" data-category="eje3">
+                        <span class="proposal-code">PROPUESTA 3.3</span>
+                        <div class="proposal-icon">🎓</div>
+                        <h4>Feria de internacionalización universitaria</h4>
+                        <p>
+                            Acercar a los jóvenes información sobre universidades,
+                            becas, intercambios y oportunidades de estudio en el exterior.
+                        </p>
+                        <div class="proposal-meta">
+                            <span>OPORTUNIDADES</span>
+                            <span>ODS 4 · 17</span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p><strong>Etapas:</strong> Año 1: primera feria. Años siguientes: feria anual y asesoría para postular a becas.</p>
+                            <p><strong>Resultado esperado:</strong> Más jóvenes postulando a becas y estudios superiores.</p>
+                        </details>
+                    </article>
+
+                    <article class="proposal-card" data-category="eje3">
+                        <span class="proposal-code">PROPUESTA 3.4</span>
+                        <div class="proposal-icon">🔬</div>
+                        <h4>Feria parroquial de ciencia, tecnología y proyectos</h4>
+                        <p>
+                            Organizar una feria anual para exponer proyectos técnicos
+                            y científicos de colegios, con jurados y premios.
+                        </p>
+                        <div class="proposal-meta">
+                            <span>INNOVACIÓN</span>
+                            <span>ODS 4 · 9</span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p><strong>Etapas:</strong> Año 1: primera convocatoria. Año 2: premios y proyectos piloto. Año 3: feria abierta a toda la parroquia.</p>
+                            <p><strong>Resultado esperado:</strong> Cultura de innovación y proyectos juveniles aplicados a problemas locales.</p>
+                        </details>
+                    </article>
+
+                    <article class="proposal-card" data-category="eje3">
+                        <span class="proposal-code">PROPUESTA 3.5</span>
+                        <div class="proposal-icon">❤️</div>
+                        <h4>Educación afectivo-sexual: Proyecto de Vida</h4>
+                        <p>
+                            Desarrollar talleres participativos para fortalecer
+                            la toma de decisiones y prevenir el embarazo adolescente.
+                        </p>
+                        <div class="proposal-meta">
+                            <span>JUVENTUD Y SALUD</span>
+                            <span>ODS 3 · 4 · 5</span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p><strong>Etapas:</strong> Año 1: alianzas y formación de facilitadores. Años 1-3: talleres en colegios y comunidades.</p>
+                            <p><strong>Resultado esperado:</strong> Adolescentes con herramientas para construir su proyecto de vida.</p>
+                        </details>
+                    </article>
+
+                    <article class="proposal-card" data-category="eje3">
+                        <span class="proposal-code">PROPUESTA 3.6</span>
+                        <div class="proposal-icon">🤝</div>
+                        <h4>Red Comunidad Protectora</h4>
+                        <p>
+                            Crear redes de apoyo para prevenir la violencia intrafamiliar
+                            y proteger a mujeres, niñez, adultos mayores y personas con discapacidad.
+                        </p>
+                        <div class="proposal-meta">
+                            <span>PROTECCIÓN SOCIAL</span>
+                            <span>ODS 5 · 10 · 16</span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p><strong>Etapas:</strong> Año 1: formación de promotores. Año 2: círculos de apoyo. Año 3: evaluación y mejora.</p>
+                            <p><strong>Resultado esperado:</strong> Red activa de protección y rutas de atención conocidas.</p>
+                        </details>
+                    </article>
+
+                    <article class="proposal-card" data-category="eje3">
+                        <span class="proposal-code">PROPUESTA 3.7</span>
+                        <div class="proposal-icon">🫂</div>
+                        <h4>Apoyo a personas con alcoholismo mediante convenios</h4>
+                        <p>
+                            Promover prevención, detección temprana, grupos de ayuda mutua
+                            y acompañamiento para las personas afectadas y sus familias.
+                        </p>
+                        <div class="proposal-meta">
+                            <span>SALUD COMUNITARIA</span>
+                            <span>ODS 3 · 10</span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p><strong>Etapas:</strong> Año 1: diagnóstico y mesa comunitaria. Año 2: grupos de apoyo. Año 3: seguimiento y campañas.</p>
+                            <p><strong>Resultado esperado:</strong> Más personas acompañadas y derivadas a servicios de salud.</p>
+                        </details>
+                    </article>
+
+                    <article class="proposal-card" data-category="eje3">
+                        <span class="proposal-code">PROPUESTA 3.8</span>
+                        <div class="proposal-icon">🌈</div>
+                        <h4>Reconocimiento oficial de las culturas de la parroquia</h4>
+                        <p>
+                            Reconocer las culturas presentes en El Valle y crear
+                            un consejo cultural con representantes y agenda anual.
+                        </p>
+                        <div class="proposal-meta">
+                            <span>IDENTIDAD</span>
+                            <span>ODS 10 · 16</span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p><strong>Etapas:</strong> Año 1: consulta y resolución. Años 1-2: consejo cultural y calendario. Desde el año 2: festivales.</p>
+                            <p><strong>Resultado esperado:</strong> Culturas reconocidas y representadas en las decisiones culturales.</p>
+                        </details>
+                    </article>
+
+                    <article class="proposal-card" data-category="eje3">
+                        <span class="proposal-code">PROPUESTA 3.9</span>
+                        <div class="proposal-icon">🎼</div>
+                        <h4>Formación académica y reconocimiento a los músicos</h4>
+                        <p>
+                            Impulsar formación musical formal para músicos empíricos,
+                            con convenios, certificación y reconocimiento de géneros musicales.
+                        </p>
+                        <div class="proposal-meta">
+                            <span>MÚSICA</span>
+                            <span>ODS 4 · 8</span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p><strong>Etapas:</strong> Año 1: censo y convenio. Año 2: primer ciclo de formación. Año 3: certificación y gala de reconocimiento.</p>
+                            <p><strong>Resultado esperado:</strong> Músicos con formación y mayores oportunidades de profesionalización.</p>
+                        </details>
+                    </article>
+
+                    <article class="proposal-card" data-category="eje3">
+                        <span class="proposal-code">PROPUESTA 3.10</span>
+                        <div class="proposal-icon">🎨</div>
+                        <h4>Reconocimiento y galería parroquial para artistas</h4>
+                        <p>
+                            Crear un registro de artistas y habilitar un espacio
+                            parroquial para exposiciones y actividades culturales.
+                        </p>
+                        <div class="proposal-meta">
+                            <span>ARTE Y CULTURA</span>
+                            <span>ODS 8 · 11</span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p><strong>Etapas:</strong> Año 1: registro y adecuación. Año 2: exposiciones. Año 3: circuito cultural.</p>
+                            <p><strong>Resultado esperado:</strong> Espacio cultural activo y artistas reconocidos.</p>
+                        </details>
+                    </article>
+
+                </div>
+
+            </div>
+
+
+            <!-- EJE 4 -->
+            <div class="proposal-group" id="eje4">
+
+                <div class="proposal-group-heading">
+                    <span>04</span>
+                    <div>
+                        <small>EJE DE DESARROLLO</small>
+                        <h3>Ambiental y gestión de riesgos</h3>
+                    </div>
+                </div>
+
+                <div class="proposal-grid">
+
+                    <article class="proposal-card" data-category="eje4">
+                        <span class="proposal-code">PROPUESTA 4.1</span>
+                        <div class="proposal-icon">💧</div>
+                        <h4>Protección de fuentes de agua y control de calidad</h4>
+                        <p>
+                            Proteger captaciones mediante cercado, reforestación,
+                            acuerdos con propietarios y análisis periódicos del agua.
+                        </p>
+                        <div class="proposal-meta">
+                            <span>AGUA</span>
+                            <span>ODS 6 · 15</span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p><strong>Etapas:</strong> Año 1: inventario y línea base. Años 1-2: protección y convenios. Desde el año 2: monitoreo periódico.</p>
+                            <p><strong>Resultado esperado:</strong> Fuentes protegidas y agua con calidad verificada.</p>
+                        </details>
+                    </article>
+
+                    <article class="proposal-card" data-category="eje4">
+                        <span class="proposal-code">PROPUESTA 4.2</span>
+                        <div class="proposal-icon">🚰</div>
+                        <h4>Captaciones y sistemas de potabilización tecnificados</h4>
+                        <p>
+                            Modernizar sistemas comunitarios con captación,
+                            desarenadores, filtración y desinfección.
+                        </p>
+                        <div class="proposal-meta">
+                            <span>AGUA SEGURA</span>
+                            <span>ODS 3 · 6</span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p><strong>Etapas:</strong> Año 1: diagnóstico. Años 2-4: modernización por prioridad. Continuamente: capacitación de operadores.</p>
+                            <p><strong>Resultado esperado:</strong> Agua segura para las comunidades.</p>
+                        </details>
+                    </article>
+
+                    <article class="proposal-card" data-category="eje4">
+                        <span class="proposal-code">PROPUESTA 4.3</span>
+                        <div class="proposal-icon">♻</div>
+                        <h4>Plan de saneamiento: alcantarillado o planta de tratamiento</h4>
+                        <p>
+                            Gestionar soluciones de saneamiento según las características
+                            de cada sector, priorizando alcantarillado y plantas de tratamiento.
+                        </p>
+                        <div class="proposal-meta">
+                            <span>SANEAMIENTO</span>
+                            <span>ODS 3 · 6 · 11</span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p><strong>Etapas:</strong> Año 1: diagnóstico y priorización. Año 2: diseños. Desde el año 3: ejecución por fases.</p>
+                            <p><strong>Resultado esperado:</strong> Menos contaminación y mejor salud comunitaria.</p>
+                        </details>
+                    </article>
+
+                    <article class="proposal-card" data-category="eje4">
+                        <span class="proposal-code">PROPUESTA 4.4</span>
+                        <div class="proposal-icon">⛰</div>
+                        <h4>Mapa de riesgos: remoción en masa y fallas geológicas</h4>
+                        <p>
+                            Elaborar un mapa de amenazas para identificar zonas
+                            susceptibles a deslizamientos y establecer medidas preventivas.
+                        </p>
+                        <div class="proposal-meta">
+                            <span>PREVENCIÓN</span>
+                            <span>ODS 11 · 13</span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p><strong>Etapas:</strong> Año 1: levantamiento técnico. Año 2: mapa e incorporación al PDOT. Año 3: simulacros y obras de mitigación.</p>
+                            <p><strong>Resultado esperado:</strong> Decisiones de uso del suelo basadas en información de riesgos.</p>
+                        </details>
+                    </article>
+
+                    <article class="proposal-card suggested-card" data-category="eje4">
+                        <span class="proposal-code">PROPUESTA 4.5 · POR VALIDAR</span>
+                        <div class="proposal-icon">🌳</div>
+                        <h4>Protección de quebradas y reforestación con especies nativas</h4>
+                        <p>
+                            Desarrollar viveros comunitarios y jornadas de reforestación
+                            en quebradas y laderas.
+                        </p>
+                        <div class="proposal-meta">
+                            <span>CONSERVACIÓN</span>
+                            <span>ODS 13 · 15</span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p><strong>Etapas:</strong> Año 1: vivero y primeras jornadas. Años 2-3: reforestación por microcuencas. Continuamente: cuidado y monitoreo.</p>
+                            <p><strong>Resultado esperado:</strong> Quebradas protegidas y mayor cobertura vegetal.</p>
+                        </details>
+                    </article>
+
+                </div>
+
+            </div>
+
+
+            <!-- EJE 5 -->
+            <div class="proposal-group" id="eje5">
+
+                <div class="proposal-group-heading">
+                    <span>05</span>
+                    <div>
+                        <small>EJE DE DESARROLLO</small>
+                        <h3>Político-institucional, participación y transparencia</h3>
+                    </div>
+                </div>
+
+                <div class="proposal-grid">
+
+                    <article class="proposal-card" data-category="eje5">
+                        <span class="proposal-code">PROPUESTA 5.1</span>
+                        <div class="proposal-icon">🌐</div>
+                        <h4>Transparencia activa y portal web actualizado</h4>
+                        <p>
+                            Actualizar la página web del GAD y publicar presupuestos,
+                            contratos, obras, avances y rendición de cuentas.
+                        </p>
+                        <div class="proposal-meta">
+                            <span>TRANSPARENCIA</span>
+                            <span>ODS 16</span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p><strong>Etapas:</strong> Primeros 100 días: auditoría y publicación de información obligatoria. Años 1-2: tablero público. Cada mes: actualización.</p>
+                            <p><strong>Resultado esperado:</strong> Información pública actualizada y mayor confianza ciudadana.</p>
+                        </details>
+                    </article>
+
+                    <article class="proposal-card" data-category="eje5">
+                        <span class="proposal-code">PROPUESTA 5.2</span>
+                        <div class="proposal-icon">🤝</div>
+                        <h4>Presidente en territorio y convenios de participación</h4>
+                        <p>
+                            Establecer visitas periódicas a las comunidades,
+                            asambleas y acuerdos con compromisos y seguimiento.
+                        </p>
+                        <div class="proposal-meta">
+                            <span>PARTICIPACIÓN</span>
+                            <span>ODS 16 · 17</span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p><strong>Etapas:</strong> Año 1: calendario y reglamento. Años 1-4: visitas periódicas, asambleas y presupuestos participativos.</p>
+                            <p><strong>Resultado esperado:</strong> Prioridades definidas con las comunidades y compromisos con seguimiento.</p>
+                        </details>
+                    </article>
+
+                    <article class="proposal-card" data-category="eje5">
+                        <span class="proposal-code">PROPUESTA 5.3</span>
+                        <div class="proposal-icon">💻</div>
+                        <h4>Gobierno parroquial digital con inteligencia artificial</h4>
+                        <p>
+                            Crear herramientas digitales para reportar daños viales,
+                            consultar obras, visualizar proyectos y agilizar procesos internos.
+                        </p>
+                        <div class="proposal-meta">
+                            <span>GOBIERNO DIGITAL</span>
+                            <span>ODS 9 · 16</span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p><strong>Etapas:</strong> Año 1: piloto de reporte vial. Año 2: portal de obras y mapa interactivo. Año 3: más trámites digitales.</p>
+                            <p><strong>Resultado esperado:</strong> Servicios ágiles y decisiones basadas en datos.</p>
+                        </details>
+                    </article>
+
+                    <article class="proposal-card suggested-card" data-category="eje5">
+                        <span class="proposal-code">PROPUESTA 5.4 · POR VALIDAR</span>
+                        <div class="proposal-icon">🔎</div>
+                        <h4>Observatorio ciudadano de obras y veeduría</h4>
+                        <p>
+                            Promover grupos ciudadanos capacitados para observar
+                            las obras, revisar avances y publicar informes sencillos.
+                        </p>
+                        <div class="proposal-meta">
+                            <span>CONTROL CIUDADANO</span>
+                            <span>ODS 16</span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p><strong>Etapas:</strong> Año 1: convocatoria y capacitación. Año 2: primeros informes. Año 3: informe anual.</p>
+                            <p><strong>Resultado esperado:</strong> Obras mejor controladas y ciudadanía informada.</p>
+                        </details>
+                    </article>
+
+                </div>
+
+            </div>
+
+            <div class="no-results" id="noResults">
+                No se encontraron propuestas con ese criterio de búsqueda.
+            </div>
+
         </div>
-        <div>
-          <span class="label y">TU CANDIDATO</span>
-          <h2>Felipe Sari</h2>
-          <p class="role">Ingeniero civil y músico académico · Candidato a vocal del GAD Parroquial Rural de El Valle</p>
-          <p>Creo en la innovación, en la planificación responsable y en la capacidad de nuestras comunidades para construir un mejor futuro. Siempre podemos mejorar lo que ya existe y trabajar junto a la ciudadanía para encontrar soluciones reales.</p>
-          <a class="btn y" href="https://pachakutik.com.ec/" target="_blank" rel="noopener">CONOCE EL MOVIMIENTO →</a>
-        </div>
-      </div>
+
     </section>
 
-    <!-- PARTICIPA -->
-    <section class="sec join" id="participa">
-      <div class="wrap two">
-        <div>
-          <span class="label">PARTICIPA</span>
-          <h2>Tu comunidad tiene mucho que aportar.</h2>
-          <p>Escríbeme, confirma tu asistencia y comparte las ideas y necesidades de tu barrio o comunidad.</p>
-          <div class="links">
-            <a href="mailto:briari21@hotmail.com"><b>✉</b>briari21@hotmail.com</a>
-            <a href="https://wa.me/593988486874" target="_blank" rel="noopener"><b>☏</b>+593 0988486874 · WhatsApp</a>
-          </div>
+
+    <!-- PARTICIPACIÓN -->
+    <section class="participation-section" id="participacion">
+
+        <div class="container participation-content">
+
+            <div>
+                <span class="section-tag">EL VALLE LO CONSTRUIMOS TODOS</span>
+
+                <h2>
+                    Una parroquia participativa
+                    necesita escuchar a su gente.
+                </h2>
+
+                <p>
+                    Las propuestas deben construirse junto a las comunidades.
+                    La participación ciudadana, las asambleas y el seguimiento
+                    de los proyectos son fundamentales para alcanzar resultados.
+                </p>
+
+                <a href="#contacto" class="btn btn-light">
+                    PARTICIPA CON NOSOTROS →
+                </a>
+            </div>
+
+            <div class="participation-stats">
+                <div>
+                    <strong>05</strong>
+                    <span>EJES DE DESARROLLO</span>
+                </div>
+
+                <div>
+                    <strong>30+</strong>
+                    <span>PROPUESTAS Y ACCIONES</span>
+                </div>
+
+                <div>
+                    <strong>04</strong>
+                    <span>AÑOS DE PLANIFICACIÓN</span>
+                </div>
+            </div>
+
         </div>
-        <div class="ticket">
-          <small>LISTA</small><strong>18</strong>
-          <h3>FELIPE SARI</h3>
-          <p>22 NOV 2026 · DOMINGO 14h00<br>PARQUEADERO PARROQUIAL</p>
-          <a class="btn y full" href="https://wa.me/593988486874?text=Hola%20Felipe,%20quiero%20asistir%20al%20encuentro%20El%20Valle%20Democr%C3%A1tico." target="_blank" rel="noopener">CONFIRMAR POR WHATSAPP →</a>
-        </div>
-      </div>
+
     </section>
-  </main>
 
-  <footer>
-    <div class="wiphala-bar" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-    <div class="wrap foot">
-      <b>FELIPE SARI · PACHAKUTIK · LISTA 18</b>
-      <small>El Valle · Cuenca · Azuay</small>
-    </div>
-  </footer>
 
-  <script>
-    // Cuenta regresiva al encuentro (22 nov 2026, 14h00, hora de Ecuador)
-    (function () {
-      var t = new Date("2026-11-22T14:00:00-05:00").getTime();
-      var ids = ["d", "h", "m", "s"];
-      function pad(n) { return String(n).padStart(2, "0"); }
-      function tick() {
-        var x = Math.max(0, t - Date.now());
-        var v = [Math.floor(x / 864e5), Math.floor(x / 36e5) % 24, Math.floor(x / 6e4) % 60, Math.floor(x / 1e3) % 60];
-        ids.forEach(function (id, i) { document.getElementById(id).textContent = pad(v[i]); });
-      }
-      tick(); setInterval(tick, 1000);
-    })();
-  </script>
+    <!-- TRANSPARENCIA Y RESPONSABILIDAD -->
+    <section class="commitment-section">
+
+        <div class="container">
+
+            <div class="section-heading">
+                <span class="section-tag">COMPROMISO CON EL VALLE</span>
+                <h2>Propuestas con planificación y responsabilidad.</h2>
+                <p>
+                    Cada proyecto debe partir de un diagnóstico,
+                    respetar las competencias institucionales y contar
+                    con mecanismos de seguimiento.
+                </p>
+            </div>
+
+            <div class="commitment-grid">
+
+                <div class="commitment-card">
+                    <span>01</span>
+                    <h3>Diagnóstico</h3>
+                    <p>Conocer las necesidades reales de cada comunidad.</p>
+                </div>
+
+                <div class="commitment-card">
+                    <span>02</span>
+                    <h3>Gestión</h3>
+                    <p>Coordinar con las instituciones responsables y buscar convenios.</p>
+                </div>
+
+                <div class="commitment-card">
+                    <span>03</span>
+                    <h3>Ejecución</h3>
+                    <p>Priorizar proyectos según su viabilidad y disponibilidad presupuestaria.</p>
+                </div>
+
+                <div class="commitment-card">
+                    <span>04</span>
+                    <h3>Evaluación</h3>
+                    <p>Informar a la ciudadanía sobre los avances y resultados.</p>
+                </div>
+
+            </div>
+
+            <p class="disclaimer">
+                Las propuestas que corresponden a competencias municipales,
+                provinciales o nacionales se plantean mediante coordinación,
+                convenios y gestión interinstitucional. Los presupuestos deberán
+                determinarse mediante estudios técnicos y disponibilidad de recursos.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACTO -->
+    <section class="contact-section" id="contacto">
+
+        <div class="container contact-grid">
+
+            <div>
+                <span class="section-tag">MANTENGAMOS EL CONTACTO</span>
+
+                <h2>
+                    El Valle tiene mucho
+                    por construir.
+                </h2>
+
+                <p>
+                    Tu opinión, tus ideas y las necesidades de tu comunidad
+                    son importantes para construir una propuesta participativa.
+                </p>
+
+                <div class="contact-information">
+                    <div>
+                        <span>PROYECTO</span>
+                        <strong>El Valle · Cuenca · Azuay</strong>
+                    </div>
+
+                    <div>
+                        <span>ORGANIZACIÓN</span>
+                        <strong>Movimiento Pachakutik</strong>
+                    </div>
+
+                    <div>
+                        <span>CANDIDATO</span>
+                        <strong>Ingeniero Felipe Sari</strong>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="contact-box">
+
+                <div class="contact-box-symbol">FS</div>
+
+                <h3>Construyamos juntos.</h3>
+
+                <p>
+                    Las mejores soluciones nacen cuando escuchamos
+                    a quienes viven cada realidad.
+                </p>
+
+                <!-- Reemplazar el número por el WhatsApp real -->
+                <a
+                    href="https://wa.me/593000000000"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-primary btn-full"
+                >
+                    ESCRÍBENOS POR WHATSAPP →
+                </a>
+
+                <small>Actualiza el enlace con tu número de contacto.</small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+
+        <div class="container footer-main">
+
+            <div class="footer-brand">
+                <div class="brand-symbol">P</div>
+                <div>
+                    <strong>PACHAKUTIK</strong>
+                    <small>El Valle · Cuenca</small>
+                </div>
+            </div>
+
+            <div class="footer-message">
+                <h3>Felipe Sari</h3>
+                <p>Ingeniero Civil · Candidato a vocal parroquial</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#propuestas">Plan de trabajo</a>
+                <a href="#identidad">Identidad</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <span>EL VALLE · CUENCA · ECUADOR</span>
+                <span>UNIDAD · PARTICIPACIÓN · DESARROLLO</span>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
+        ↑
+    </button>
+
+
+    <script>
+
+        // MENÚ PARA CELULARES
+        const menuToggle = document.getElementById("menuToggle");
+        const mainNav = document.getElementById("mainNav");
+
+        menuToggle.addEventListener("click", () => {
+            mainNav.classList.toggle("nav-open");
+        });
+
+        document.querySelectorAll(".nav a").forEach(link => {
+            link.addEventListener("click", () => {
+                mainNav.classList.remove("nav-open");
+            });
+        });
+
+
+        // FILTROS DE PROPUESTAS
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const proposalCards = document.querySelectorAll(".proposal-card");
+        const searchInput = document.getElementById("proposalSearch");
+        const noResults = document.getElementById("noResults");
+
+        let currentFilter = "all";
+
+        function filterProposals() {
+
+            const searchText = searchInput.value.toLowerCase().trim();
+            let visibleCount = 0;
+
+            proposalCards.forEach(card => {
+
+                const category = card.dataset.category;
+                const content = card.innerText.toLowerCase();
+
+                const matchesCategory =
+                    currentFilter === "all" || category === currentFilter;
+
+                const matchesSearch = content.includes(searchText);
+
+                if (matchesCategory && matchesSearch) {
+                    card.classList.remove("hidden");
+                    visibleCount++;
+                } else {
+                    card.classList.add("hidden");
+                }
+
+            });
+
+            document.querySelectorAll(".proposal-group").forEach(group => {
+
+                const visibleCards = group.querySelectorAll(
+                    ".proposal-card:not(.hidden)"
+                );
+
+                group.classList.toggle(
+                    "hidden-group",
+                    visibleCards.length === 0
+                );
+
+            });
+
+            noResults.style.display = visibleCount === 0 ? "block" : "none";
+        }
+
+        filterButtons.forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                filterButtons.forEach(btn => btn.classList.remove("active"));
+
+                button.classList.add("active");
+
+                currentFilter = button.dataset.filter;
+
+                filterProposals();
+
+            });
+
+        });
+
+        searchInput.addEventListener("input", filterProposals);
+
+
+        // BOTÓN VOLVER ARRIBA
+        const backToTop = document.getElementById("backToTop");
+
+        window.addEventListener("scroll", () => {
+
+            if (window.scrollY > 500) {
+                backToTop.classList.add("visible");
+            } else {
+                backToTop.classList.remove("visible");
+            }
+
+        });
+
+        backToTop.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+
+
+        // ANIMACIÓN DE ENTRADA
+        const observer = new IntersectionObserver((entries) => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+
+            });
+
+        }, {
+            threshold: 0.12
+        });
+
+        document.querySelectorAll(
+            ".proposal-card, .axis-card, .identity-card, .commitment-card"
+        ).forEach(element => {
+            element.classList.add("reveal");
+            observer.observe(element);
+        });
+
+    </script>
+
 </body>
 </html>
