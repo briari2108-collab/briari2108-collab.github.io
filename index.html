@@ -1,1545 +1,1314 @@
-/* =========================================
-   CONFIGURACIÓN GENERAL
-========================================= */
-
-:root {
-    --green: #16833d;
-    --green-dark: #07552b;
-    --green-light: #e8f5ec;
-
-    --yellow: #f4c522;
-    --yellow-light: #fff7d7;
-
-    --blue: #0879ad;
-    --orange: #e87823;
-
-    --dark: #17231c;
-    --gray: #64716a;
-    --light: #f5f7f5;
-    --white: #ffffff;
-
-    --border: #e4eae5;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: "Courier New", Courier, monospace;
-    background: var(--white);
-    color: var(--dark);
-    line-height: 1.65;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-button,
-input {
-    font-family: inherit;
-}
-
-.container {
-    width: min(1180px, 90%);
-    margin: auto;
-}
-
-section {
-    scroll-margin-top: 90px;
-}
-
-
-/* =========================================
-   BARRA SUPERIOR
-========================================= */
-
-.topbar {
-    background: var(--green-dark);
-    color: white;
-    font-size: 11px;
-    letter-spacing: 1.5px;
-    padding: 9px 0;
-}
-
-.topbar-content {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-
-/* =========================================
-   ENCABEZADO
-========================================= */
-
-.header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(255, 255, 255, 0.97);
-    border-bottom: 1px solid var(--border);
-    backdrop-filter: blur(10px);
-}
-
-.nav-container {
-    min-height: 83px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.brand,
-.footer-brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.brand-symbol {
-    width: 48px;
-    height: 48px;
-    background: var(--green);
-    color: white;
-    display: grid;
-    place-items: center;
-    font-size: 29px;
-    font-weight: bold;
-    border-radius: 5px;
-    border-bottom: 5px solid var(--yellow);
-}
-
-.brand strong,
-.footer-brand strong {
-    display: block;
-    font-size: 17px;
-    color: var(--green-dark);
-    letter-spacing: 1px;
-}
-
-.brand small,
-.footer-brand small {
-    display: block;
-    font-size: 9px;
-    color: var(--gray);
-}
-
-.nav {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-}
-
-.nav a {
-    font-size: 12px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.nav a:hover {
-    color: var(--green);
-}
-
-.nav .nav-button {
-    background: var(--green);
-    color: white;
-    padding: 12px 18px;
-    border-radius: 4px;
-}
-
-.nav .nav-button:hover {
-    background: var(--green-dark);
-    color: white;
-}
-
-.menu-toggle {
-    display: none;
-    border: none;
-    background: var(--green);
-    color: white;
-    padding: 9px 13px;
-    font-size: 22px;
-    cursor: pointer;
-}
-
-
-/* =========================================
-   PORTADA
-========================================= */
-
-.hero {
-    min-height: 690px;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-
-    background:
-        linear-gradient(110deg, rgba(4, 52, 27, 0.97), rgba(10, 110, 49, 0.83)),
-        radial-gradient(circle at 80% 40%, #7dbb52, transparent 45%);
-
-    color: white;
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    width: 700px;
-    height: 700px;
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 50%;
-    right: -150px;
-    top: -100px;
-}
-
-.hero::after {
-    content: "";
-    position: absolute;
-    width: 450px;
-    height: 450px;
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 50%;
-    right: -20px;
-    top: 20px;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    padding-top: 75px;
-    padding-bottom: 75px;
-}
-
-.hero-label {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    border: 1px solid rgba(255,255,255,0.35);
-    padding: 10px 15px;
-    font-size: 11px;
-    letter-spacing: 2px;
-    margin-bottom: 30px;
-}
-
-.hero-dot {
-    width: 9px;
-    height: 9px;
-    background: var(--yellow);
-    border-radius: 50%;
-}
-
-.hero-pretitle {
-    font-size: 13px;
-    letter-spacing: 5px;
-    color: var(--yellow);
-    margin-bottom: 10px;
-}
-
-.hero h1 {
-    font-size: clamp(65px, 10vw, 125px);
-    line-height: 0.95;
-    letter-spacing: -7px;
-    font-weight: bold;
-}
-
-.hero h1 span {
-    display: block;
-    color: var(--yellow);
-}
-
-.hero-line {
-    width: 100px;
-    height: 6px;
-    background: var(--yellow);
-    margin: 32px 0;
-}
-
-.hero h2 {
-    max-width: 670px;
-    font-size: clamp(21px, 3vw, 33px);
-    line-height: 1.3;
-    margin-bottom: 20px;
-}
-
-.hero-description {
-    max-width: 620px;
-    color: rgba(255,255,255,0.85);
-    font-size: 14px;
-}
-
-.hero-actions {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-top: 35px;
-}
-
-.btn {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 23px;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-    transition: 0.3s;
-    border-radius: 3px;
-}
-
-.btn-primary {
-    background: var(--yellow);
-    color: var(--dark);
-}
-
-.btn-primary:hover {
-    background: white;
-    transform: translateY(-3px);
-}
-
-.btn-outline {
-    border: 1px solid white;
-    color: white;
-}
-
-.btn-outline:hover {
-    background: white;
-    color: var(--green-dark);
-}
-
-.hero-bottom {
-    display: flex;
-    justify-content: space-between;
-    max-width: 600px;
-    border-top: 1px solid rgba(255,255,255,0.25);
-    padding-top: 18px;
-    margin-top: 65px;
-    font-size: 10px;
-    letter-spacing: 2px;
-}
-
-.hero-decoration {
-    position: absolute;
-    right: 7%;
-    bottom: 3%;
-    font-size: clamp(160px, 25vw, 370px);
-    font-weight: bold;
-    color: rgba(255,255,255,0.055);
-    line-height: 1;
-    pointer-events: none;
-}
-
-
-/* =========================================
-   INTRODUCCIÓN
-========================================= */
-
-.intro-section {
-    padding: 90px 0;
-    background: var(--light);
-}
-
-.intro-grid {
-    display: grid;
-    grid-template-columns: 90px 1.1fr 1fr;
-    gap: 35px;
-    align-items: start;
-}
-
-.intro-number {
-    font-size: 65px;
-    color: var(--green);
-    font-weight: bold;
-    line-height: 1;
-}
-
-.section-tag {
-    display: block;
-    color: var(--green);
-    font-size: 11px;
-    letter-spacing: 2px;
-    font-weight: bold;
-    margin-bottom: 18px;
-}
-
-.intro-grid h2,
-.section-heading h2 {
-    font-size: clamp(27px, 4vw, 43px);
-    line-height: 1.25;
-}
-
-.intro-text {
-    color: var(--gray);
-    font-size: 14px;
-}
-
-.intro-text p + p {
-    margin-top: 15px;
-}
-
-
-/* =========================================
-   CANDIDATO
-========================================= */
-
-.candidate-section {
-    padding: 110px 0;
-}
-
-.candidate-grid {
-    display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: 80px;
-    align-items: center;
-}
-
-.candidate-visual {
-    position: relative;
-    min-height: 440px;
-    display: grid;
-    place-items: center;
-}
-
-.candidate-frame {
-    width: 90%;
-    height: 420px;
-    background:
-        linear-gradient(145deg, var(--green-dark), var(--green));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    color: white;
-    position: relative;
-    overflow: hidden;
-}
-
-.candidate-frame::before,
-.candidate-frame::after {
-    content: "";
-    position: absolute;
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 50%;
-}
-
-.candidate-frame::before {
-    width: 350px;
-    height: 350px;
-}
-
-.candidate-frame::after {
-    width: 250px;
-    height: 250px;
-}
-
-.candidate-initials {
-    font-size: 130px;
-    font-weight: bold;
-    z-index: 1;
-    letter-spacing: -10px;
-}
-
-.candidate-frame span {
-    z-index: 1;
-    letter-spacing: 5px;
-    font-size: 12px;
-}
-
-.candidate-stamp {
-    position: absolute;
-    right: -10px;
-    bottom: 30px;
-    background: var(--yellow);
-    padding: 20px;
-    font-size: 12px;
-    font-weight: bold;
-    transform: rotate(-5deg);
-}
-
-.candidate-info h2 {
-    font-size: clamp(35px, 5vw, 55px);
-    line-height: 1.15;
-    margin-bottom: 25px;
-}
-
-.candidate-info h2 span {
-    color: var(--green);
-}
-
-.candidate-info > p {
-    color: var(--gray);
-    font-size: 14px;
-    margin-bottom: 15px;
-}
-
-.candidate-values {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin-top: 35px;
-}
-
-.candidate-values div {
-    border-top: 3px solid var(--green);
-    padding-top: 13px;
-}
-
-.candidate-values span {
-    display: block;
-    color: var(--green);
-    font-weight: bold;
-    font-size: 12px;
-}
-
-.candidate-values strong {
-    display: block;
-    font-size: 13px;
-    margin: 7px 0;
-}
-
-.candidate-values small {
-    font-size: 10px;
-    color: var(--gray);
-}
-
-
-/* =========================================
-   IDENTIDAD
-========================================= */
-
-.identity-section {
-    background: var(--green-dark);
-    color: white;
-    padding: 100px 0;
-    position: relative;
-    overflow: hidden;
-}
-
-.identity-section::after {
-    content: "P";
-    position: absolute;
-    right: -30px;
-    bottom: -190px;
-    font-size: 500px;
-    color: rgba(255,255,255,0.035);
-    pointer-events: none;
-}
-
-.section-heading {
-    max-width: 780px;
-    margin-bottom: 50px;
-}
-
-.section-heading p {
-    color: var(--gray);
-    margin-top: 18px;
-    font-size: 14px;
-}
-
-.light-heading {
-    position: relative;
-    z-index: 1;
-}
-
-.light-heading .section-tag {
-    color: var(--yellow);
-}
-
-.light-heading p {
-    color: rgba(255,255,255,0.75);
-}
-
-.identity-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-    position: relative;
-    z-index: 1;
-}
-
-.identity-card {
-    padding: 30px;
-    border: 1px solid rgba(255,255,255,0.17);
-    background: rgba(255,255,255,0.055);
-    transition: 0.3s;
-}
-
-.identity-card:hover {
-    background: rgba(255,255,255,0.13);
-    transform: translateY(-5px);
-}
-
-.identity-icon {
-    font-size: 35px;
-    color: var(--yellow);
-    margin-bottom: 20px;
-}
-
-.identity-card h3 {
-    font-size: 19px;
-    margin-bottom: 12px;
-}
-
-.identity-card p {
-    color: rgba(255,255,255,0.72);
-    font-size: 12px;
-}
-
-
-/* =========================================
-   EJES
-========================================= */
-
-.axes-section {
-    padding: 105px 0;
-    background: var(--light);
-}
-
-.axes-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.axis-card {
-    position: relative;
-    overflow: hidden;
-    padding: 35px 30px;
-    min-height: 285px;
-    color: white;
-    transition: 0.3s;
-}
-
-.axis-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
-}
-
-.axis-green {
-    background: #247b3d;
-}
-
-.axis-orange {
-    background: #d87525;
-}
-
-.axis-blue {
-    background: #1877a5;
-}
-
-.axis-teal {
-    background: #238d82;
-}
-
-.axis-dark {
-    background: #263a31;
-}
-
-.axis-number {
-    position: absolute;
-    top: 15px;
-    right: 22px;
-    font-size: 45px;
-    opacity: 0.22;
-    font-weight: bold;
-}
-
-.axis-icon {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.axis-card h3 {
-    font-size: 21px;
-    line-height: 1.3;
-    max-width: 270px;
-    margin-bottom: 15px;
-}
-
-.axis-card p {
-    font-size: 12px;
-    opacity: 0.85;
-}
-
-.axis-link {
-    display: inline-block;
-    margin-top: 25px;
-    font-size: 10px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    color: var(--yellow);
-}
-
-
-/* =========================================
-   PROPUESTAS
-========================================= */
-
-.proposals-section {
-    padding: 105px 0;
-}
-
-.proposal-search {
-    max-width: 700px;
-    margin: 0 auto 25px;
-    position: relative;
-}
-
-.proposal-search input {
-    width: 100%;
-    padding: 18px 50px 18px 20px;
-    border: 1px solid var(--border);
-    outline: none;
-    font-size: 13px;
-    background: var(--light);
-}
-
-.proposal-search input:focus {
-    border-color: var(--green);
-}
-
-.proposal-search span {
-    position: absolute;
-    right: 20px;
-    top: 9px;
-    font-size: 28px;
-    color: var(--green);
-}
-
-.filter-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-    margin-bottom: 75px;
-}
-
-.filter-btn {
-    background: white;
-    border: 1px solid var(--border);
-    padding: 12px 16px;
-    cursor: pointer;
-    font-size: 10px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.filter-btn:hover,
-.filter-btn.active {
-    background: var(--green);
-    color: white;
-    border-color: var(--green);
-}
-
-.proposal-group {
-    margin-bottom: 85px;
-}
-
-.proposal-group-heading {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    margin-bottom: 30px;
-    border-bottom: 2px solid var(--border);
-    padding-bottom: 20px;
-}
-
-.proposal-group-heading > span {
-    font-size: 55px;
-    font-weight: bold;
-    color: var(--green);
-    line-height: 1;
-}
-
-.proposal-group-heading small {
-    font-size: 10px;
-    color: var(--green);
-    letter-spacing: 2px;
-    font-weight: bold;
-}
-
-.proposal-group-heading h3 {
-    font-size: clamp(20px, 3vw, 30px);
-    margin-top: 5px;
-}
-
-.proposal-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    align-items: stretch;
-}
-
-.proposal-card {
-    padding: 27px;
-    background: white;
-    border: 1px solid var(--border);
-    border-top: 4px solid var(--green);
-    display: flex;
-    flex-direction: column;
-    transition: 0.3s;
-    min-width: 0;
-}
-
-.proposal-card:hover {
-    box-shadow: 0 15px 35px rgba(0,0,0,0.07);
-    transform: translateY(-5px);
-}
-
-.proposal-code {
-    font-size: 10px;
-    font-weight: bold;
-    color: var(--green);
-    letter-spacing: 1px;
-}
-
-.proposal-icon {
-    font-size: 34px;
-    margin: 20px 0;
-}
-
-.proposal-card h4 {
-    font-size: 17px;
-    line-height: 1.4;
-    margin-bottom: 15px;
-}
-
-.proposal-card h5 {
-    color: var(--green);
-    font-size: 13px;
-    margin-top: -8px;
-    margin-bottom: 15px;
-}
-
-.proposal-card > p {
-    color: var(--gray);
-    font-size: 12px;
-    flex-grow: 1;
-}
-
-.proposal-meta {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 10px;
-    border-top: 1px solid var(--border);
-    margin-top: 23px;
-    padding-top: 15px;
-    font-size: 9px;
-    color: var(--gray);
-    font-weight: bold;
-}
-
-.proposal-meta span:first-child {
-    color: var(--green);
-}
-
-.proposal-card details {
-    margin-top: 20px;
-    border-top: 1px solid var(--border);
-    padding-top: 15px;
-}
-
-.proposal-card summary {
-    font-size: 11px;
-    font-weight: bold;
-    color: var(--green);
-    cursor: pointer;
-    list-style-position: inside;
-}
-
-.proposal-card details p {
-    font-size: 11px;
-    color: var(--gray);
-    margin-top: 13px;
-}
-
-.featured-card {
-    grid-column: span 2;
-    background: linear-gradient(140deg, #f0f8f0, #ffffff);
-    border-top: 6px solid var(--yellow);
-}
-
-.featured-card .proposal-code {
-    color: #9b7210;
-}
-
-.market-lines {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-    margin-top: 20px;
-}
-
-.market-lines div {
-    background: var(--green-light);
-    padding: 10px;
-    font-size: 10px;
-    color: var(--green-dark);
-    font-weight: bold;
-}
-
-.suggested-card {
-    border-top-color: var(--orange);
-}
-
-.suggested-card .proposal-code {
-    color: var(--orange);
-}
-
-.hidden {
-    display: none !important;
-}
-
-.hidden-group {
-    display: none !important;
-}
-
-.no-results {
-    display: none;
-    text-align: center;
-    padding: 35px;
-    background: var(--light);
-    color: var(--gray);
-}
-
-
-/* =========================================
-   PARTICIPACIÓN
-========================================= */
-
-.participation-section {
-    padding: 100px 0;
-    background:
-        linear-gradient(110deg, rgba(5,74,36,0.96), rgba(16,128,60,0.92));
-    color: white;
-}
-
-.participation-content {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 70px;
-    align-items: center;
-}
-
-.participation-content .section-tag {
-    color: var(--yellow);
-}
-
-.participation-content h2 {
-    font-size: clamp(30px, 4vw, 47px);
-    line-height: 1.2;
-    margin-bottom: 20px;
-}
-
-.participation-content p {
-    color: rgba(255,255,255,0.8);
-    font-size: 13px;
-    max-width: 600px;
-    margin-bottom: 30px;
-}
-
-.btn-light {
-    background: white;
-    color: var(--green-dark);
-}
-
-.btn-light:hover {
-    background: var(--yellow);
-    transform: translateY(-3px);
-}
-
-.participation-stats {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-}
-
-.participation-stats div {
-    padding: 25px;
-    border: 1px solid rgba(255,255,255,0.25);
-}
-
-.participation-stats strong {
-    display: block;
-    font-size: 45px;
-    color: var(--yellow);
-}
-
-.participation-stats span {
-    font-size: 10px;
-    letter-spacing: 1px;
-}
-
-
-/* =========================================
-   COMPROMISO
-========================================= */
-
-.commitment-section {
-    padding: 105px 0;
-    background: var(--light);
-}
-
-.commitment-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-}
-
-.commitment-card {
-    background: white;
-    padding: 28px;
-    border-bottom: 4px solid var(--green);
-}
-
-.commitment-card span {
-    color: var(--green);
-    font-size: 35px;
-    font-weight: bold;
-}
-
-.commitment-card h3 {
-    font-size: 17px;
-    margin: 12px 0;
-}
-
-.commitment-card p {
-    font-size: 11px;
-    color: var(--gray);
-}
-
-.disclaimer {
-    background: var(--yellow-light);
-    padding: 20px;
-    margin-top: 35px;
-    border-left: 4px solid var(--yellow);
-    font-size: 11px;
-    color: #69571d;
-}
-
-
-/* =========================================
-   CONTACTO
-========================================= */
-
-.contact-section {
-    padding: 105px 0;
-}
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 0.8fr;
-    gap: 70px;
-    align-items: center;
-}
-
-.contact-grid h2 {
-    font-size: clamp(34px, 5vw, 52px);
-    line-height: 1.2;
-    margin-bottom: 20px;
-}
-
-.contact-grid > div > p {
-    font-size: 13px;
-    color: var(--gray);
-}
-
-.contact-information {
-    margin-top: 35px;
-    display: grid;
-    gap: 18px;
-}
-
-.contact-information div {
-    border-left: 3px solid var(--green);
-    padding-left: 15px;
-}
-
-.contact-information span {
-    display: block;
-    color: var(--green);
-    font-size: 10px;
-    letter-spacing: 1px;
-}
-
-.contact-information strong {
-    font-size: 13px;
-}
-
-.contact-box {
-    background: var(--green-dark);
-    color: white;
-    padding: 45px;
-    text-align: center;
-    border-bottom: 7px solid var(--yellow);
-}
-
-.contact-box-symbol {
-    width: 90px;
-    height: 90px;
-    display: grid;
-    place-items: center;
-    background: var(--yellow);
-    color: var(--green-dark);
-    font-size: 35px;
-    font-weight: bold;
-    margin: 0 auto 25px;
-}
-
-.contact-box h3 {
-    font-size: 25px;
-    margin-bottom: 15px;
-}
-
-.contact-box p {
-    color: rgba(255,255,255,0.75);
-    font-size: 12px;
-    margin-bottom: 30px;
-}
-
-.btn-full {
-    width: 100%;
-}
-
-.contact-box small {
-    display: block;
-    color: rgba(255,255,255,0.55);
-    font-size: 9px;
-    margin-top: 18px;
-}
-
-
-/* =========================================
-   FOOTER
-========================================= */
-
-.footer {
-    background: #112b1d;
-    color: white;
-}
-
-.footer-main {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
-.footer-brand .brand-symbol {
-    background: var(--yellow);
-    color: var(--green-dark);
-}
-
-.footer-brand strong {
-    color: white;
-}
-
-.footer-brand small {
-    color: rgba(255,255,255,0.65);
-}
-
-.footer-message h3 {
-    font-size: 20px;
-}
-
-.footer-message p {
-    font-size: 10px;
-    color: rgba(255,255,255,0.6);
-}
-
-.footer-links {
-    display: flex;
-    gap: 18px;
-    flex-wrap: wrap;
-}
-
-.footer-links a {
-    font-size: 10px;
-    color: rgba(255,255,255,0.75);
-}
-
-.footer-links a:hover {
-    color: var(--yellow);
-}
-
-.footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.12);
-    padding: 17px 0;
-}
-
-.footer-bottom .container {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    font-size: 9px;
-    color: rgba(255,255,255,0.55);
-    letter-spacing: 1px;
-}
-
-
-/* =========================================
-   BOTÓN VOLVER ARRIBA
-========================================= */
-
-.back-to-top {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    width: 45px;
-    height: 45px;
-    background: var(--yellow);
-    color: var(--dark);
-    border: none;
-    font-size: 23px;
-    cursor: pointer;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.3s;
-    z-index: 999;
-}
-
-.back-to-top.visible {
-    opacity: 1;
-    visibility: visible;
-}
-
-.back-to-top:hover {
-    background: var(--green);
-    color: white;
-}
-
-
-/* =========================================
-   ANIMACIONES
-========================================= */
-
-.reveal {
-    opacity: 0;
-    transform: translateY(25px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.reveal.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-/* =========================================
-   RESPONSIVE - TABLETS
-========================================= */
-
-@media (max-width: 950px) {
-
-    .nav {
-        gap: 13px;
-    }
-
-    .nav a {
-        font-size: 10px;
-    }
-
-    .candidate-grid {
-        gap: 40px;
-    }
-
-    .proposal-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .axes-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .commitment-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-}
-
-
-/* =========================================
-   RESPONSIVE - CELULARES
-========================================= */
-
-@media (max-width: 700px) {
-
-    .container {
-        width: 91%;
-    }
-
-    .topbar {
-        font-size: 8px;
-    }
-
-    .topbar-content {
-        justify-content: center;
-    }
-
-    .topbar-content span:last-child {
-        display: none;
-    }
-
-    .nav-container {
-        min-height: 70px;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav {
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-        background: white;
-        border-bottom: 1px solid var(--border);
-        padding: 10px 5%;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-    }
-
-    .nav.nav-open {
-        display: flex;
-    }
-
-    .nav a {
-        padding: 13px 0;
-        font-size: 12px;
-        border-bottom: 1px solid var(--border);
-    }
-
-    .nav .nav-button {
-        text-align: center;
-        margin-top: 10px;
-    }
-
-    .hero {
-        min-height: 630px;
-    }
-
-    .hero-content {
-        padding-top: 65px;
-        padding-bottom: 45px;
-    }
-
-    .hero h1 {
-        font-size: clamp(60px, 17vw, 100px);
-        letter-spacing: -4px;
-    }
-
-    .hero-pretitle {
-        font-size: 10px;
-        letter-spacing: 3px;
-    }
-
-    .hero-label {
-        font-size: 9px;
-    }
-
-    .hero-description {
-        font-size: 12px;
-    }
-
-    .hero-bottom {
-        font-size: 8px;
-    }
-
-    .hero-decoration {
-        right: 0;
-        bottom: 10%;
-        font-size: 180px;
-    }
-
-    .intro-section,
-    .candidate-section,
-    .identity-section,
-    .axes-section,
-    .proposals-section,
-    .participation-section,
-    .commitment-section,
-    .contact-section {
-        padding: 70px 0;
-    }
-
-    .intro-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .intro-number {
-        font-size: 45px;
-    }
-
-    .candidate-grid {
-        grid-template-columns: 1fr;
-        gap: 45px;
-    }
-
-    .candidate-visual {
-        min-height: 330px;
-    }
-
-    .candidate-frame {
-        height: 320px;
-    }
-
-    .candidate-initials {
-        font-size: 100px;
-    }
-
-    .candidate-values {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .identity-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .identity-card {
-        padding: 20px;
-    }
-
-    .axes-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .axis-card {
-        min-height: 230px;
-    }
-
-    .proposal-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .featured-card {
-        grid-column: span 1;
-    }
-
-    .proposal-group-heading {
-        gap: 15px;
-    }
-
-    .proposal-group-heading > span {
-        font-size: 40px;
-    }
-
-    .market-lines {
-        grid-template-columns: 1fr;
-    }
-
-    .filter-buttons {
-        gap: 6px;
-        margin-bottom: 50px;
-    }
-
-    .filter-btn {
-        font-size: 9px;
-        padding: 10px;
-    }
-
-    .participation-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .participation-stats {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .commitment-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 45px;
-    }
-
-    .contact-box {
-        padding: 30px 22px;
-    }
-
-    .footer-main {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .footer-links {
-        gap: 15px;
-    }
-
-    .footer-bottom .container {
-        flex-direction: column;
-        font-size: 8px;
-    }
-
-}
-
-
-/* =========================================
-   RESPONSIVE - CELULARES PEQUEÑOS
-========================================= */
-
-@media (max-width: 420px) {
-
-    .identity-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .commitment-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-actions {
-        flex-direction: column;
-    }
-
-    .hero-actions .btn {
-        width: 100%;
-    }
-
-    .participation-stats strong {
-        font-size: 34px;
-    }
-
-    .proposal-card {
-        padding: 22px;
-    }
-
-}
-
-
-/* =========================================
-   ACCESIBILIDAD
-========================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-    html {
-        scroll-behavior: auto;
-    }
-
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        transition-duration: 0.01ms !important;
-    }
-
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#176b3a">
+
+    <title>Felipe Sari | El Valle</title>
+
+    <meta name="description" content="Propuestas para el desarrollo de la parroquia El Valle. Felipe Sari, candidato a vocal del GAD Parroquial.">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="header">
+        <div class="container nav-container">
+
+            <a href="#inicio" class="brand">
+                <span class="brand-symbol">FS</span>
+                <span class="brand-name">FELIPE SARI</span>
+            </a>
+
+            <button class="menu-toggle"
+                    id="menu-toggle"
+                    aria-label="Abrir menú"
+                    aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav" id="nav">
+                <a href="#inicio">Inicio</a>
+                <a href="#candidato">Conóceme</a>
+                <a href="#propuestas">Propuestas</a>
+                <a href="#participacion">Participación</a>
+                <a href="#contacto" class="nav-button">Contáctame</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- PORTADA -->
+        <section class="hero" id="inicio">
+
+            <div class="hero-background"></div>
+
+            <div class="container hero-content">
+
+                <div class="hero-text">
+
+                    <span class="eyebrow">
+                        EL VALLE · CUENCA · AZUAY
+                    </span>
+
+                    <h1>
+                        Construyamos<br>
+                        un mejor <span>El Valle.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Una propuesta de trabajo basada en la innovación,
+                        la participación ciudadana y el desarrollo de nuestra parroquia.
+                    </p>
+
+                    <div class="hero-candidate">
+                        <span class="candidate-line"></span>
+                        <div>
+                            <strong>ING. FELIPE SARI</strong>
+                            <small>Candidato a vocal del GAD Parroquial</small>
+                        </div>
+                    </div>
+
+                    <div class="hero-actions">
+                        <a href="#propuestas" class="btn btn-primary">
+                            Conoce las propuestas
+                        </a>
+
+                        <a href="#candidato" class="btn btn-outline">
+                            Conóceme
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="hero-graphic">
+                    <div class="graphic-circle circle-one"></div>
+                    <div class="graphic-circle circle-two"></div>
+
+                    <div class="hero-monogram">
+                        FS
+                    </div>
+
+                    <div class="graphic-label">
+                        <strong>EL VALLE</strong>
+                        <span>Futuro · Trabajo · Comunidad</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="hero-bottom">
+                <span>INNOVACIÓN</span>
+                <span>DESARROLLO</span>
+                <span>PARTICIPACIÓN</span>
+                <span>TRANSPARENCIA</span>
+            </div>
+
+        </section>
+
+
+        <!-- IDENTIDAD -->
+        <section class="candidate-section section" id="candidato">
+
+            <div class="container candidate-grid">
+
+                <div class="candidate-image">
+                    <div class="candidate-image-inner">
+                        <span>FS</span>
+                        <small>FELIPE SARI</small>
+                    </div>
+                </div>
+
+                <div class="candidate-info">
+
+                    <span class="section-label">CONÓCEME</span>
+
+                    <h2>
+                        Soy Felipe Sari,<br>
+                        <span>ingeniero civil y músico académico.</span>
+                    </h2>
+
+                    <p>
+                        Creo en la innovación, en la mejora de lo que ya existe
+                        y en la posibilidad de construir soluciones más eficientes
+                        para nuestra comunidad.
+                    </p>
+
+                    <p>
+                        Mi visión es impulsar una gestión parroquial que escuche
+                        a sus habitantes, aproveche las nuevas tecnologías y
+                        trabaje de manera coordinada con las instituciones
+                        responsables de cada competencia.
+                    </p>
+
+                    <div class="values-grid">
+
+                        <div class="value-item">
+                            <span>01</span>
+                            <strong>Innovación</strong>
+                            <small>Nuevas ideas y tecnologías.</small>
+                        </div>
+
+                        <div class="value-item">
+                            <span>02</span>
+                            <strong>Compromiso</strong>
+                            <small>Trabajo junto a la comunidad.</small>
+                        </div>
+
+                        <div class="value-item">
+                            <span>03</span>
+                            <strong>Transparencia</strong>
+                            <small>Gestión abierta y responsable.</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROPUESTAS -->
+        <section class="proposals-section section" id="propuestas">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">PLAN DE TRABAJO</span>
+
+                    <h2>
+                        Cinco ejes para<br>
+                        transformar <span>El Valle.</span>
+                    </h2>
+
+                    <p>
+                        Propuestas orientadas a fortalecer la economía local,
+                        mejorar la infraestructura, promover el bienestar social,
+                        proteger el ambiente y construir una gestión transparente.
+                    </p>
+
+                </div>
+
+
+                <!-- BUSCADOR -->
+                <div class="search-container">
+
+                    <input
+                        type="search"
+                        id="proposal-search"
+                        placeholder="Buscar una propuesta..."
+                        aria-label="Buscar propuestas"
+                    >
+
+                </div>
+
+
+                <!-- FILTROS -->
+                <div class="filter-buttons">
+
+                    <button class="filter-btn active" data-filter="all">
+                        Todos
+                    </button>
+
+                    <button class="filter-btn" data-filter="economia">
+                        Economía
+                    </button>
+
+                    <button class="filter-btn" data-filter="infraestructura">
+                        Infraestructura
+                    </button>
+
+                    <button class="filter-btn" data-filter="social">
+                        Social y cultural
+                    </button>
+
+                    <button class="filter-btn" data-filter="ambiente">
+                        Ambiente
+                    </button>
+
+                    <button class="filter-btn" data-filter="institucional">
+                        Institucional
+                    </button>
+
+                </div>
+
+
+                <div class="proposal-grid" id="proposal-grid">
+
+
+                    <!-- EJE 1 -->
+                    <article class="proposal-card" data-category="economia">
+
+                        <div class="card-top">
+                            <span class="card-number">01</span>
+                            <span class="card-category">ECONOMÍA LOCAL</span>
+                        </div>
+
+                        <h3>Espacios para productores locales</h3>
+
+                        <p>
+                            Gestionar espacios para productores de El Valle
+                            en el mercado municipal y en ferias parroquiales,
+                            promoviendo la venta directa y el comercio justo.
+                        </p>
+
+                        <ul>
+                            <li>Espacios para productores locales.</li>
+                            <li>Ferias agroecológicas periódicas.</li>
+                            <li>Promoción de productos de la parroquia.</li>
+                        </ul>
+
+                        <span class="proposal-code">PROPUESTA 1.2</span>
+
+                    </article>
+
+
+                    <article class="proposal-card" data-category="economia">
+
+                        <div class="card-top">
+                            <span class="card-number">02</span>
+                            <span class="card-category">TURISMO</span>
+                        </div>
+
+                        <h3>Miradores y ruta turística</h3>
+
+                        <p>
+                            Impulsar estudios y gestiones para desarrollar
+                            miradores y una ruta turística en los sectores
+                            Cisnes–Bunchen y La Cruz.
+                        </p>
+
+                        <ul>
+                            <li>Estudios técnicos y de factibilidad.</li>
+                            <li>Señalización turística.</li>
+                            <li>Participación de emprendimientos locales.</li>
+                        </ul>
+
+                        <span class="proposal-code">PROPUESTA 1.3</span>
+
+                    </article>
+
+
+                    <article class="proposal-card" data-category="economia">
+
+                        <div class="card-top">
+                            <span class="card-number">03</span>
+                            <span class="card-category">EMPRENDIMIENTO</span>
+                        </div>
+
+                        <h3>Ventanilla de apoyo al emprendedor</h3>
+
+                        <p>
+                            Promover un espacio de orientación para fortalecer
+                            los emprendimientos y la economía popular y solidaria.
+                        </p>
+
+                        <ul>
+                            <li>Orientación sobre RUC y RIMPE.</li>
+                            <li>Capacitación financiera y comercial.</li>
+                            <li>Asesoría para asociaciones.</li>
+                        </ul>
+
+                        <span class="proposal-code">PROPUESTA 1.4</span>
+
+                    </article>
+
+
+                    <article class="proposal-card" data-category="economia">
+
+                        <div class="card-top">
+                            <span class="card-number">04</span>
+                            <span class="card-category">MERCADO PARROQUIAL</span>
+                        </div>
+
+                        <h3>Mercado Vivo</h3>
+
+                        <p>
+                            Gestionar mejoras integrales para el Mercado
+                            Parroquial Reina del Cisne, fortaleciendo su
+                            infraestructura, organización e identidad.
+                        </p>
+
+                        <ul>
+                            <li>Mantenimiento de instalaciones y servicios.</li>
+                            <li>Seguridad y organización comercial.</li>
+                            <li>Control de plagas y manejo de residuos.</li>
+                            <li>Capacitación a comerciantes.</li>
+                            <li>Promoción de productos locales.</li>
+                        </ul>
+
+                        <span class="proposal-code">PROPUESTA 1.5</span>
+
+                    </article>
+
+
+                    <!-- EJE 2 -->
+                    <article class="proposal-card" data-category="infraestructura">
+
+                        <div class="card-top">
+                            <span class="card-number">05</span>
+                            <span class="card-category">VIALIDAD</span>
+                        </div>
+
+                        <h3>Mejoramiento técnico de vías de lastre</h3>
+
+                        <p>
+                            Impulsar el mejoramiento de caminos mediante
+                            criterios técnicos que permitan una circulación
+                            más segura y duradera.
+                        </p>
+
+                        <ul>
+                            <li>Inventario y diagnóstico vial.</li>
+                            <li>Conformación de pendientes y bombeo.</li>
+                            <li>Drenajes y mantenimiento periódico.</li>
+                        </ul>
+
+                        <span class="proposal-code">PROPUESTA 2.1</span>
+
+                    </article>
+
+
+                    <article class="proposal-card" data-category="infraestructura">
+
+                        <div class="card-top">
+                            <span class="card-number">06</span>
+                            <span class="card-category">INGENIERÍA VIAL</span>
+                        </div>
+
+                        <h3>Estructuras adecuadas para las vías</h3>
+
+                        <p>
+                            Promover diseños viales que consideren las
+                            características del suelo y las condiciones
+                            de tránsito.
+                        </p>
+
+                        <ul>
+                            <li>Mejoramiento de subrasante.</li>
+                            <li>Capas de subbase y base.</li>
+                            <li>Ensayos de CBR, granulometría y compactación.</li>
+                        </ul>
+
+                        <span class="proposal-code">PROPUESTA 2.2</span>
+
+                    </article>
+
+
+                    <article class="proposal-card" data-category="infraestructura">
+
+                        <div class="card-top">
+                            <span class="card-number">07</span>
+                            <span class="card-category">INNOVACIÓN</span>
+                        </div>
+
+                        <h3>Geoceldas para caminos difíciles</h3>
+
+                        <p>
+                            Evaluar el uso de geoceldas de polietileno de alta
+                            densidad (HDPE) como alternativa para estabilizar
+                            suelos débiles y pendientes.
+                        </p>
+
+                        <ul>
+                            <li>Selección de tramos piloto.</li>
+                            <li>Evaluación técnica y económica.</li>
+                            <li>Seguimiento de resultados.</li>
+                        </ul>
+
+                        <span class="proposal-code">PROPUESTA 2.3</span>
+
+                    </article>
+
+
+                    <article class="proposal-card" data-category="infraestructura">
+
+                        <div class="card-top">
+                            <span class="card-number">08</span>
+                            <span class="card-category">CONECTIVIDAD</span>
+                        </div>
+
+                        <h3>Mejoramiento de cinco salidas viales</h3>
+
+                        <p>
+                            Gestionar soluciones para mejorar la conectividad
+                            de los principales accesos de la parroquia.
+                        </p>
+
+                        <ul>
+                            <li>El Verde.</li>
+                            <li>La Libertad (Morochiquiwa).</li>
+                            <li>San Antonio de Gapal.</li>
+                            <li>Chilcapamba.</li>
+                            <li>Vía principal de El Valle.</li>
+                        </ul>
+
+                        <span class="proposal-code">PROPUESTA 2.4</span>
+
+                    </article>
+
+
+                    <article class="proposal-card" data-category="infraestructura">
+
+                        <div class="card-top">
+                            <span class="card-number">09</span>
+                            <span class="card-category">MOVILIDAD</span>
+                        </div>
+
+                        <h3>Ordenamiento del tránsito y estacionamientos</h3>
+
+                        <p>
+                            Gestionar una reorganización de la circulación
+                            vehicular y los espacios de estacionamiento.
+                        </p>
+
+                        <ul>
+                            <li>Identificación de puntos conflictivos.</li>
+                            <li>Ordenamiento de paradas de buses.</li>
+                            <li>Zonas de carga y descarga.</li>
+                        </ul>
+
+                        <span class="proposal-code">PROPUESTA 2.5</span>
+
+                    </article>
+
+
+                    <article class="proposal-card" data-category="infraestructura">
+
+                        <div class="card-top">
+                            <span class="card-number">10</span>
+                            <span class="card-category">SERVICIOS</span>
+                        </div>
+
+                        <h3>Servicios institucionales más cerca</h3>
+
+                        <p>
+                            Gestionar la desconcentración de servicios
+                            municipales e institucionales para facilitar
+                            los trámites de los habitantes.
+                        </p>
+
+                        <ul>
+                            <li>Acercamiento de servicios municipales.</li>
+                            <li>Coordinación con ETAPA.</li>
+                            <li>Convenios interinstitucionales.</li>
+                        </ul>
+
+                        <span class="proposal-code">PROPUESTA 2.6</span>
+
+                    </article>
+
+
+                    <article class="proposal-card" data-category="infraestructura">
+
+                        <div class="card-top">
+                            <span class="card-number">11</span>
+                            <span class="card-category">SEGURIDAD</span>
+                        </div>
+
+                        <h3>Red comunitaria de videovigilancia</h3>
+
+                        <p>
+                            Fortalecer la seguridad mediante la coordinación
+                            comunitaria y el aprovechamiento de los sistemas
+                            de vigilancia existentes.
+                        </p>
+
+                        <ul>
+                            <li>Diagnóstico de cámaras existentes.</li>
+                            <li>Gestión de nuevos puntos de vigilancia.</li>
+                            <li>Coordinación con Policía y ECU 911.</li>
+                        </ul>
+
+                        <span class="proposal-code">PROPUESTA 2.7</span>
+
+                    </article>
+
+
+                    <article class="proposal-card" data-category="infraestructura">
+
+                        <div class="card-top">
+                            <span class="card-number">12</span>
+                            <span class="card-category">PLANIFICACIÓN</span>
+                        </div>
+
+                        <h3>Actualización participativa del PDOT</h3>
+
+                        <p>
+                            Impulsar la actualización de la planificación
+                            parroquial mediante información técnica y
+                            participación ciudadana.
+                        </p>
+
+                        <ul>
+                            <li>Diagnóstico territorial.</li>
+                            <li>Identificación de riesgos y necesidades.</li>
+                            <li>Participación de barrios y comunidades.</li>
+                        </ul>
+
+                        <span class="proposal-code">PROPUESTA 2.8</span>
+
+                    </article>
+
+
+                    <!-- EJE 3 -->
+                    <article class="proposal-card" data-category="social">
+
+                        <div class="card-top">
+                            <span class="card-number">13</span>
+                            <span class="card-category">TECNOLOGÍA</span>
+                        </div>
+
+                        <h3>Programa de inteligencia artificial aplicada</h3>
+
+                        <p>
+                            Acercar las nuevas tecnologías a jóvenes,
+                            emprendedores y habitantes de la parroquia.
+                        </p>
+
+                        <ul>
+                            <li>Capacitación práctica en IA.</li>
+                            <li>Automatización de tareas.</li>
+                            <li>Herramientas digitales y programación.</li>
+                        </ul>
+
+                        <span class="proposal-code">PROPUESTA 3.1</span>
+
+                    </article>
+
+
+                    <article class="proposal-card" data-category="social">
+
+                        <div class="card-top">
+                            <span class="card-number">14</span>
+                            <span class="card-category">EDUCACIÓN</span>
+                        </div>
+
+                        <h3>Inglés para la comunidad</h3>
+
+                        <p>
+                            Promover oportunidades de aprendizaje del idioma
+                            inglés mediante cursos comunitarios por niveles.
+                        </p>
+
+                        <ul>
+                            <li>Clases para principiantes y avanzados.</li>
+                            <li>Preparación para certificaciones.</li>
+                            <li>Convenios con universidades y voluntarios.</li>
+                        </ul>
+
+                        <span class="proposal-code">PROPUESTA 3.2</span>
+
+                    </article>
+
+
+                    <article class="proposal-card" data-category="social">
+
+                        <div class="card-top">
+                            <span class="card-number">15</span>
+                            <span class="card-category">OPORTUNIDADES</span>
+                        </div>
+
+                        <h3>Feria universitaria internacional</h3>
+
+                        <p>
+                            Facilitar el acceso a información sobre estudios,
+                            becas y oportunidades académicas nacionales
+                            e internacionales.
+                        </p>
+
+                        <ul>
+                            <li>Participación de universidades.</li>
+                            <li>Información sobre becas.</li>
+                            <li>Orientación para postulaciones.</li>
+                        </ul>
+
+                        <span class="proposal-code">PROPUESTA 3.3</span>
+
+                    </article>
+
+
+                    <article class="proposal-card" data-category="social">
+
+                        <div class="card-top">
+                            <span class="card-number">16</span>
+                            <span class="card-category">CIENCIA</span>
+                        </div>
+
+                        <h3>Feria parroquial de ciencia y tecnología</h3>
+
+                        <p>
+                            Crear espacios para que estudiantes y jóvenes
+                            presenten sus ideas, proyectos e innovaciones.
+                        </p>
+
+                        <ul>
+                            <li>Exposición de proyectos estudiantiles.</li>
+                            <li>Reconocimiento a iniciativas destacadas.</li>
+                            <li>Vinculación con universidades.</li>
+                        </ul>
+
+                        <span class="proposal-code">PROPUESTA 3.4</span>
+
+                    </article>
+
+
+                    <article class="proposal-card" data-category="social">
+
+                        <div class="card-top">
+                            <span class="card-number">17</span>
+                            <span class="card-category">JUVENTUD</span>
+                        </div>
+
+                        <h3>Proyecto de Vida</h3>
+
+                        <p>
+                            Promover espacios de educación afectiva y sexual
+                            que contribuyan a la prevención del embarazo
+                            adolescente y a la toma de decisiones responsables.
+                        </p>
+
+                        <ul>
+                            <li>Talleres participativos.</li>
+                            <li>Orientación para adolescentes.</li>
+                            <li>Coordinación con familias e instituciones.</li>
+                        </ul>
+
+                        <span class="proposal-code">PROPUESTA 3.5</span>
+
+                    </article>
+
+
+                    <article class="proposal-card" data-category="social">
+
+                        <div class="card-top">
+                            <span class="card-number">18</span>
+                            <span class="card-category">CONVIVENCIA</span>
+                        </div>
+
+                        <h3>Comunidad Protectora</h3>
+
+                        <p>
+                            Impulsar acciones de prevención de la violencia
+                            intrafamiliar y acompañamiento comunitario.
+                        </p>
+
+                        <ul>
+                            <li>Espacios de orientación y apoyo.</li>
+                            <li>Prevención de violencia.</li>
+                            <li>Información sobre rutas de atención.</li>
+                        </ul>
+
+                        <span class="proposal-code">PROPUESTA 3.6</span>
+
+                    </article>
+
+
+                    <article class="proposal-card" data-category="social">
+
+                        <div class="card-top">
+                            <span class="card-number">19</span>
+                            <span class="card-category">SALUD COMUNITARIA</span>
+                        </div>
+
+                        <h3>Apoyo comunitario frente al alcoholismo</h3>
+
+                        <p>
+                            Promover la prevención, orientación y
+                            acompañamiento a personas y familias que
+                            enfrentan problemas relacionados con el alcohol.
+                        </p>
+
+                        <ul>
+                            <li>Campañas preventivas.</li>
+                            <li>Redes de apoyo comunitario.</li>
+                            <li>Coordinación con servicios de salud.</li>
+                        </ul>
+
+                        <span class="proposal-code">PROPUESTA 3.7</span>
+
+                    </article>
+
+
+                    <article class="proposal-card" data-category="social">
+
+                        <div class="card-top">
+                            <span class="card-number">20</span>
+                            <span class="card-category">CULTURA</span>
+                        </div>
+
+                        <h3>Reconocimiento de las culturas parroquiales</h3>
+
+                        <p>
+                            Fortalecer la identidad cultural de El Valle
+                            mediante el reconocimiento de sus expresiones
+                            y tradiciones.
+                        </p>
+
+                        <ul>
+                            <li>Representación cultural.</li>
+                            <li>Calendario anual de actividades.</li>
+                            <li>Reconocimiento de expresiones locales.</li>
+                        </ul>
+
+                        <span class="proposal-code">PROPUESTA 3.8</span>
+
+                    </article>
+
+
+                    <article class="proposal-card" data-category="social">
+
+                        <div class="card-top">
+                            <span class="card-number">21</span>
+                            <span class="card-category">MÚSICA</span>
+                        </div>
+
+                        <h3>Formación y reconocimiento musical</h3>
+
+                        <p>
+                            Impulsar la formación académica y el reconocimiento
+                            de músicos de la parroquia, en distintos géneros
+                            y expresiones musicales.
+                        </p>
+
+                        <ul>
+                            <li>Formación teórica e instrumental.</li>
+                            <li>Lectura musical y dirección.</li>
+                            <li>Espacios de presentación y reconocimiento.</li>
+                        </ul>
+
+                        <span class="proposal-code">PROPUESTA 3.9</span>
+
+                    </article>
+
+
+                    <article class="proposal-card" data-category="social">
+
+                        <div class="card-top">
+                            <span class="card-number">22</span>
+                            <span class="card-category">ARTE</span>
+                        </div>
+
+                        <h3>Galería y reconocimiento de artistas locales</h3>
+
+                        <p>
+                            Visibilizar el talento artístico de El Valle
+                            mediante espacios de exposición y reconocimiento.
+                        </p>
+
+                        <ul>
+                            <li>Registro de artistas locales.</li>
+                            <li>Exposiciones de pintura y fotografía.</li>
+                            <li>Reconocimiento a creadores parroquiales.</li>
+                        </ul>
+
+                        <span class="proposal-code">PROPUESTA 3.10</span>
+
+                    </article>
+
+
+                    <!-- EJE 4 -->
+                    <article class="proposal-card" data-category="ambiente">
+
+                        <div class="card-top">
+                            <span class="card-number">23</span>
+                            <span class="card-category">AGUA</span>
+                        </div>
+
+                        <h3>Protección de fuentes de agua</h3>
+
+                        <p>
+                            Promover la protección de fuentes hídricas y
+                            microcuencas mediante acciones comunitarias
+                            y coordinación institucional.
+                        </p>
+
+                        <ul>
+                            <li>Protección de zonas de captación.</li>
+                            <li>Reforestación de microcuencas.</li>
+                            <li>Monitoreo de calidad del agua.</li>
+                        </ul>
+
+                        <span class="proposal-code">PROPUESTA 4.1</span>
+
+                    </article>
+
+
+                    <article class="proposal-card" data-category="ambiente">
+
+                        <div class="card-top">
+                            <span class="card-number">24</span>
+                            <span class="card-category">AGUA POTABLE</span>
+                        </div>
+
+                        <h3>Captaciones y tratamiento tecnificado</h3>
+
+                        <p>
+                            Gestionar mejoras en los sistemas de captación
+                            y tratamiento de agua para fortalecer su
+                            funcionamiento y calidad.
+                        </p>
+
+                        <ul>
+                            <li>Mejoramiento de captaciones.</li>
+                            <li>Desarenadores y filtración.</li>
+                            <li>Desinfección y capacitación de operadores.</li>
+                        </ul>
+
+                        <span class="proposal-code">PROPUESTA 4.2</span>
+
+                    </article>
+
+
+                    <article class="proposal-card" data-category="ambiente">
+
+                        <div class="card-top">
+                            <span class="card-number">25</span>
+                            <span class="card-category">SANEAMIENTO</span>
+                        </div>
+
+                        <h3>Plan de saneamiento parroquial</h3>
+
+                        <p>
+                            Impulsar soluciones de saneamiento que respondan
+                            a las características de los diferentes sectores
+                            de la parroquia.
+                        </p>
+
+                        <ul>
+                            <li>Diagnóstico de cobertura sanitaria.</li>
+                            <li>Gestión de redes de alcantarillado.</li>
+                            <li>Alternativas para sectores dispersos.</li>
+                        </ul>
+
+                        <span class="proposal-code">PROPUESTA 4.3</span>
+
+                    </article>
+
+
+                    <article class="proposal-card" data-category="ambiente">
+
+                        <div class="card-top">
+                            <span class="card-number">26</span>
+                            <span class="card-category">GESTIÓN DE RIESGOS</span>
+                        </div>
+
+                        <h3>Mapa de riesgos y prevención</h3>
+
+                        <p>
+                            Promover la identificación de zonas vulnerables
+                            y fortalecer la preparación comunitaria ante
+                            emergencias.
+                        </p>
+
+                        <ul>
+                            <li>Identificación de zonas susceptibles.</li>
+                            <li>Mapas de riesgos.</li>
+                            <li>Planes y puntos de encuentro.</li>
+                        </ul>
+
+                        <span class="proposal-code">PROPUESTA 4.4</span>
+
+                    </article>
+
+
+                    <article class="proposal-card" data-category="ambiente">
+
+                        <div class="card-top">
+                            <span class="card-number">27</span>
+                            <span class="card-category">REFORESTACIÓN</span>
+                        </div>
+
+                        <h3>Protección de quebradas y reforestación</h3>
+
+                        <p>
+                            Impulsar iniciativas comunitarias para recuperar
+                            espacios naturales y proteger las quebradas
+                            de la parroquia.
+                        </p>
+
+                        <ul>
+                            <li>Reforestación con especies nativas.</li>
+                            <li>Viveros comunitarios.</li>
+                            <li>Educación ambiental y seguimiento.</li>
+                        </ul>
+
+                        <span class="proposal-code">PROPUESTA 4.5</span>
+
+                    </article>
+
+
+                    <!-- EJE 5 -->
+                    <article class="proposal-card" data-category="institucional">
+
+                        <div class="card-top">
+                            <span class="card-number">28</span>
+                            <span class="card-category">TRANSPARENCIA</span>
+                        </div>
+
+                        <h3>Transparencia y rendición de cuentas</h3>
+
+                        <p>
+                            Fortalecer el acceso ciudadano a la información
+                            sobre el presupuesto, las obras y la gestión
+                            del GAD Parroquial.
+                        </p>
+
+                        <ul>
+                            <li>Publicación de presupuestos.</li>
+                            <li>Información sobre obras y contratos.</li>
+                            <li>Actualización periódica de resultados.</li>
+                        </ul>
+
+                        <span class="proposal-code">PROPUESTA 5.1</span>
+
+                    </article>
+
+
+                    <article class="proposal-card" data-category="institucional">
+
+                        <div class="card-top">
+                            <span class="card-number">29</span>
+                            <span class="card-category">PARTICIPACIÓN</span>
+                        </div>
+
+                        <h3>El presidente en territorio</h3>
+
+                        <p>
+                            Promover una gestión cercana a los barrios
+                            y comunidades, con espacios periódicos
+                            de diálogo y seguimiento.
+                        </p>
+
+                        <ul>
+                            <li>Visitas comunitarias programadas.</li>
+                            <li>Asambleas y reuniones territoriales.</li>
+                            <li>Seguimiento de compromisos.</li>
+                        </ul>
+
+                        <span class="proposal-code">PROPUESTA 5.2</span>
+
+                    </article>
+
+
+                    <article class="proposal-card" data-category="institucional">
+
+                        <div class="card-top">
+                            <span class="card-number">30</span>
+                            <span class="card-category">GOBIERNO DIGITAL</span>
+                        </div>
+
+                        <h3>Gobierno parroquial digital con IA</h3>
+
+                        <p>
+                            Aprovechar las herramientas digitales y la
+                            inteligencia artificial para mejorar la atención
+                            y los procesos administrativos.
+                        </p>
+
+                        <ul>
+                            <li>Reporte digital de daños viales.</li>
+                            <li>Seguimiento de obras.</li>
+                            <li>Mapa digital de proyectos.</li>
+                            <li>Automatización de procesos.</li>
+                        </ul>
+
+                        <span class="proposal-code">PROPUESTA 5.3</span>
+
+                    </article>
+
+
+                    <article class="proposal-card" data-category="institucional">
+
+                        <div class="card-top">
+                            <span class="card-number">31</span>
+                            <span class="card-category">CONTROL CIUDADANO</span>
+                        </div>
+
+                        <h3>Observatorio ciudadano de obras públicas</h3>
+
+                        <p>
+                            Promover mecanismos de participación para
+                            que la ciudadanía pueda conocer y dar seguimiento
+                            a la ejecución de obras parroquiales.
+                        </p>
+
+                        <ul>
+                            <li>Participación de ciudadanos.</li>
+                            <li>Seguimiento de avances.</li>
+                            <li>Informes públicos de fácil comprensión.</li>
+                        </ul>
+
+                        <span class="proposal-code">PROPUESTA 5.4</span>
+
+                    </article>
+
+
+                </div>
+
+                <p class="no-results" id="no-results">
+                    No se encontraron propuestas con esa búsqueda.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- PARTICIPACIÓN -->
+        <section class="participation-section section" id="participacion">
+
+            <div class="container">
+
+                <div class="participation-content">
+
+                    <span class="section-label">EL VALLE LO CONSTRUIMOS TODOS</span>
+
+                    <h2>
+                        Las mejores soluciones<br>
+                        nacen de <span>escuchar.</span>
+                    </h2>
+
+                    <p>
+                        Cada barrio, comunidad y familia conoce sus necesidades.
+                        La participación ciudadana debe ser el punto de partida
+                        para construir soluciones reales.
+                    </p>
+
+                    <a href="#contacto" class="btn btn-light">
+                        Comparte tus ideas
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACTO -->
+        <section class="contact-section section" id="contacto">
+
+            <div class="container contact-grid">
+
+                <div>
+                    <span class="section-label">MANTENGAMOS EL CONTACTO</span>
+
+                    <h2>
+                        Tu voz también<br>
+                        construye <span>El Valle.</span>
+                    </h2>
+
+                    <p>
+                        Las propuestas pueden mejorar con las ideas,
+                        experiencias y necesidades de nuestra gente.
+                    </p>
+                </div>
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">FS</div>
+
+                    <h3>Felipe Sari</h3>
+
+                    <p>Ingeniero Civil · Músico Académico</p>
+
+                    <a
+                        href="https://wa.me/593000000000"
+                        class="btn btn-primary contact-button"
+                        target="_blank"
+                        rel="noopener">
+                        Contactar por WhatsApp
+                    </a>
+
+                    <small>
+                        Reemplaza el número del enlace por tu número real
+                        de WhatsApp con código de país.
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div class="footer-brand">
+                <span class="footer-symbol">FS</span>
+                <div>
+                    <strong>FELIPE SARI</strong>
+                    <small>EL VALLE · CUENCA</small>
+                </div>
+            </div>
+
+            <p>
+                Innovación, participación y desarrollo para nuestra parroquia.
+            </p>
+
+            <span class="footer-copy">
+                © 2026 Felipe Sari. Todos los derechos reservados.
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- BOTÓN SUBIR -->
+    <button id="back-to-top" class="back-to-top" aria-label="Volver arriba">
+        ↑
+    </button>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        // MENÚ RESPONSIVE
+
+        const menuToggle = document.getElementById("menu-toggle");
+        const nav = document.getElementById("nav");
+
+        menuToggle.addEventListener("click", function () {
+
+            nav.classList.toggle("nav-open");
+
+            const isOpen = nav.classList.contains("nav-open");
+
+            menuToggle.setAttribute("aria-expanded", isOpen);
+
+        });
+
+
+        // CERRAR MENÚ AL SELECCIONAR UNA OPCIÓN
+
+        document.querySelectorAll(".nav a").forEach(function(link) {
+
+            link.addEventListener("click", function() {
+
+                nav.classList.remove("nav-open");
+
+                menuToggle.setAttribute("aria-expanded", "false");
+
+            });
+
+        });
+
+
+        // FILTROS DE PROPUESTAS
+
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const proposalCards = document.querySelectorAll(".proposal-card");
+        const searchInput = document.getElementById("proposal-search");
+        const noResults = document.getElementById("no-results");
+
+        let currentFilter = "all";
+
+        function filterProposals() {
+
+            const searchText = searchInput.value.toLowerCase().trim();
+
+            let visibleCount = 0;
+
+            proposalCards.forEach(function(card) {
+
+                const category = card.dataset.category;
+
+                const text = card.textContent.toLowerCase();
+
+                const matchesCategory =
+                    currentFilter === "all" || category === currentFilter;
+
+                const matchesSearch = text.includes(searchText);
+
+                if (matchesCategory && matchesSearch) {
+
+                    card.style.display = "flex";
+
+                    visibleCount++;
+
+                } else {
+
+                    card.style.display = "none";
+
+                }
+
+            });
+
+            noResults.style.display =
+                visibleCount === 0 ? "block" : "none";
+
+        }
+
+
+        filterButtons.forEach(function(button) {
+
+            button.addEventListener("click", function() {
+
+                filterButtons.forEach(function(btn) {
+                    btn.classList.remove("active");
+                });
+
+                button.classList.add("active");
+
+                currentFilter = button.dataset.filter;
+
+                filterProposals();
+
+            });
+
+        });
+
+
+        searchInput.addEventListener("input", filterProposals);
+
+
+        // BOTÓN VOLVER ARRIBA
+
+        const backToTop = document.getElementById("back-to-top");
+
+        window.addEventListener("scroll", function() {
+
+            if (window.scrollY > 400) {
+
+                backToTop.classList.add("visible");
+
+            } else {
+
+                backToTop.classList.remove("visible");
+
+            }
+
+        });
+
+        backToTop.addEventListener("click", function() {
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        });
+
+
+    </script>
+
+</body>
+</html>
