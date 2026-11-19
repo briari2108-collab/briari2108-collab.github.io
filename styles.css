@@ -55,7 +55,7 @@ html {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Courier New', sans-serif;
     background: var(--white);
     color: var(--dark);
     line-height: 1.7;
