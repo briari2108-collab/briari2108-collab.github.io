@@ -2256,3 +2256,31 @@ textarea,
 select {
     font-family: 'Courier New', monospace !important;
 }
+
+
+
+
+
+
+/* Descripciones */
+.proposal-card .proposal-description {
+    line-height: 1.6;
+}
+
+/* Separación visual entre idiomas */
+.proposal-translation {
+    padding-left: 12px;
+    border-left: 2px solid #d1d5db;
+    margin-top: 8px;
+}
+
+/* Identificación de idiomas */
+.proposal-language {
+    font-size: 0.75rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 3px;
+    opacity: 0.8;
+}
+
+
